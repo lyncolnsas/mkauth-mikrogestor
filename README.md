@@ -30,17 +30,23 @@ Projeto de modernização e conteinerização do sistema **MK-Auth**, focado em 
 └── README.md
 ```
 
-## 🚀 Como Instalar (Ubuntu Server)
+## ⚡ Instalação Rápida (Copia e Cola)
 
-1.  Clone este repositório no seu servidor.
-2.  Dê permissão de execução ao instalador:
-    ```bash
-    chmod +x scripts/install.sh
-    ```
-3.  Execute o instalador:
-    ```bash
-    sudo ./scripts/install.sh
-    ```
+Para instalar o sistema completo no seu servidor Ubuntu novo, basta colar este comando:
+
+```bash
+git clone https://github.com/lyncolnsas/mkauth-mikrogestor.git && cd mkauth-mikrogestor && sudo chmod +x scripts/*.sh && sudo ./scripts/install.sh
+```
+
+## 🧹 Limpeza Total (Reset)
+
+Caso queira apagar tudo e recomeçar do zero:
+
+```bash
+cd mkauth-mikrogestor && sudo ./scripts/reset.sh
+```
+
+## 🚀 Como Instalar (Passo a Passo)
 
 O instalador irá cuidar de tudo: instalação do Docker, configurações de rede, extração de binários e subida do sistema.
 
