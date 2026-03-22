@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head id="Fav">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="layout/{HOTSITE_TEMPLATE}/css/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="layout/{HOTSITE_TEMPLATE}/css/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="layout/{HOTSITE_TEMPLATE}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="layout/{HOTSITE_TEMPLATE}/css/style.css" rel="stylesheet">
+    <link href="layout/{HOTSITE_TEMPLATE}/css/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-xxl bg-white p-0">
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Carregando...</span>
+            </div>
+        </div>
+        <div class="container-fluid nav-bar bg-transparent">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+                <div class="icon p-2 me-2">
+                    <img class="logo" src="../mkfiles/logo.jpg">
+                </div>
+                <a href="./home" class="navbar-brand d-flex align-items-center text-center">
+                    <h2 class="m-0 text-primary">{PROVEDORNOME}</h2>
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-item nav-link" href="./home">HOME</a>
+                        <a class="nav-item nav-link" href="./empresa">PROVEDOR</a>
+                        <a class="nav-item nav-link" href="./planos">PLANOS</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Suporte</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a class="dropdown-item" href="./suporte">Atendimento</a>
+                                <a class="dropdown-item" href="./fale">Fale Conosco</a>
+                                <a class="dropdown-item" href="./faq">Perguntas e Respostas</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">MAIS</a>
+                            <div id="PaginasPage" class="dropdown-menu rounded-0 m-0">
+                                <a class="dropdown-item" href="./noticias">Notícias</a>
+                                <a class="dropdown-item" href="./tecnologia">Tecnologia</a>
+                                <a class="dropdown-item" href="./cadastro">Faça Seu Cadastro</a>
+                                <a class="dropdown-item" href="./downloads">Download</a>
+                            </div>
+                        </div>
+                        <a class="nav-item nav-link" href="./cobertura">ÁREA DE COBERTURA</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="container-fluid header bg-white p-0">
+            <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+                <div class="col-md-6 p-5 mt-lg-5">
+                    <h1 class="display-5 animated fadeIn mb-4">Tecnologia do Provedor</h1>
+                    <nav aria-label="breadcrumb animated fadeIn">
+                        <ol class="breadcrumb text-uppercase">
+                            <li class="breadcrumb-item"><a href="./home">Home</a></li>
+                            <li class="breadcrumb-item text-body active" aria-current="page">Tecnologia do Provedor</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-md-6 animated fadeIn">
+                    <img class="img-fluid" src="layout/{HOTSITE_TEMPLATE}/img/header.jpg" alt="">
+                </div>
+            </div>
+        </div>
+          <div class="container-fluid bg-dark mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 30px;">
+            <div class="container">
+                <div class="row g-2">
+                    <div class="col-md-12">
+                        <div class="row g-5">
+                            <div class="col-md-6">
+                                <input class="form-control border-0 py-3 consulta" style="border-radius: 5px;" placeholder="Buscar" name=""  value="">
+                            </div>
+                            <div class="col-md-4">
+                                <select class="form-select border-0 py-3">
+                                    <option value="google" data-content="layout/{HOTSITE_TEMPLATE}/img/ico/google.png">Google</option>
+                                    <option value="yahoo">Yahoo</option>
+                                    <option value="big">Bing</option>
+                                    <option value="duckgo">DuckDuckGo</option>
+                                    <option value="ask">Ask</option>
+                                    <option value="you">You</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2 searchBtn">
+                                <button class="btn btn-primary border-0 w-100 py-3"><i class="bi bi-search"></i> Buscar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-xxl">
+            <div class="bg-light rounded p-3">
+                <div class="bg-white rounded p-4" style="border: 1px dashed rgb(14, 46, 80, .3)">
+                    <div class="container">
+                        <div class="row g-5 align-items-start">
+                            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                                <div class="about-img position-relative overflow-hidden p-5 pe-0">
+                                    <img class="img-fluid w-100" src="layout/{HOTSITE_TEMPLATE}/img/tecn.jpg" />
+                                </div>
+                            </div>
+                            <div class="col-md-6 p-3 mt-lg-5" data-wow-delay="0.5s">
+                                <span id="PaginaTecnologia" class="d-flex flex-column"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-4 col-md-6">
+                        <h5 class="text-white mb-4">ENTRE EM CONTATO</h5>
+                        <p id="ProvedorFone" class="mb-2 textF"><i class="bi bi-telephone me-3"></i>Telefone: </p>
+                        <p id="ProvedorCelular" class="mb-2 textF"><i class="bi bi-phone me-3"></i>Celular: </p>
+                        <p id="ProvedorEmail" class="mb-2 textF"><i class="bi bi-envelope me-3"></i>Email: </p>
+                        <div class="d-flex pt-2 redes-sociais">
+                            <a class="btn btn-outline-light btn-social" href="#" target="_blank" id="twitter"><i class="bi bi-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" target="_blank" id="facebook"><i class="bi bi-facebook"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" target="_blank" id="instagram"><i class="bi bi-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" target="_blank" id="whatsapp"><i class="bi bi-whatsapp"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" target="_blank" id="tiktok"><i class="bi bi-tiktok"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" target="_blank" id="linkedin"><i class="bi bi-linkedin"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" target="_blank" id="youtube"><i class="bi bi-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" target="_blank" id="telegram"><i class="bi bi-telegram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" target="_blank" id="skype"><i class="bi bi-skype"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#" target="_blank" id="kwai"><i class="bi bi-camera-reels-fill"></i></a>
+                        </div>
+                        <div class="pt-3 textF">
+                            <p id="ProvedorEndereco"></p>
+                        </div>
+                    </div>
+                    <div id="LinksProvedor" class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">LINKS RÁPIDOS</h5>
+                        <a class="btn btn-link textF" href="./home">Home</a>
+                        <a class="btn btn-link textF" href="./empresa">Quem somos</a>
+                        <a class="btn btn-link textF" href="./fale">Fale Conosco</a>
+                        <a class="btn btn-link textF" href="./planos">Planos</a>
+                        <a class="btn btn-link textF" href="./cadastro">Faça Seu Cadastro</a>
+                        <a class="btn btn-link textF" href="../speedtest/" target="_blank">Medidor de velocidade</a>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <form action="./newsletter" method="post" name="formr" target="mpg_popup">
+                            <h5 class="text-white mb-4">NEWSLETTER</h5>
+                            <p class="textF">Cadastre seu e-mail e receba promoções e novidades por e-mail.</p>
+                            <div id="cp_user" class="mb-2">
+                                <input class="form-control w-100 py-3 ps-4 pe-" name="nome_news" type="text" placeholder="Seu Nome">
+                            </div>
+                            <div id="cp_user" class="position-relative mx-auto">
+                                <input class="form-control w-100 py-3 ps-4 pe-5" name="email_news" type="text" placeholder="Seu Email">
+                                <input name="enviar_news" id="enviar_news" value="Enviar" alt="Enviar" type="submit" class="botao btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <span id="Ano"></span> <a class="border-bottom ProvedorNome" href="./home"></a>, Todos os direitos reservados <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <a target="_blank" href="https://www.gov.br/anatel/pt-br/">
+                                <img src="imagens/anatel.jpg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+    <div id="footerAnuncio"></div>
+    <div id="variavel">{ANUNCIO}</div>
+    <script src="layout/{HOTSITE_TEMPLATE}/js/jquery-3.4.1.min.js"></script>
+    <script src="layout/{HOTSITE_TEMPLATE}/js/bootstrap.bundle.min.js"></script>
+    <script src="layout/{HOTSITE_TEMPLATE}/css/lib/wow/wow.min.js"></script>
+    <script src="layout/{HOTSITE_TEMPLATE}/css/lib/easing/easing.min.js"></script>
+    <script src="layout/{HOTSITE_TEMPLATE}/css/lib/waypoints/waypoints.min.js"></script>
+    <script src="layout/{HOTSITE_TEMPLATE}/css/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="layout/{HOTSITE_TEMPLATE}/js/main.js"></script>
+    <script src="layout/{HOTSITE_TEMPLATE}/js/mk-auth.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            getToken();
+            setTimeout(linkPage, 500);
+            setTimeout(PaginasPage, 500);
+            setTimeout(EmpresaDados, 500);
+            setTimeout(EmpresaDadosPagina, 500);
+        });
+    </script>
+</body>
+<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+</html>

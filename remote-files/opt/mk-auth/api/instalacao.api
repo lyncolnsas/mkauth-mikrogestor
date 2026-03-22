@@ -1,0 +1,237 @@
+<?php
+
+#@@@ sis_solic
+#??? uuid_solic
+
+class instalacao {
+
+	private $dados = array();
+
+	public function carregarDados($valor) {
+
+		$comandoSQL = 'SELECT *
+		FROM sis_solic
+		WHERE id = :instalacao OR uuid_solic = :instalacao
+		LIMIT 1';
+		$rotinaSQL = DB::prepare($comandoSQL);
+		$rotinaSQL -> bindParam('instalacao', $valor);
+		$rotinaSQL -> execute();
+		$resultadosSQL = $rotinaSQL -> fetch(PDO::FETCH_ASSOC);
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+
+		if ($numeroDeLinhas > 0) {
+
+			$this->dados = $resultadosSQL;
+			
+		}
+
+	}
+
+	public function get_show($valor) {
+
+		$this->carregarDados($valor);
+
+		echo json_encode($this->dados);
+
+	}
+
+	public function get_listagem() {
+
+		// apenas para compatibilidade
+		$this->get_listar('listagem');
+		return;
+
+	}
+
+	public function get_listar($valor = null) {
+
+		$comandoSQL = 'SELECT *, uuid_solic AS uuid
+		FROM sis_solic';
+
+		$sql = new SQL($valor);
+		if ($valor == 'listagem') $sql->limite = 999999999;
+		$sql->comandoSQL = $comandoSQL;
+		$sql->tabela = 'sis_solic';
+		$sql->gerarSQL();
+
+		$comandoSQL = $sql->comandoSQL;
+		$rotinaSQL = DB::prepare($comandoSQL);
+
+		if (isset($sql->binds)) {
+
+			foreach ($sql->binds as $bind) {
+
+				$rotinaSQL -> bindParam("{$bind[0]}", $bind[1], $bind[2]);
+
+			}
+
+		}
+
+		$rotinaSQL -> execute();
+		$resultadosSQL = $rotinaSQL -> fetchAll();
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+
+		if ($numeroDeLinhas == 0) {
+			
+			echo json_encode(array('status' => 'erro', 'mensagem' => 'Registros nao encontrados'));
+			return;
+			
+		} 
+
+		if ($valor == 'listagem') {
+
+			echo json_encode(array('instalacoes' => $resultadosSQL));
+			return;
+
+		}
+
+		echo json_encode(array('total_registros' => $sql->total_registros,
+		'consulta_atual' => $numeroDeLinhas,
+		'pagina_atual' => $sql->pagina,
+		'total_paginas' => $sql->total_paginas,
+		'instalacoes' => $resultadosSQL));
+
+	}
+
+	public function get_fechar($key){
+
+		$comandoSQL = "UPDATE sis_solic
+		SET datainst = NOW(), visitado = 'sim', instalado = 'sim', concluido = 'xxx', status = 'concluido'
+		WHERE uuid_solic = :uuid";
+
+		$rotinaSQL = DB::prepare($comandoSQL);
+		$rotinaSQL -> bindParam(':uuid', $key);
+		$rotinaSQL -> execute();
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+
+		if ($numeroDeLinhas > 0) {
+			echo json_encode(array('status' => 'sucesso', 'mensagem' => 'Registro fechado com sucesso'));
+		} else {
+			echo json_encode(array('status' => 'erro', 'mensagem' => 'Registro não encontrado'));
+		}
+
+	}
+
+	public function post_inserir($data) {
+
+		$nome = $data -> nome;
+		$login = $data -> login;
+		$senha = $data -> senha;
+		$email = $data -> email;
+		$cpf = $data -> cpf;
+		$rg = $data -> rg;
+		$data_nasc = $data -> data_nasc;
+		$endereco = $data -> endereco;
+		$bairro = $data -> bairro;
+		$complemento = $data -> complemento;
+		$cidade = $data -> cidade;
+		$estado = $data -> estado;
+		$cep = $data -> cep;
+		$telefone = $data -> telefone;
+		$celular = $data -> celular;
+		$numero = $data -> numero;
+
+		$comandoSQL = "INSERT INTO sis_solic
+		(uuid_solic, nome, login, senha, email, cpf, rg, data_nasc, endereco, bairro, complemento, cidade, estado, cep, telefone, celular, numero, tipo, obs, tecnico, visita)
+		VALUES
+		(uuid(), :nome, :login, :senha, :email, :cpf, :rg, :data_nasc, :endereco, :bairro, :complemento, :cidade, :estado, :cep, :telefone, :celular, :numero, 'instalacao', 'API', 'nenhum', DATE_ADD(DATE(NOW()), INTERVAL 2 DAY))";
+
+		$rotinaSQL = DB::prepare($comandoSQL);
+		$rotinaSQL -> bindParam(':nome', $nome);
+		$rotinaSQL -> bindParam(':login', $login);
+		$rotinaSQL -> bindParam(':senha', $senha);
+		$rotinaSQL -> bindParam(':email', $email);
+		$rotinaSQL -> bindParam(':cpf', $cpf);
+		$rotinaSQL -> bindParam(':rg', $rg);
+		$rotinaSQL -> bindParam(':data_nasc', $data_nasc);
+		$rotinaSQL -> bindParam(':endereco', $endereco);
+		$rotinaSQL -> bindParam(':bairro', $bairro);
+		$rotinaSQL -> bindParam(':complemento', $complemento);
+		$rotinaSQL -> bindParam(':cidade', $cidade);
+		$rotinaSQL -> bindParam(':estado', $estado);
+		$rotinaSQL -> bindParam(':cep', $cep);
+		$rotinaSQL -> bindParam(':telefone', $telefone);
+		$rotinaSQL -> bindParam(':celular', $celular);
+		$rotinaSQL -> bindParam(':numero', $numero);
+		$rotinaSQL -> execute();
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+
+		echo json_encode(array('status' => 'sucesso', 'mensagem' => 'Registro inserido com sucesso', 'dados' => $data));
+
+	}
+
+	public function put_editar($data) {
+
+		$uuid = $data->uuid;
+
+		$this->carregarDados($uuid);
+
+		if (count($this->dados) == 0) {
+			
+			echo json_encode(array('status' => 'erro', 'mensagem' => 'Registro nao encontrado'));
+			return;
+
+		}
+
+		$colunas = array();
+
+		foreach ($data as $coluna => $valor) {
+			if (array_key_exists($coluna, $this->dados)) $colunas[$coluna] = $valor;
+		}
+
+		if (count($colunas) == 0) {
+			
+			echo json_encode(array('status' => 'erro', 'mensagem' => 'Nenhum campo valido para alteracao'));
+			return;
+
+		}
+
+		// montagem da query
+		$comandoSQL = "UPDATE sis_solic SET";
+
+		foreach ($colunas as $c => $v) {
+		
+			$comandoSQL .= " {$c} = :{$c},";
+
+		}
+
+		$comandoSQL = rtrim($comandoSQL, ',');
+
+		$comandoSQL .= " WHERE uuid_solic = :uuid";
+
+		$rotinaSQL = DB::prepare($comandoSQL);
+
+		foreach ($colunas as $c => $v) {
+
+			$rotinaSQL -> bindValue(":{$c}", $v);
+
+		}
+
+		$rotinaSQL -> bindParam('uuid', $uuid);
+		$rotinaSQL -> execute();
+
+		echo json_encode(array('status' => 'sucesso', 'mensagem' => 'Instalacao editada com sucesso', 'dados' => $data));
+
+	}
+
+	public function delete_id($key) {
+
+		$comandoSQL = 'DELETE FROM sis_solic
+		WHERE uuid_solic = :uuid';
+		$rotinaSQL = DB::prepare($comandoSQL);
+		$rotinaSQL -> bindParam('uuid', $key);
+		$rotinaSQL -> execute();
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+		
+		if ($numeroDeLinhas > 0) {
+
+			echo json_encode(array('status' => 'sucesso', 'mensagem' => 'Registro excluido com sucesso'));
+			return;
+
+		}
+		
+		echo json_encode(array('status' => 'erro', 'mensagem' => 'Registro nao encontrado'));
+
+	}
+
+}

@@ -1,0 +1,116 @@
+<?php
+
+class mensagem {
+
+	public function post_enviar_email($data) {
+
+		if (!isset($data -> login)) {
+
+			echo json_encode(array('status' => 'erro', 'mensagem' => 'Login do cliente invalido'));
+			return;
+
+		}
+
+		$login = $data -> login;
+
+		$assunto = (isset($data -> assunto)) ? $data -> assunto : '';
+		$mensagem = (isset($data -> mensagem)) ? $data -> mensagem : '';
+
+		$enviar = api_email($login, $assunto, $mensagem);
+
+		if ($enviar != false) {
+
+			echo json_encode(array('status' => 'sucesso', 'mensagem' => 'Email enviado com sucesso'));
+			return;
+
+		} else {
+
+			echo json_encode(array('status' => 'erro', 'mensagem' => 'Erro ao enviar email'));
+			return;
+
+		}
+
+	}
+
+	public function post_enviar_sms($data) {
+
+		if (!isset($data -> login)) {
+
+			echo json_encode(array('status' => 'erro', 'mensagem' => 'Login do cliente invalido'));
+			return;
+
+		}
+
+		$login = $data -> login;
+		$mensagem = (isset($data -> mensagem)) ? $data -> mensagem : '';
+
+		$enviar = api_sms($login, $mensagem);
+
+		if ($enviar != false) {
+
+			echo json_encode(array('status' => 'sucesso', 'mensagem' => 'SMS enviado com sucesso'));
+			return;
+
+		} else {
+
+			echo json_encode(array('status' => 'erro', 'mensagem' => 'Erro ao enviar SMS'));
+			return;
+
+		}
+
+	}
+
+	public function post_enviar_zap($data) {
+
+		if (!isset($data -> login)) {
+
+			echo json_encode(array('status' => 'erro', 'mensagem' => 'Login do cliente invalido'));
+			return;
+
+		}
+
+		$tipo = (isset($data -> tipo)) ? $data -> tipo : 1;
+
+		$login = $data -> login;
+		$mensagem = (isset($data -> mensagem)) ? $data -> mensagem : '';
+
+		if (isset($data -> img_base64)) $img_base64 = $data -> img_base64;
+		if (isset($data -> img_legenda)) $img_legenda = $data -> img_legenda;
+		if (isset($data -> pdf_base64)) $pdf_base64 = $data -> pdf_base64;
+		if (isset($data -> pdf_legenda)) $pdf_legenda -> pdf_legenda;
+		if (isset($data -> pdf_nome)) $pdf_nome = $data -> pdf_nome;
+
+		switch (true) {
+
+			case $tipo == 1:
+
+				$enviar = api_zap_texto($login, $mensagem);
+
+			break;
+
+			case $tipo == 2:
+
+				$enviar = api_zap_img($login, $img_base64, $img_legenda);
+
+			break;
+
+			case $tipo == 3:
+
+				$enviar = api_zap_pdf($login, $pdf_base64, $pdf_legenda, $pdf_nome);
+
+			break;
+
+		}
+
+		if ($enviar != false) {
+
+			echo json_encode(array('status' => 'sucesso', 'mensagem' => 'Zap enviado com sucesso'));
+			return;
+
+		}
+
+		echo json_encode(array('status' => 'erro', 'mensagem' => 'Erro ao enviar Zap'));
+
+	}
+
+}

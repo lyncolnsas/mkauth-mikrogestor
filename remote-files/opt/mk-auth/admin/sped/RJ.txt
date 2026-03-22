@@ -1,0 +1,27 @@
+0213|Operações próprias – Apuração (Débitos/Créditos) – Normal – ICMS|01012019|
+0345|Operações próprias – Apuração (Débitos/Créditos) – Comunicações – ICMS|01012019|
+0337|Operações próprias – Apuração (Débitos/Créditos) – Energia elétrica – ICMS|01012019|
+0361|Operações próprias – Apuração (Débitos/Créditos) – Transporte – ICMS|01012019|
+0329|Operações próprias – Apuração (Débitos/Créditos) – Petróleo – ICMS|01012019|
+0221|Regime de Estimativa – ICMS|01012019|
+0620|ICMS Consumidor Final não Contribuinte outra UF por Apuração (DARJ)|01012019|
+0639|ICMS Consumidor Final não Contribuinte outra UF por Operação (DARJ)|01012019|
+0604|ICMS Consumidor Final não Contribuinte outra UF por Apuração (GNRE)|01012019|
+0612|ICMS Consumidor Final não Contribuinte outra UF por Operação (GNRE)|01012019|
+0272|Diferencial de alíquota – ICMS|01012019|
+0248|Importação – ICMS|01012019|
+7544|Importação – FECP|01012019|
+0744|Fundo Estadual de Equilíbrio Fiscal – FEEF|01012019|
+0370|Outras (Fato gerador) – ICMS|01012019|
+0230|Substituição Tributária - ICMS|01012019|
+7501|Fundo Estadual de Combate à Pobreza - FECP|01012019|
+0710|Operações Próprias – ICMS Compensado – Normal – ICMS|01012019|
+0663|Operações Próprias – ICMS após Compensação – Normal – ICMS|01012019|
+0698|Operações Próprias – ICMS Compensado – Comunicações – ICMS|01012019|
+0647|Operações Próprias – ICMS após Compensação – Comunicações – ICMS|01012019|
+0701|Operações Próprias – ICMS Compensado – Energia Elétrica – ICMS|01012019|
+0655|Operações Próprias – ICMS após Compensação – Energia Elétrica – ICMS|01012019|
+0736|Operações Próprias – ICMS Compensado – Transportes – ICMS|01012019|
+0680|Operações Próprias – ICMS após Compensação – Transportes – ICMS|01012019|
+0728|Operações Próprias – ICMS Compensado – Petróleo e Derivados, Combustíveis e Lubrificantes – ICMS|01012019|
+0671|Operações Próprias – ICMS após Compensação – Petróleo e Derivados, Combustíveis e Lubrificantes – ICMS|01012019|

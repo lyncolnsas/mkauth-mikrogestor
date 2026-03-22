@@ -1,0 +1,165 @@
+<div style="page-break-after: always">
+<table width="666" border="1" cellspacing="0" cellpadding="0">
+<tr>
+<td><table width="99%" border="0" align="center" cellPadding="0" cellSpacing="0">
+<tr>
+<td height="20" colspan="2" align="middle">&nbsp;</td>
+</tr>
+<tr>
+<td width="1%" align="middle"><img src="{PROVEDORLOGO}" style="max-height:75px" hspace="5" vspace="5" /></td>
+<td align="middle"> {PROVEDORRAZAO}  <BR>
+CNPJ: {PROVEDORCNPJ} - IE: {PROVEDORIE} <BR>
+{PROVEDORENDERECO} - {PROVEDORBAIRRO} <br>
+{PROVEDORCIDADE} - {PROVEDORESTADO} - CEP: {PROVEDORCEP} </td>
+</tr>
+</table>
+
+<table width="99%" border="0" align="center" cellPadding="0" cellSpacing="0">
+<tr>
+<td height="20" align="center">&nbsp;</td>
+</tr>
+<tr>
+<td align="center"><h3>NOTA FISCAL DE SERVICO DE COMUNICACAO - MODELO {NOTA_MODELO}</h3></td>
+</tr>
+<tr>
+<td height="20" align="center">NUMERO: {NOTA_NUMERO} SERIE: {NOTA_SERIE} REF: {NOTA_REF} EMISSAO: {NOTA_EMISSAO} CFOP: {NOTA_CFOP} </td>
+</tr>
+</table>
+<br>
+
+<table width="99%" border="0" align="center" cellPadding="2" cellSpacing="2" id="Table3">
+<tr>
+<td width="70%" height="20" colspan="4" align="middle" bgcolor="#ffffcc"><span style="FONT-SIZE: 10pt"> DADOS DO CLIENTE </span> </td>
+</tr>
+<tr>
+<td>NOME: </td>
+<td><span> {CLIENTE_NOME} </span> </td>
+<td><span style="WIDTH: 50px; DISPLAY: inline-block">CPF/CNPJ: </span></td>
+<td width="110"><span> {CLIENTE_CPF} </span> </td>
+</tr>
+<tr>
+<td>ENDERE&#199;O: </td>
+<td><span> {CLIENTE_ENDERECO} </span> </td>
+<td><span style="WIDTH: 50px; DISPLAY: inline-block">COMPL: </span></td>
+<td width="110"><span> {CLIENTE_COMPLEMENTO} </span> </td>
+</tr>
+<tr>
+<td>BAIRRO: </td>
+<td width="320"><span> {CLIENTE_BAIRRO} </span> </td>
+<td><span style="WIDTH: 50px; DISPLAY: inline-block">CEP: </span></td>
+<td><span> {CLIENTE_CEP} </span> </td>
+</tr>
+<tr>
+<td>MUNIC&Iacute;PIO: </td>
+<td><span> {CLIENTE_CIDADE} </span> </td>
+<td>ESTADO: </td>
+<td> {CLIENTE_ESTADO} </td>
+</tr>
+<tr>
+<td>E-MAIL: </td>
+<td><span> {CLIENTE_EMAIL} </span> </td>
+<td>TELEFONE: </td>
+<td> {CLIENTE_TELEFONE} </td>
+</tr>
+</table>
+<br>
+
+<table width="99%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr bgcolor="#ffffcc">
+<td width="70%" height="20"><span style="FONT-SIZE: 10pt"> DESCRIÇAO </span></td>
+<td width="15%"><span style="FONT-SIZE: 10pt"> VALOR ICMS </span></td>
+<td width="15%"><span style="FONT-SIZE: 10pt"> VALOR (R$)</span></td>
+</tr>
+
+<!-- BEGIN BLOCK_ITENS -->
+<!-- BEGIN BLOCK_DADOSITENS -->
+<tr>
+<td>{ITEM_DESC}</td>
+<td align="right">{ITEM_ICMS}</td>
+<td align="right">{ITEM_VALOR}</td>
+</tr>
+<!-- END BLOCK_DADOSITENS -->
+<!-- END BLOCK_ITENS -->
+
+<tr>
+<td colspan="3" height="20"></td>
+</tr>
+<tr>
+<td colspan="3" height="20"></td>
+</tr>
+<tr>
+<td colspan="3" height="20"></td>
+</tr>
+<tr>
+<td colspan="3" height="20"></td>
+</tr>
+<tr>
+<td colspan="3" height="20"></td>
+</tr>
+<tr>
+<td colspan="3" height="20"></td>
+</tr>
+<tr>
+<td colspan="3" height="20"></td>
+</tr>
+<tr>
+<td colspan="3" height="20"></td>
+</tr>
+<tr>
+<td colspan="3" height="20"></td>
+</tr>
+<tr>
+<td colspan="3" height="20"></td>
+</tr>
+<tr>
+<td colspan="3" height="20"></td>
+</tr>
+<tr>
+<td colspan="3" height="20"></td>
+</tr>
+<tr>
+<td colspan="3" height="20"></td>
+</tr>
+<tr>
+<td colspan="3"> OBSERVACAO: {NOTA_OBS} </td>
+</tr>
+
+<tr>
+<td colspan="3"><small>VALOR APROXIMADO DE IMPOSTOS: {NOTA_VALOR_IBPT} / PERCENTUAL: {NOTA_PERC_IBPT} <br />
+VALOR MUNICIPAL DE IMPOSTOS: {NOTA_VALOR_IBPT_M} / PERCENTUAL: {NOTA_PERC_IBPT_M} <br />
+VALOR ESTATUAL DE IMPOSTOS: {NOTA_VALOR_IBPT_E} / PERCENTUAL: {NOTA_PERC_IBPT_E} <br />
+VALOR FEDERAL DE IMPOSTOS: {NOTA_VALOR_IBPT_F} / PERCENTUAL: {NOTA_PERC_IBPT_F} <br /><br />
+CONSUMIDO {DADOS_ATUAL} DE DADOS EM {MESANO_ATUAL}</small></td>
+</tr>
+</table>
+<br>
+
+<table width="99%" border="0" align="center" cellpadding="0" cellspacing="1">
+<tr>
+<td><strong> BASE DE CALCULO </strong></td>
+<td><strong> ALIQUOTA (%) </strong></td>
+<td><strong> VALOR ICMS </strong></td>
+<td><strong> ISENTAS/NT </strong></td>
+<td><strong> OUTRAS </strong></td>
+<td><strong> VALOR TOTAL </strong></td>
+</tr>
+<tr>
+<td> {NOTA_BASE} </td>
+<td> {NOTA_ALIQ} </td>
+<td> {NOTA_ICMS} </td>
+<td> {NOTA_ISENTAS} </td>
+<td> {NOTA_OUTROS} </td>
+<td> {NOTA_VTOTAL} </td>
+</tr>
+</table>
+<br>
+
+<table width="99%" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td> RESERVADO AO FISCO: {NOTA_CHAVE} </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>

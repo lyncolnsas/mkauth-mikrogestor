@@ -1,0 +1,7 @@
+1111|ICMS Normal Declaração|01052017|
+1411|ICMS Substituição Tributária Declaração|01052017|
+1416|ICMS Consumidor Final Não Contribuinte Outra UF por Apuração|01052017|
+1611|ICMS Diferencial de Alíquotas Declaração|01052017|
+1612|ICMS Antecipação Parcial Declaração|01052017|
+1613|ICMS Antecipação com Encerramento Declaração|01052017|
+1417|ICMS Substituição Tributária Interna Declaração|01052017|

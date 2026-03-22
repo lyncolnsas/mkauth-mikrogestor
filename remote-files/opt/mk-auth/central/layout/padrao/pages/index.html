@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<title>Central do assinante</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="./layout/{CENTRAL_TEMPLATE}/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="./layout/{CENTRAL_TEMPLATE}/css/vendor.css">
+<link rel="stylesheet" type="text/css" href="./layout/{CENTRAL_TEMPLATE}/css/bootstrap-icons.css">
+<link rel="stylesheet" type="text/css" href="./layout/{CENTRAL_TEMPLATE}/css/flat.css">
+<link rel="stylesheet" type="text/css" id="theme" href="./layout/{CENTRAL_TEMPLATE}/css/light_mode.css">
+</head>
+<body>
+<div class="app app-default">
+<aside class="app-sidebar" id="sidebar">
+	<div class="sidebar-header"> <span class="sidebar-brand"><span class="highlight">Central</span></span>
+		<button type="button" class="sidebar-toggle"> <i class="fa fa-times"></i></button>
+	</div>
+	<div class="sidebar-menu">
+		<ul class="sidebar-nav">
+			<li class="active"> <a href="./index.hhvm">
+				<div class="icon"> <i class="fa fa-tasks" aria-hidden="true"></i></div>
+				<div class="title">Inicio</div>
+				</a></li>
+			<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				<div class="icon"> <i class="fa fa-user" aria-hidden="true"></i></div>
+				<div class="title">Dados</div>
+				</a>
+				<div class="dropdown-menu">
+					<ul>
+						<li class="section"><i class="fa fa-user" aria-hidden="true"></i> Meus dados</li>
+						<li><a href="./atualizar_dados.hhvm"> Atualizar dados </a></li>
+						<!-- BEGIN BLOCK_MENUSENHA -->
+						<li><a href="./trocar_senha.hhvm"> Trocar senha </a></li>
+						<!-- END BLOCK_MENUSENHA -->
+						<li><a href="./foto.hhvm"> Trocar foto </a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				<div class="icon"> <i class="fa fa-money" aria-hidden="true"></i></div>
+				<div class="title">Financeiro</div>
+				</a>
+				<div class="dropdown-menu">
+					<ul>
+						<li class="section"><i class="fa fa-money" aria-hidden="true"></i> Financeiro</li>
+						<!-- BEGIN BLOCK_MENU2VIA -->
+						<li><a href="./2_via.hhvm"> 2&#176; via on-line </a></li>
+						<!-- END BLOCK_MENU2VIA -->
+						<li><a href="./servicos.hhvm"> Servi&ccedil;os contratados </a></li>
+						<li><a href="./faturas.hhvm"> Faturas geradas </a></li>
+						<li><a href="./comprovante.hhvm"> Enviar comprovante </a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				<div class="icon"> <i class="fa fa-globe" aria-hidden="true"></i></div>
+				<div class="title">Acesso</div>
+				</a>
+				<div class="dropdown-menu">
+					<ul>
+						<li class="section"><i class="fa fa-globe" aria-hidden="true"></i> Acesso a internet</li>
+						<li><a href="./relatorio.hhvm"> Relatorio de conex&otilde;es </a></li>
+						<!-- BEGIN BLOCK_MENUDISCO -->
+						<li><a href="./disco_virtual.hhvm"> Disco virtual </a></li>
+						<!-- END BLOCK_MENUDISCO -->
+					</ul>
+				</div>
+			</li>
+			<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				<div class="icon"> <i class="fa fa-envelope" aria-hidden="true"></i></div>
+				<div class="title">Suporte</div>
+				</a>
+				<div class="dropdown-menu">
+					<ul>
+						<li class="section"><i class="fa fa-envelope" aria-hidden="true"></i> Suporte tecnico</li>
+						<!-- BEGIN BLOCK_MENUCHAMADOS -->
+						<li><a href="./suporte.hhvm"> Chamados t&eacute;cnicos </a></li>
+						<!-- END BLOCK_MENUCHAMADOS -->
+						<li><a href="./downloads.hhvm"> Downloads </a></li>
+						<!-- BEGIN BLOCK_MENUFALE -->
+						<li><a href="./fale_conosco.hhvm"> Fale conosco </a></li>
+						<!-- END BLOCK_MENUFALE -->
+					</ul>
+				</div>
+			</li>
+			<li> <a href="./executar_central.hhvm?acao=sair">
+				<div class="icon"> <i class="fa fa-unlock" aria-hidden="true"></i></div>
+				<div class="title">Sair</div>
+				</a> </li>
+		</ul>
+	</div>
+</aside>
+<div class="app-container">
+	<nav class="navbar navbar-default" id="navbar">
+		<div class="container-fluid">
+			<div class="navbar-collapse collapse in">
+				<ul class="nav navbar-nav navbar-mobile">
+					<li>
+						<button type="button" class="sidebar-toggle"> <i class="fa fa-bars"></i></button>
+					</li>
+					<li class="logo">
+						<div class="navbar-brand"><img class="my-logo" src="../mkfiles/logo.jpg"></div>
+					</li>
+					<li>
+						<button type="button" class="navbar-toggle"> <img class="profile-img" src="../mkfiles/{CLIENTE_FOTO}"> </button>
+					</li>
+					<div class="tema mobile-tema">
+						<span class="btn btn-outline-light btn-social"><i class="iconT"></i></span>
+					</div>
+				</ul>
+				<ul class="nav navbar-nav navbar-left">
+					<li class="navbar-title"><img class="my-logo" src="../mkfiles/logo.jpg"></li>
+					<p><span class="provedor-nome"> {PROVEDOR_NOME} </span></p>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<div class="tema desktop-tema">
+						<span class="btn btn-outline-light btn-social"><i class="iconT"></i></span>
+					</div>
+					<li class="dropdown notification danger"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<div class="icon"><i class="fa fa-bell" aria-hidden="true"></i></div>
+						<div class="title"> Avisos </div>
+						<div class="count"> {TOTAL_AVISOS} </div>
+						</a>
+						<div class="dropdown-menu">
+							<ul>
+								<li class="dropdown-header">Avisos</li>
+								<!-- BEGIN BLOCK_DADOSAVISOS -->
+								<li><a href="{CLIENTE_AVISO_LINK}"> {CLIENTE_AVISO_MSG} </a></li>
+								<!-- END BLOCK_DADOSAVISOS -->
+							</ul>
+						</div>
+					</li>
+					<li class="dropdown profile"> <a href="./atualizar_dados.hhvm" class="dropdown-toggle"  data-toggle="dropdown"> <img class="profile-img" src="../mkfiles/{CLIENTE_FOTO}">
+						<div class="title"> Perfil </div>
+						</a>
+						<div class="dropdown-menu">
+							<div class="profile-info">
+								<h4 class="username"> {CLIENTE_NOME_RES} </h4>
+							</div>
+							<ul class="action">
+								<li><a href="./atualizar_dados.hhvm"> Dados </a></li>
+								<li><a href="./foto.hhvm"> Foto </a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="row">
+		<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"> <a href="./relatorio.hhvm" class="card card-banner card-yellow-light">
+			<div class="card-body"> <i class="icon fa fa-globe fa-4x"></i>
+				<div class="content">
+					<div class="title">Tr&Aacute;fego</div>
+					<div class="value"><span class="sign"></span>{TOTAL_TRAFEGO}</div>
+				</div>
+			</div>
+			</a> </div>
+		<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"> <a href="./2_via.hhvm" class="card card-banner card-green-light">
+			<div class="card-body"> <i class="icon fa fa-money fa-4x"></i>
+				<div class="content">
+					<div class="title">Titulos</div>
+					<div class="value"><span class="sign"></span>{TOTAL_TITULOS}</div>
+				</div>
+			</div>
+			</a> </div>
+		<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"> <a href="./suporte.hhvm" class="card card-banner card-blue-light">
+			<div class="card-body"> <i class="icon fa fa-envelope fa-4x"></i>
+				<div class="content">
+					<div class="title">Chamados</div>
+					<div class="value"><span class="sign"></span>{TOTAL_CHAMADOS}</div>
+				</div>
+			</div>
+			</a> </div>
+	</div>
+	<!-- BEGIN BLOCK_LIBERAR -->
+	<div class="row">
+		<div class="col-md-12">
+			<div class="alert alert-danger  alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+				<span class="icon fa fa-toggle-off" aria-hidden="true"></span> <strong>Acesso Bloqueado!</strong> Sua conex&atilde;o se encontrada bloqueada, <a href="./executar_central.hhvm?acao=desbloquear"> clique aqui </a> e receba mais alguns dias de prazo para pagamento. </div>
+		</div>
+	</div>
+	<!-- END BLOCK_LIBERAR -->
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="card card-mini">
+				<div class="card-header">
+					<div class="card-title"> &Uacute;ltimas faturas </div>
+				</div>
+				<div class="card-body no-padding table-responsive">
+					<table class="table card-table">
+						<thead>
+							<tr>
+								<th>Valor</th>
+								<th class="right">Vencimento</th>
+								<th>Status</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- BEGIN BLOCK_FATURAS -->
+							<!-- BEGIN BLOCK_DADOSFATURAS -->
+							<tr>
+								<td> R${FATURA_VALOR} </td>
+								<td class="right"> {FATURA_VENCIMENTO} </td>
+								<td> <a href="prepara_boleto.hhvm?titulo={FATURA_UUID}" target="_blank" onClick="window.open(this.href, this.target, 'width=800, height=500, scrollbars=yes'); return false;"><span class="badge badge-{FATURA_BADGE} badge-icon"><i class="fa fa-{FATURA_ICONE}" aria-hidden="true"></i><span> {FATURA_STATUS} </span></span></a>	</td>
+							</tr>
+							<!-- END BLOCK_DADOSFATURAS -->
+							<!-- END BLOCK_FATURAS -->
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="card card-mini">
+				<div class="card-header">
+					<div class="card-title"> &Uacute;ltimos acessos </div>
+				</div>
+				<div class="card-body no-padding table-responsive">
+					<table class="table card-table">
+						<thead>
+							<tr>
+								<th>DATA</th>
+								<th>Tempo</th>
+								<th class="ver_pc">TR&Aacute;FEGO</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- BEGIN BLOCK_REL -->
+							<!-- BEGIN BLOCK_DADOSREL -->
+							<tr>
+								<td> {REL_DATA} </td>
+								<td> {REL_DURACAO} </td>
+								<td class="ver_pc"> {REL_TRAFEGO} </td>
+							</tr>
+							<!-- END BLOCK_DADOSREL -->
+							<!-- END BLOCK_REL -->
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="card card-mini">
+				<div class="card-header">
+					<div class="card-title"> Avisos </div>
+				</div>
+				<div class="card-body no-padding table-responsive">
+					<div class="list-group __timeline">
+						<!-- BEGIN BLOCK_ZEROMYAVISOS -->
+						<a name="avisozero" class="list-group-item"> Nenhum aviso... </a>
+						<!-- END BLOCK_ZEROMYAVISOS -->
+						<!-- BEGIN BLOCK_MYAVISOS -->
+						<!-- BEGIN BLOCK_DADOSMYAVISOS -->
+						<a name="{MY_NAMEAVISO}" class="list-group-item"> {MY_AVISO} </a>
+						<!-- END BLOCK_DADOSMYAVISOS -->
+						<!-- END BLOCK_MYAVISOS -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="app-footer">
+		<div class="row">
+			<div class="col-xs-12 footer">
+				<div class="redes-sociais d-flex">
+					<a class="btn btn-outline-light btn-social" href="{INSTAGRAM}" target="_blank" id="instagram"><i class="bi bi-instagram"></i></a>
+					<a class="btn btn-outline-light btn-social" href="{WHATSAPP}" target="_blank" id="whatsapp"><i class="bi bi-whatsapp"></i></a>
+					<a class="btn btn-outline-light btn-social" href="{TIKTOK}" target="_blank" id="tiktok"><i class="bi bi-tiktok"></i></a>
+					<a class="btn btn-outline-light btn-social" href="{TWITTER}" target="_blank" id="twitter"><i class="bi bi-twitter"></i></a>
+					<a class="btn btn-outline-light btn-social" href="{FACEBOOK}" target="_blank" id="facebook"><i class="bi bi-facebook"></i></a>
+					<a class="btn btn-outline-light btn-social" href="{LINKEDIN}" target="_blank" id="linkedin"><i class="bi bi-linkedin"></i></a>
+					<a class="btn btn-outline-light btn-social" href="{YOUTUBE}" target="_blank" id="youtube"><i class="bi bi-youtube"></i></a>
+					<a class="btn btn-outline-light btn-social" href="{TELEGRAM}" target="_blank" id="telegram"><i class="bi bi-telegram"></i></a>
+					<a class="btn btn-outline-light btn-social" href="{SKYPE}" target="_blank" id="skype"><i class="bi bi-skype"></i></a>
+					<a class="btn btn-outline-light btn-social" href="{KWAI}" target="_blank" id="kwai"><i class="bi bi-camera-reels-fill"></i></a>
+				</div>	
+				<div class="footer-copyright"> Copyright &copy; {ANO_ATUAL} MK-AUTH </div>
+			</div>
+		</div>
+	</footer>
+</div>
+<script src="./layout/{CENTRAL_TEMPLATE}/js/jquery.js"></script>
+<script src="./layout/{CENTRAL_TEMPLATE}/js/bootstrap.js"></script>
+<script src="./layout/{CENTRAL_TEMPLATE}/js/vendor.js"></script>
+<script src="./layout/{CENTRAL_TEMPLATE}/js/app.js"></script>
+<script src="./layout/{CENTRAL_TEMPLATE}/js/mk-auth.js"></script>
+</body>
+</html>

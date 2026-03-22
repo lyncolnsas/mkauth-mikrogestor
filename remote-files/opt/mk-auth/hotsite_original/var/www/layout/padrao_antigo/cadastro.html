@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<title>{PROVEDORNOME}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="provedor de internet via radio, provedor de internet wireless, provedor web, sistema mk-auth" />
+<meta name="robots" content="ALL" />
+<meta name="distribution" content="Global" />
+<meta name="rating" content="General" />
+<meta name="language" content="pt-br" />
+
+<link rel="stylesheet" type="text/css" href="estilos/estilo.css" />
+<link rel="stylesheet" type="text/css" href="estilos/jgrowl.css" />
+<style type="text/css">
+body {
+background: URL('{IMAGEMFUNDO}') fixed no-repeat;
+background-color: #000000;
+}
+</style>
+<script src="scripts/hotsite.js"></script>
+<script src="scripts/jquery.js"></script>
+<script src="scripts/jgrowl.js"></script>
+<script>
+var retorno;
+var mpg_popup;
+window.name = "sistema";
+function fabrewin() {
+if(navigator.appName.indexOf("Netscape") != -1)
+   mpg_popup = window.open("", "mpg_popup","toolbar=0, location=0, directories=0, status=1, menubar=0, scrollbars=1, resizable=0, screenX=0, screenY=0, left=0, top=0, width=440, height=220");
+else
+   mpg_popup = window.open("", "mpg_popup","toolbar=0, location=0, directories=0, status=0, menubar=0, scrollbars=1, resizable=0, screenX=0, screenY=0, left=0, top=0, width=440, height=220");
+	window.location = '#';
+	return true;
+}
+</script>
+
+</head>
+<body>
+<table width="745" align="center" background="imagens/img_border_fundo.png" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><table width="727" align="center" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="45" colspan="2" background="imagens/img_top_site_m_2.jpg"><div id="menu_funcionalidades">
+              <div id="link1" onClick="javascript: link('empresa.hhvm');" title="PROVEDOR"></div>
+              <div id="link2" onClick="javascript: link('cobertura.hhvm');" title="ÁREA DE COBERTURA"></div>
+              <div id="link3" onClick="javascript: link('planos.hhvm');" title="PLANOS DE ACESSO"></div>
+              <div id="link4" onClick="javascript: link('tecnologia.hhvm');" title="TECNOLOGIA"></div>
+              <div id="link5" onClick="javascript: link('suporte.hhvm');" title="ATENDIMENTO"></div>
+            </div></td>
+        </tr>
+        <tr background="imagens/img_topo.jpg">
+			<td><img src="imagens/topo_hotsite.jpg" hspace="0" vspace="0" /></td>
+        </tr>
+        <tr>
+          <td height="31" colspan="2" valign="top" background="imagens/img_fund_sub_c.jpg" class="txt_cinza"><table width="100%" border="0" cellpadding="0" cellspacing="0" height="31">
+              <tr>
+                <td class="txt_cinza" style="padding-left: 10px;"> {MOSTRADATA} </td>
+                <td style="padding-right: 15px;" class="txt_cinza" align="right"> Telefone: {PROVEDORFONE} &nbsp;|&nbsp; E-mail: <span class="item" style="font-size: 9px;"> <a href="javascript: link('mailto:{PROVEDOREMAIL}')" title="Suporte Tecnico">{PROVEDOREMAIL}</a> </span> </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td height="545" colspan="2" valign="top" class="txt_cinza"><table border="0" cellpadding="0" cellspacing="0" height="650">
+              <tr>
+                <td height="8"></td>
+              </tr>
+              <tr>
+                <td style="padding-left: 8px;" valign="top" width="177"><div class="txt_cinza">
+                    <table width="165" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td height="20"><img src="imagens/img_top_menu_serv.jpg" width="165" height="20"></td>
+                      </tr>
+                    </table>
+                    <table bgcolor="#e3e2e2" border="0" cellpadding="0" cellspacing="1">
+                      <tr>
+                        <td valign="top"><table class="item" width="163" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="index.hhvm" title="Início">Home</a></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="empresa.hhvm" title="Nossa Empresa">Provedor</a></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <!-- BEGIN BLOCK_BATEPAPO -->
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="../chat/" title="Bate-papo" target="_blank" onClick="window.open(this.href, this.target, 'width=740,height=480,scrollbars=NO'); return false;"> Bate-Papo </a></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <!-- END BLOCK_BATEPAPO -->
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="noticias.hhvm" title="Notícias">Not&iacute;cias</a></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="tecnologia.hhvm" title="Tecnologia">Tecnologia</a></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="cobertura.hhvm" title="Área de Cobertura">&Aacute;rea de Cobertura</a></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="planos.hhvm" title="Planos de Acesso">Planos de Acesso</a></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="faq.hhvm" title="Planos Empresariais">Perguntas e Respostas</a></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="cadastro.hhvm" title="Faca Seu Cadastro">Fa&ccedil;a Seu Cadastro</a></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="downloads.hhvm" title="Atendimento">Downloads</a></td>
+                            </tr>
+                            <!-- BEGIN BLOCK_PAGINAS -->
+                            <!-- BEGIN BLOCK_DADOSPAGINAS -->
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="pagina.hhvm?id={PAGINAID}" title="{PAGINANOME}">{PAGINANOME}</a></td>
+                            </tr>
+                            <!-- END BLOCK_DADOSPAGINAS -->
+                            <!-- END BLOCK_PAGINAS -->
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="suporte.hhvm" title="Atendimento">Atendimento</a></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="fale.hhvm" title="Fale conosco">Fale Conosco</a></td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                    </table>
+                    <table width="165" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td height="15"></td>
+                      </tr>
+                      <tr>
+                        <td height="20"><img src="imagens/img_top_menu_news.jpg" title="Newsletter"></td>
+                      </tr>
+                    </table>
+                    <form action="newsletter.hhvm" method="post" name="formr" target="mpg_popup" onSubmit="javascript: fabrewin();">
+                      <table width="163" border="0" cellpadding="0" cellspacing="1" bgcolor="#e3e2e2">
+                        <tr>
+                          <td valign="top"><table width="163" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+                              <tr>
+                                <td style="padding-left: 10px;" valign="top"><table width="150" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                      <td height="10"></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="txt_cinza"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"> Cadastre seu e-mail e receba promo&ccedil;&otilde;es e novidades por e-mail.</font></td>
+                                    </tr>
+                                    <tr>
+                                      <td height="10"></td>
+                                    </tr>
+                                    <tr>
+                                      <td height="15" class="txt_cinza">Seu Nome:</td>
+                                    </tr>
+                                    <tr>
+                                      <td><div id="cp_user">
+                                          <input name="nome_news" style="width: 130px;" type="text">
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                      <td height="5"></td>
+                                    </tr>
+                                    <tr>
+                                      <td height="15" class="txt_cinza">E-mail:</td>
+                                    </tr>
+                                    <tr>
+                                      <td><div id="cp_user">
+                                          <input name="email_news" style="width: 130px;" type="text">
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                      <td height="15"></td>
+                                    </tr>
+                                    <tr>
+                                      <td style="padding-bottom: 2px;"><input name="enviar_news" id="enviar_news" value="Enviar" alt="Enviar" style="height: 20px; width: 80px;" type="submit" class="botao">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td height="15"></td>
+                                    </tr>
+                                  </table></td>
+                              </tr>
+                            </table></td>
+                        </tr>
+                      </table>
+                    </form>
+                  </div></td>
+                <td valign="top"><table width="540" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td><img src="imagens/img_cad_t.gif"></td>
+                    </tr>
+                    <tr>
+                      <td><img name="Imagem" src="imagens/img_cadastro.jpg" alt="" style="background-color: rgb(226, 226, 226);" width="535" height="85"></td>
+                    </tr>
+                    <tr>
+                      <td class="txt_cinza" valign="top" height="445"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td class="txt_pr" height="50"> Se voce deseja adquirir um dos nossos planos por favor preencha os campos abaixo com seus dados pessoais e depois clique em <b class="txt_form">CADASTRAR</b>. </td>
+                          </tr>
+                          <tr>
+                            <form action="executar.hhvm?acao=assinar" method="post" name="form" id="form" onSubmit="return verifica_form(this)">
+                              <td style="padding-top: 10px;" valign="top"><table border="0" cellpadding="2" cellspacing="2">
+                                  <tr>
+                                    <td class="txt_pr"><strong>Dia de vencimento:</strong></td>
+                                    <td><select name="venc" class="txt_form" id="venc" style="width: 120px;">
+                                        <!-- BEGIN BLOCK_DIA01 -->
+                                        <option value="01"> Todo dia 01 </option>
+                                        <!-- END BLOCK_DIA01 -->
+                                        <!-- BEGIN BLOCK_DIA02 -->
+                                        <option value="02"> Todo dia 02 </option>
+                                        <!-- END BLOCK_DIA02 -->
+                                        <!-- BEGIN BLOCK_DIA03 -->
+                                        <option value="03"> Todo dia 03 </option>
+                                        <!-- END BLOCK_DIA03 -->
+                                        <!-- BEGIN BLOCK_DIA04 -->
+                                        <option value="04"> Todo dia 04 </option>
+                                        <!-- END BLOCK_DIA04 -->
+                                        <!-- BEGIN BLOCK_DIA05 -->
+                                        <option value="05"> Todo dia 05 </option>
+                                        <!-- END BLOCK_DIA05 -->
+                                        <!-- BEGIN BLOCK_DIA06 -->
+                                        <option value="06"> Todo dia 06 </option>
+                                        <!-- END BLOCK_DIA06 -->
+                                        <!-- BEGIN BLOCK_DIA07 -->
+                                        <option value="07"> Todo dia 07 </option>
+                                        <!-- END BLOCK_DIA07 -->
+                                        <!-- BEGIN BLOCK_DIA08 -->
+                                        <option value="08"> Todo dia 08 </option>
+                                        <!-- END BLOCK_DIA08 -->
+                                        <!-- BEGIN BLOCK_DIA09 -->
+                                        <option value="09"> Todo dia 09 </option>
+                                        <!-- END BLOCK_DIA09 -->
+                                        <!-- BEGIN BLOCK_DIA10 -->
+                                        <option value="10"> Todo dia 10 </option>
+                                        <!-- END BLOCK_DIA10 -->
+                                        <!-- BEGIN BLOCK_DIA11 -->
+                                        <option value="11"> Todo dia 11 </option>
+                                        <!-- END BLOCK_DIA11 -->
+                                        <!-- BEGIN BLOCK_DIA12 -->
+                                        <option value="12"> Todo dia 12 </option>
+                                        <!-- END BLOCK_DIA12 -->
+                                        <!-- BEGIN BLOCK_DIA13 -->
+                                        <option value="13"> Todo dia 13 </option>
+                                        <!-- END BLOCK_DIA13 -->
+                                        <!-- BEGIN BLOCK_DIA14 -->
+                                        <option value="14"> Todo dia 14 </option>
+                                        <!-- END BLOCK_DIA14 -->
+                                        <!-- BEGIN BLOCK_DIA15 -->
+                                        <option value="15"> Todo dia 15 </option>
+                                        <!-- END BLOCK_DIA15 -->
+                                        <!-- BEGIN BLOCK_DIA16 -->
+                                        <option value="16"> Todo dia 16 </option>
+                                        <!-- END BLOCK_DIA16 -->
+                                        <!-- BEGIN BLOCK_DIA17 -->
+                                        <option value="17"> Todo dia 17 </option>
+                                        <!-- END BLOCK_DIA17 -->
+                                        <!-- BEGIN BLOCK_DIA18 -->
+                                        <option value="18"> Todo dia 18 </option>
+                                        <!-- END BLOCK_DIA18 -->
+                                        <!-- BEGIN BLOCK_DIA19 -->
+                                        <option value="19"> Todo dia 19 </option>
+                                        <!-- END BLOCK_DIA19 -->
+                                        <!-- BEGIN BLOCK_DIA20 -->
+                                        <option value="20"> Todo dia 20 </option>
+                                        <!-- END BLOCK_DIA20 -->
+                                        <!-- BEGIN BLOCK_DIA21 -->
+                                        <option value="21"> Todo dia 21 </option>
+                                        <!-- END BLOCK_DIA21 -->
+                                        <!-- BEGIN BLOCK_DIA22 -->
+                                        <option value="22"> Todo dia 22 </option>
+                                        <!-- END BLOCK_DIA22 -->
+                                        <!-- BEGIN BLOCK_DIA23 -->
+                                        <option value="23"> Todo dia 23 </option>
+                                        <!-- END BLOCK_DIA23 -->
+                                        <!-- BEGIN BLOCK_DIA24 -->
+                                        <option value="24"> Todo dia 24 </option>
+                                        <!-- END BLOCK_DIA24 -->
+                                        <!-- BEGIN BLOCK_DIA25 -->
+                                        <option value="25"> Todo dia 25 </option>
+                                        <!-- END BLOCK_DIA25 -->
+                                        <!-- BEGIN BLOCK_DIA26 -->
+                                        <option value="26"> Todo dia 26 </option>
+                                        <!-- END BLOCK_DIA26 -->
+                                        <!-- BEGIN BLOCK_DIA27 -->
+                                        <option value="27"> Todo dia 27 </option>
+                                        <!-- END BLOCK_DIA27 -->
+                                        <!-- BEGIN BLOCK_DIA28 -->
+                                        <option value="28"> Todo dia 28 </option>
+                                        <!-- END BLOCK_DIA28 -->
+                                        <!-- BEGIN BLOCK_DIA29 -->
+                                        <option value="29"> Todo dia 29 </option>
+                                        <!-- END BLOCK_DIA29 -->
+                                        <!-- BEGIN BLOCK_DIA30 -->
+                                        <option value="30"> Todo dia 30 </option>
+                                        <!-- END BLOCK_DIA30 -->
+                                        <!-- BEGIN BLOCK_DIA31 -->
+                                        <option value="31"> Todo dia 31 </option>
+                                        <!-- END BLOCK_DIA31 -->
+                                      </select>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2" height="5"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="txt_pr" width="150"><strong>Plano de Acesso</strong> </td>
+                                    <td><select name="plano" id="plano">
+                                        <!-- BEGIN BLOCK_PLANOS -->
+                                        <!-- BEGIN BLOCK_DADOSPLANOS -->
+                                        <option value="{PLANONOME}"> {PLANONOME}
+                                        <!-- BEGIN BLOCK_PRECO -->
+                                        - R$ {PLANOPRECO}
+                                        <!-- END BLOCK_PRECO -->
+                                        </option>
+                                        <!-- END BLOCK_DADOSPLANOS -->
+                                        <!-- END BLOCK_PLANOS -->
+                                      </select>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2" height="5"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="txt_pr" width="150"><strong>Login:</strong></td>
+                                    <td><input name="q" id="q" value="{V_LOGIN}" class="txt_form" onKeyUp="buscalogin(this.value)" maxlength="100" style="width: 300px;" df_verificar="sim">
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td width="150" height="20"></td>
+                                    <td height="20"><div id="msglogin" style="display:inline; font-size:9px"></div></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2" height="5"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="txt_pr" width="150"><strong>Senha:</strong></td>
+                                    <td><input name="senha" id="senha" class="txt_form" value="{V_SENHA}" maxlength="32" style="width: 300px;" type="password" df_verificar="sim"></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2" height="5"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="txt_pr" width="150">Nome Completo:</td>
+                                    <td><input name="nome" id="nome" class="txt_form" value="{V_NOME}" maxlength="100" style="width: 300px;" type="text" df_verificar="sim"></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2" height="5"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="txt_pr">Seu E-mail:</td>
+                                    <td><input name="email" id="email" value="{V_EMAIL}" class="txt_form" maxlength="100" style="width: 300px;" type="text" df_verificar="sim" df_validar="email"></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2" height="5"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="txt_pr">CPF/CNPJ:</td>
+                                    <td><input name="cpf_cnpj" id="cpf_cnpj" class="txt_form" value="{V_CPF_CNPJ}" maxlength="100" style="width: 150px;" type="text" df_verificar="sim" df_validar="cpf_cnpj" onKeyUp='this.value=this.value.replace(/[^\d]*/gi,"");'>
+                                      <span class="txt_cinza"> (somente n&uacute;meros)</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="5"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="txt_pr">RG:</td>
+                                    <td><input name="rg" id="rg" class="txt_form" maxlength="100" value="{V_RG}" style="width: 150px;" type="text" df_verificar="sim" onKeyUp='this.value=this.value.replace(/[^\d]*/gi,"");'>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td height="5"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="txt_pr">Data Nasc.:</td>
+                                    <td class="txt_form" valign="bottom"><input name="nascimento" id="cli_data_nasc" value="{V_DATA_NASC}" class="txt_form" maxlength="10" style="width: 100px;" type="text" df_verificar="sim" onKeyPress="return MaskData(this, event)">
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2" height="5"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="txt_pr">CEP :</td>
+                                    <td><input name="cep" type="text" value="{V_CEP}" id="cep" onKeyUp="buscacep(this.value)" maxlength="9" onKeyPress="return MaskCEP(this, event)" />
+                                      <div id="msg" style="display:inline"><small><i>xxxxx-xxx</i></small></div>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2" height="5"></td>
+                                  </tr>
+
+                                    <tr>
+                                      <td width="150" class="txt_pr">Endere&ccedil;o:</td>
+                                      <td width="347"><input name="endereco" id="endereco" value="{V_ENDERECO}" class="txt_form" maxlength="100" style="width: 300px;" type="text" df_verificar="sim">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="2" height="5"></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="txt_pr">Numero :</td>
+                                      <td><input name="numero" type="text" value="{V_NUMERO}" id="numero" maxlength="10" df_verificar="sim">
+                                    </tr>
+                                    <tr>
+                                      <td colspan="2" height="5"></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="txt_pr">Complemento:</td>
+                                      <td><input name="complemento" id="complemento" value="{V_COMPLEMENTO}" class="txt_form" maxlength="70" style="width: 170px;" type="text">
+                                        <span class="txt_cinza">(Ex.: Andar,  Bloco, etc...)</span> </td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="2" height="5"></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="txt_pr">Bairro:</td>
+                                      <td><input name="bairro" id="bairro" class="txt_form" value="{V_BAIRRO}" maxlength="100" style="width: 250px;" type="text" df_verificar="sim"></td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="2" height="5"></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="txt_pr">Cidade:</td>
+                                      <td><input name="cidade" id="cidade" class="txt_form" value="{V_CIDADE}" maxlength="100" style="width: 250px;" type="text" df_verificar="sim"></td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="2" height="5"></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="txt_pr">Estado:</td>
+                                      <td><select name="estado" size="1" id="estado">
+                                          <option value="AC">Acre</option>
+                                          <option value="AL">Alagoas</option>
+                                          <option value="AP">Amap&aacute;</option>
+                                          <option value="AM">Amazonas</option>
+                                          <option value="BA">Bahia</option>
+                                          <option value="CE">Cear&aacute;</option>
+                                          <option value="DF">Distrito Federal</option>
+                                          <option value="ES">Esp&iacute;rito Santo</option>
+                                          <option value="GO">Goias</option>
+                                          <option value="MA">Maranh&atilde;o</option>
+                                          <option value="MT">Mato Grosso</option>
+                                          <option value="MS">Mato Grosso do Sul</option>
+                                          <option value="MG">Minas Gerais</option>
+                                          <option value="PA">Par&aacute;</option>
+                                          <option value="PB">Para&iacute;ba</option>
+                                          <option value="PR">Paran&aacute;</option>
+                                          <option value="PE">Pernambuco</option>
+                                          <option value="PI">Piau&iacute;</option>
+                                          <option value="RJ" selected=selected>Rio de Janeiro</option>
+                                          <option value="RN">Rio Grande do Norte</option>
+                                          <option value="RS">Rio Grande do Sul</option>
+                                          <option value="RO">Rond&ocirc;nia</option>
+                                          <option value="RR">Roraima</option>
+                                          <option value="SC">Santa Catarina</option>
+                                          <option value="SP">S&atilde;o Paulo</option>
+                                          <option value="SE">Sergipe</option>
+                                          <option value="TO">Tocantins</option>
+                                        </select>
+                                      </td>
+                                    </tr>
+                                  <tr>
+                                    <td colspan="2" height="5"></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="150" class="txt_pr">Telefone :</td>
+                                    <td><input name="telefone" id="telefone" class="txt_form" value="{V_TELEFONE}" maxlength="20" style="width: 120px;" type="text" onKeyPress="return MaskTelefone(this, event)">
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2" height="5"></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="150" class="txt_pr">Celular :</td>
+									<td>
+									<!-- BEGIN BLOCK_SMSVALIDAR -->
+									<input name="celular" id="celular" class="txt_form" value="{V_CELULAR}" maxlength="20" style="width: 120px;" type="text" onKeyUp="enviacodigo(this.value)" onKeyPress="return MaskCelular(this, event)" df_verificar="sim">
+									<!-- END BLOCK_SMSVALIDAR -->
+									<!-- BEGIN BLOCK_NSMSVALIDAR -->
+									<input name="celular" id="celular" value="{V_CELULAR}" class="txt_form" maxlength="20" style="width: 120px;" type="text" df_verificar="sim" onKeyPress="return MaskCelular(this, event)">
+									<input name="codigo" type="hidden" id="codigo" value="{TOKEN}">
+									<!-- END BLOCK_NSMSVALIDAR -->
+									<input name="token" type="hidden" id="token" value="{CRIPTOTOKEN}">
+									<input name="captchax" type="hidden" id="captchax" value="{CAPTCHA}">
+									<input name="coordenadas" type="hidden" id="coordenadas" value="">
+									</td>
+                                  </tr>
+                                  <!-- BEGIN BLOCK_SMSVALIDAR2 -->
+                                  <tr>
+                                    <td colspan="2" height="5"></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="150" class="txt_pr">C&oacute;digo de confirma&ccedil;&atilde;o: </td>
+                                    <td><input name="codigo" id="codigo" class="txt_form" maxlength="20" style="width: 120px;" type="text" df_verificar="sim">
+                                    </td>
+                                  </tr>
+                                  <!-- END BLOCK_SMSVALIDAR2 -->
+                                  <tr>
+                                    <td colspan="2" height="5"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="txt_pr">C&oacute;digo promocional:</td>
+                                    <td><input name="promocod" id="promocod" class="txt_form" value="{V_PROMOCOD}" maxlength="50" style="width: 120px;" type="text">
+                                      <span class="txt_cinza">(Caso tenha um C&oacute;digo...)</span> </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2" height="5"></td>
+                                  </tr>
+                                  <!-- BEGIN BLOCK_CAPTCHA -->
+                                  <tr>
+                                    <td width="150" class="txt_pr"></td>
+                                    <td><img src="img_gera.hhvm"></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2" height="5"></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="150" class="txt_pr">Caracteres acima: </td>
+                                    <td><input name="captchay" id="captchay" class="txt_form" maxlength="6" style="width: 120px;" type="text" df_verificar="sim">
+                                    </td>
+                                  </tr>
+                                  <!-- END BLOCK_CAPTCHA -->
+                                  <tr>
+                                    <td colspan="2" height="5"></td>
+                                  </tr>
+                                  <!-- BEGIN BLOCK_CONTRATONAO -->
+                                  <tr>
+                                    <td class="txt_pr"></td>
+                                    <td class="txt_pr"><input type="checkbox" name="aceitou" id="aceitou" value="sim">
+                                      declaro que aceito o contrato do provedor. </td>
+                                  </tr>
+                                  <!-- END BLOCK_CONTRATONAO -->
+                                  <!-- BEGIN BLOCK_CONTRATOSIM -->
+                                  <tr>
+                                    <td class="txt_pr"></td>
+                                    <td class="txt_pr"><input type="checkbox" name="aceitou" id="aceitou" value="sim">
+                                      declaro que li e aceito o <strong><a href="contrato.hhvm" target="_blank" onClick="window.open(this.href, this.target, 'width=740,height=420,scrollbars=yes'); return false;">contrato</a></strong> do provedor. </td>
+                                  </tr>
+                                  <!-- END BLOCK_CONTRATOSIM -->
+                                  <tr>
+                                    <td colspan="2" height="5"></td>
+                                  </tr>
+                                  <tr>
+                                    <td></td>
+                                    <td style="padding-bottom: 2px;"><input name="enviar" class="botao" id="enviar" value="Enviar" alt="Enviar" style="width: 80px; height: 21px;" type="submit">
+                                      <input name="limpar" class="botao" alt="Limpar" id="limpar" value="Limpar" style="width: 80px; height: 21px;" type="reset">
+									  {CSRF}
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2" height="10"></td>
+                                  </tr>
+                                </table></td>
+                            </form>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                      <td height="20">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td height="20">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td height="20">&nbsp;</td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" height="28" colspan="2"><table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td nowrap><!-- BEGIN BLOCK_ANATEL -->
+                  <img src="imagens/anatel.jpg" hspace="5" vspace="5" align="right">
+                <!-- END BLOCK_ANATEL --></td>
+              </tr>
+              <tr>
+                <td height="19" align="right" background="imagens/img_fundo_rodape.jpg" bgcolor="#006699" class="txt_rodape">&copy; {ANOATUAL} - Todos os direitos reservados - <span class="item3" style="font-size: 9px;"> <a href="secure.hhvm" target="_blank" onClick="window.open(this.href, this.target, 'width=380,height=340,scrollbars=yes'); return false;">site seguro</a></span> &nbsp;</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td height="5" colspan="2"></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<script>
+// procura cep do cliente
+function buscacep(cep){
+if(cep.length == 9){
+$.ajax(
+{
+type: "GET",
+url: "busca_cep.hhvm",
+data: "cep=" + cep,
+contentType: "application/json; charset=utf-8",
+dataType: "json",
+
+success: function(txt) {
+if (txt!='ERRO'){
+	// altera os campos
+	$('#endereco').val(txt['endereco']);
+	$('#bairro').val(txt['bairro']);
+	$('#complemento').val(txt['complemento']);
+	$('#cidade').val(txt['cidade']);
+	$('#estado option[value="' + txt['estado'] + '"]').attr({ selected : "selected" });
+}else{
+	// se nao encontrar o cep, insiro esta pequena mensagem
+	$.jGrowl("cep nao encontrado");
+}	
+},
+
+error: function(txt) {
+	// em caso de erro você pode dar um alert
+	$.jGrowl("Desculpe, houve um problema interno");
+}
+}
+);
+}
+}
+
+function buscalogin(login){
+if(login.length > 3){
+//alert('Busca login');	
+$.ajax(
+{
+type: "GET",
+url: "busca.hhvm",
+data: "login=" + login + "&acao=login",
+beforeSend: function() {
+$('#msglogin').html('PROCESSANDO...');
+},
+success: function(txt) {
+if (txt!='ERRO'){
+$('#msglogin').html('LOGIN INDISPONIVEL');
+}else{
+$('#msglogin').html('LOGIN DISPONIVEL');
+}
+},
+error: function(txt) {
+alert('Houve um problema interno. tente novamente mais tarde.');
+}
+}
+);
+}
+}
+
+function enviacodigo(celular){
+if(celular.length >= 10){
+// envia codigo para o celular do cliente
+$.ajax(
+{
+type: "GET",
+url: "validarsms.hhvm",
+data: "celular=" + celular + "&codigo={CRIPTOTOKEN}",
+success: function(txt) {
+if (txt=='ENVIADO'){
+	alert('Codigo enviado para o seu celular.');
+}	
+},
+error: function(txt) {
+	alert('Houve um problema interno. tente novamente mais tarde.');
+}
+}
+);
+}
+}
+
+navigator.geolocation.getCurrentPosition(function(posicao) {
+	$('#coordenadas').val(posicao.coords.latitude + ',' + posicao.coords.longitude);
+});
+</script>
+
+</body>
+</html>

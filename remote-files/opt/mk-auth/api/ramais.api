@@ -1,0 +1,230 @@
+<?php
+
+#@@@ nas
+#??? uuid_nas
+
+class ramais {
+
+	private $dados = array();
+
+	public function carregarDados($valor) {
+
+		$comandoSQL = 'SELECT *
+		FROM nas 
+		WHERE shortname = :valor OR id = :valor OR uuid_nas = :valor
+		LIMIT 1';
+		$rotinaSQL = DB::prepare($comandoSQL);
+		$rotinaSQL -> bindParam('valor', $valor);
+		$rotinaSQL -> execute();
+		$resultadosSQL = $rotinaSQL -> fetch(PDO::FETCH_ASSOC);
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+
+		if ($numeroDeLinhas > 0) {
+
+			$this->dados = $resultadosSQL;
+			
+		}
+
+	}
+
+	public function get_show($valor) {
+
+		$this->carregarDados($valor);
+
+		echo json_encode($this->dados);
+
+	}
+
+	public function get_listagem() {
+
+		// apenas para compatibilidade
+		$this->get_listar('listagem');
+		return;
+
+	}
+
+	public function get_listar($valor = null) {
+
+		$comandoSQL = 'SELECT *
+		FROM nas';
+
+		$sql = new SQL($valor);
+		if ($valor == 'listagem') $sql->limite = 999999999;
+		$sql->comandoSQL = $comandoSQL;
+		$sql->tabela = 'nas';
+		$sql->gerarSQL();
+
+		$comandoSQL = $sql->comandoSQL;
+		$rotinaSQL = DB::prepare($comandoSQL);
+
+		if (isset($sql->binds)) {
+
+			foreach ($sql->binds as $bind) {
+
+				$rotinaSQL -> bindParam("{$bind[0]}", $bind[1], $bind[2]);
+
+			}
+
+		}
+
+		$rotinaSQL -> execute();
+		$resultadosSQL = $rotinaSQL -> fetchAll();
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+
+		if ($numeroDeLinhas == 0) {
+			
+			echo json_encode(array('status' => 'erro', 'mensagem' => 'Registros nao encontrados'));
+			return;
+			
+		} 
+
+		if ($valor == 'listagem') {
+
+			echo json_encode(array('ramais' => $resultadosSQL));
+			return;
+
+		}
+
+		echo json_encode(array('total_registros' => $sql->total_registros,
+		'consulta_atual' => $numeroDeLinhas,
+		'pagina_atual' => $sql->pagina,
+		'total_paginas' => $sql->total_paginas,
+		'ramais' => $resultadosSQL));
+
+	}
+
+	public function post_inserir($data) {
+
+		$nome = $data->nome;
+		$ip = $data->ip;
+		$tipo = $data->tipo;
+		$senha = $data->senha;
+		$cliente = $data->cliente;
+		$mega = $data->mega;
+		$ip_fallback = $data->ip_fallback;
+		$secret = $data->secret;
+		$community = $data->community;
+		$id_placa = $data->id_placa;
+		$ssh_ativo = $data->ssh_ativo;
+		$ssh_porta = $data->ssh_porta;
+		$ftp_ativo = $data->ftp_ativo;
+		$cep = $data->cep;
+		$endereco = $data->endereco;
+		$numero = $data->numero;
+		$bairro = $data->bairro;
+		$complemento = $data->complemento;
+		$cidade = $data->cidade;
+		$estado = $data->estado;
+		$codigo_ibge = $data->codigo_ibge;
+		$coordenadas = $data->coordenadas;
+
+		$comandoSQL = "INSERT INTO nas
+		(nasname, shortname, type, secret, community, tipo, maxclientes, sshativo, portassh, senha, ftpativo, idplaca, mb_instalados, ipfall, cep, endereco, numero, bairro, complemento, cidade, estado, cidade_ibge, coordenadas)
+		VALUES
+		(:nasname, :shortname, 'other', :secret, :community, :tipo, :maxclientes, :sshativo, :portassh, :senha, :ftpativo, :idplaca, :mb_instalados, :ipfall, :cep, :endereco, :numero, :bairro, :complemento, :cidade, :estado, :cidade_ibge, :coordenadas)";
+
+		$rotinaSQL = DB::prepare($comandoSQL);
+		$rotinaSQL -> bindParam('nasname', $ip);
+		$rotinaSQL -> bindParam('shortname', $nome);
+		$rotinaSQL -> bindParam('secret', $secret);
+		$rotinaSQL -> bindParam('community', $community);
+		$rotinaSQL -> bindParam('tipo', $tipo);
+		$rotinaSQL -> bindParam('maxclientes', $cliente);
+		$rotinaSQL -> bindParam('sshativo', $ssh_ativo);
+		$rotinaSQL -> bindParam('portassh', $ssh_porta);
+		$rotinaSQL -> bindParam('senha', $senha);
+		$rotinaSQL -> bindParam('ftpativo', $ftp_ativo);
+		$rotinaSQL -> bindParam('idplaca', $id_placa);
+		$rotinaSQL -> bindParam('mb_instalados', $mega);
+		$rotinaSQL -> bindParam('ipfall', $ip_fallback);
+		$rotinaSQL -> bindParam('cep', $cep);
+		$rotinaSQL -> bindParam('endereco', $endereco);
+		$rotinaSQL -> bindParam('numero', $numero);
+		$rotinaSQL -> bindParam('bairro', $bairro);
+		$rotinaSQL -> bindParam('complemento', $complemento);
+		$rotinaSQL -> bindParam('cidade', $cidade);
+		$rotinaSQL -> bindParam('estado', $estado);
+		$rotinaSQL -> bindParam('cidade_ibge', $codigo_ibge);
+		$rotinaSQL -> bindParam('coordenadas', $coordenadas);
+		$rotinaSQL -> execute();
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+
+		echo json_encode(array('status' => 'sucesso', 'mensagem' => 'Registro inserido com sucesso', 'dados' => $data));
+
+	}
+
+	public function put_editar($data) {
+
+		$uuid = $data->uuid;
+
+		$this->carregarDados($uuid);
+
+		if (count($this->dados) == 0) {
+			
+			echo json_encode(array('status' => 'erro', 'mensagem' => 'Registro nao encontrado'));
+			return;
+
+		}
+
+		$colunas = array();
+
+		foreach ($data as $coluna => $valor) {
+			if (array_key_exists($coluna, $this->dados)) $colunas[$coluna] = $valor;
+		}
+
+		if (count($colunas) == 0) {
+			
+			echo json_encode(array('status' => 'erro', 'mensagem' => 'Nenhum campo valido para alteracao'));
+			return;
+
+		}
+
+		// montagem da query
+		$comandoSQL = "UPDATE nas SET";
+
+		foreach ($colunas as $c => $v) {
+		
+			$comandoSQL .= " {$c} = :{$c},";
+
+		}
+
+		$comandoSQL = rtrim($comandoSQL, ',');
+
+		$comandoSQL .= " WHERE uuid_nas = :uuid";
+
+		$rotinaSQL = DB::prepare($comandoSQL);
+
+		foreach ($colunas as $c => $v) {
+
+			$rotinaSQL -> bindValue(":{$c}", $v);
+
+		}
+
+		$rotinaSQL -> bindParam('uuid', $uuid);
+		$rotinaSQL -> execute();
+
+		echo json_encode(array('status' => 'sucesso', 'mensagem' => 'Ramal editado com sucesso', 'dados' => $data));
+
+	}
+
+	public function delete_id($key) {
+
+		$comandoSQL = 'DELETE FROM nas
+		WHERE id = :id';
+		$rotinaSQL = DB::prepare($comandoSQL);
+		$rotinaSQL -> bindParam('id', $key);
+		$rotinaSQL -> execute();
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+		
+		if ($numeroDeLinhas > 0) {
+
+			echo json_encode(array('status' => 'sucesso', 'mensagem' => 'Registro excluido com sucesso'));
+			return;
+
+		}
+		
+		echo json_encode(array('status' => 'erro', 'mensagem' => 'Registro nao encontrado'));
+
+	}
+
+}

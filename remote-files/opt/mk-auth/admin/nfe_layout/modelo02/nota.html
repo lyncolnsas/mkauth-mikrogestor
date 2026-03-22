@@ -1,0 +1,72 @@
+<div style="page-break-after: always" class="container">
+    <img src="{PROVEDORLOGO}" class="logo" style="max-height:75px">
+    <div class="provedorDados">
+        <h3>{PROVEDORNOME}</h3>
+        <p>{PROVEDORRAZAO} <br>
+            CNPJ: {PROVEDORCNPJ} - IE: {PROVEDORIE} <br>
+            ENDERE&Ccedil;O: {PROVEDORENDERECO} <br>
+            BAIRRO: {PROVEDORBAIRRO} <br>
+            CEP: {PROVEDORCEP} <br>
+            CIDADE: {PROVEDORCIDADE} <br>
+            ESTADO: {PROVEDORESTADO}</p>
+    </div>
+    <div class="fatura">
+        <p class="NFe">NOTA FISCAL DE SERVICO DE COMUNICACAO - MODELO {NOTA_MODELO}</p>
+    </div>
+
+    <div class="Nn">
+        <p>Nota fiscal N&deg; {NOTA_NUMERO} - Serie: {NOTA_SERIE}</p>
+        <p>Refer&ecirc;ncia: {NOTA_REF}</p>
+        <p>Emiss&atilde;o: {NOTA_EMISSAO}</p>
+        <p>CFOP: {NOTA_CFOP}</p>
+    </div>
+
+    <div class="clienteDados">
+        <h3>DESTINAT&Aacute;RIO</h3>
+        <p>NOME: {CLIENTE_NOME} <br>
+            CPF/CNPJ: {CLIENTE_CPF} <br>
+            ENDERE&Ccedil;O: {CLIENTE_ENDERECO} <br>
+            BAIRRO: {CLIENTE_BAIRRO} <br>
+            CIDADE: {CLIENTE_CIDADE} - CEP: {CLIENTE_CEP} - ESTADO: {CLIENTE_ESTADO}<br>
+            E-MAIL: {CLIENTE_EMAIL} <br>
+            TELEFONE: {CLIENTE_TELEFONE}</p>
+    </div>
+
+    <div class="itens">
+        <div class="itens_dados">
+            <!-- BEGIN BLOCK_ITENS -->
+            <!-- BEGIN BLOCK_DADOSITENS -->
+            <span class="item_dec"> {ITEM_DESC} </span>
+            <span class="item_icms"> {ITEM_ICMS} </span>
+            <span class="item_valor"> {ITEM_VALOR} </span>
+            <!-- END BLOCK_DADOSITENS -->
+            <!-- END BLOCK_ITENS -->
+        </div>
+        <span class="NF_total">{NOTA_VTOTAL}</span>
+
+    </div>
+    <div class="NF_obs">
+        <p class="obs">OBSERVACAO: {NOTA_OBS}</p>
+
+        <p class="itemTotal1">VALOR APROXIMADO DE IMPOSTOS: {NOTA_VALOR_IBPT} / PERCENTUAL: {NOTA_PERC_IBPT} <br>
+            VALOR MUNICIPAL DE IMPOSTOS: {NOTA_VALOR_IBPT_M} / PERCENTUAL: {NOTA_PERC_IBPT_M} <br>
+            VALOR ESTATUAL DE IMPOSTOS: {NOTA_VALOR_IBPT_E} / PERCENTUAL: {NOTA_PERC_IBPT_E} <br>
+            VALOR FEDERAL DE IMPOSTOS: {NOTA_VALOR_IBPT_F} / PERCENTUAL: {NOTA_PERC_IBPT_F} <br>
+            CONSUMIDO {DADOS_ATUAL} DE DADOS EM {MESANO_ATUAL}</p>
+
+    </div>
+
+    <div class="itemBase">
+
+        <p class="NFe_calculo">{NOTA_BASE}</p>
+        <p class="NFe_aliquota">{NOTA_ALIQ}</p>
+        <p class="NFe_valor">{NOTA_ICMS}</p>
+        <p class="NFe_isentas">{NOTA_ISENTAS}</p>
+        <p class="NFe_outras">{NOTA_OUTROS}</p>
+
+    </div>
+
+    <div>
+        <p class="reservado">RESERVADO AO FISCO: {NOTA_CHAVE}</p>
+    </div>
+</div>

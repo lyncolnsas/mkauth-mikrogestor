@@ -1,0 +1,22 @@
+# MK-Auth Mikrogestor GitIgnore
+
+# Cache and temporary files
+.cache/
+.tmp/
+tmp/
+*.log
+*.tmp
+*.temp
+
+# Large backups (Redundant as remote-files is already in repo)
+backups/
+remote-files/**/backup/*.gz
+remote-files/**/log/*.log
+
+# Project specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Docker
+.docker/

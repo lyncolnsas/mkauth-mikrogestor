@@ -1,0 +1,182 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Nota Fiscal</title>
+<script>
+function printPage() {
+	print(document); 
+}
+// -->
+</script>
+
+<style type="text/css">
+
+@charset "charset=ISO-8859-1";
+
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td { 
+margin:0; 
+padding:0; 
+}
+
+img,body,html { 
+border:0; 
+}
+
+body,td,p { 
+font-family:Verdana,Arial,Helvetica;
+font-size:10px;
+}
+
+a {
+text-decoration:none;
+color:#000000;
+}
+
+a:hover {
+text-decoration:underline;
+color:#000000;
+}
+
+a:visited {
+text-decoration:none;
+}
+
+strong,b {
+font-weight:bold;
+}
+
+.textoazul	{
+font-size:14px;
+font-family:Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;
+text-decoration:none;line-height:120%;
+}
+
+body {
+margin-left: 5px;
+margin-top: 5px;
+margin-right: 5px;
+margin-bottom: 5px;
+}
+
+.container {
+	background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzk0IiBoZWlnaHQ9IjExMjMiIHZpZXdCb3g9IjAgMCA3OTQgMTEyMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9Ijc5NCIgaGVpZ2h0PSIxMTIzIiBmaWxsPSIjMUUxRTFFIi8+CjxyZWN0IHdpZHRoPSI3OTQiIGhlaWdodD0iMTEyMyIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTc4MCA2MS4wOTg5TDc4MC41IDE2LjM4NjVINTY1LjIxN0gxM00xMyAxMjcuNVYxNTguOTZWMjAyLjgyOUwxMy41NzU4IDM4MC41TTEzIDEyNy41VjE2LjM4NjVNMTMgMTI3LjVMMTMuMjg3OSA5NC4yOTk0TTEzIDE2LjM4NjVMMTMuNTc1OCA2MS4wOTg5TDEzLjI4NzkgOTQuMjk5NE03NzkuNSA2MTAuNVY2NjUuNUgxMy41NzU4VjM4MC41TTEzLjU3NTggMzgwLjVINzgwVjQyMy4wMTZNMTMuMjg3OSA5NC4yOTk0SDc4MCIgc3Ryb2tlPSJibGFjayIvPgo8cGF0aCBkPSJNNzgwIDYxMVYxNiIgc3Ryb2tlPSJibGFjayIvPgo8cGF0aCBkPSJNMTYgMzQ4SDc4MC41IiBzdHJva2U9ImJsYWNrIi8+Cjx0ZXh0IGZpbGw9ImJsYWNrIiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0id2hpdGUtc3BhY2U6IHByZSIgZm9udC1mYW1pbHk9IkludGVyIiBmb250LXNpemU9IjgiIGZvbnQtd2VpZ2h0PSI2MDAiIGxldHRlci1zcGFjaW5nPSIwZW0iPjx0c3BhbiB4PSI3MjciIHk9IjM2Ny45MDkiPlZBTE9SIChSJCk8L3RzcGFuPjwvdGV4dD4KPHRleHQgZmlsbD0iYmxhY2siIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJ3aGl0ZS1zcGFjZTogcHJlIiBmb250LWZhbWlseT0iSW50ZXIiIGZvbnQtc2l6ZT0iOCIgZm9udC13ZWlnaHQ9IjYwMCIgbGV0dGVyLXNwYWNpbmc9IjBlbSI+PHRzcGFuIHg9IjY0NSIgeT0iMzY3LjkwOSI+VkFMT1IgSUNNUzwvdHNwYW4+PC90ZXh0Pgo8dGV4dCBmaWxsPSJibGFjayIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9IndoaXRlLXNwYWNlOiBwcmUiIGZvbnQtZmFtaWx5PSJJbnRlciIgZm9udC1zaXplPSI4IiBmb250LXdlaWdodD0iNjAwIiBsZXR0ZXItc3BhY2luZz0iMGVtIj48dHNwYW4geD0iMjMiIHk9IjM2Ny45MDkiPkRFU0NSSSYjeGM3OyYjeGMzO088L3RzcGFuPjwvdGV4dD4KPHBhdGggZD0iTTYyMCAzNDlWNjY1LjUiIHN0cm9rZT0iYmxhY2siLz4KPHRleHQgZmlsbD0iYmxhY2siIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJ3aGl0ZS1zcGFjZTogcHJlIiBmb250LWZhbWlseT0iSW50ZXIiIGZvbnQtc2l6ZT0iOCIgZm9udC13ZWlnaHQ9IjYwMCIgbGV0dGVyLXNwYWNpbmc9IjBlbSI+PHRzcGFuIHg9IjY4MyIgeT0iNjc3LjkwOSI+T1VUUkFTPC90c3Bhbj48L3RleHQ+Cjx0ZXh0IGZpbGw9ImJsYWNrIiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0id2hpdGUtc3BhY2U6IHByZSIgZm9udC1mYW1pbHk9IkludGVyIiBmb250LXNpemU9IjgiIGZvbnQtd2VpZ2h0PSI2MDAiIGxldHRlci1zcGFjaW5nPSIwZW0iPjx0c3BhbiB4PSI2ODYiIHk9IjY0Mi45MDkiPlZBTE9SPC90c3Bhbj48L3RleHQ+CjxwYXRoIGQ9Ik0xNCA3MDFINzgwLjUiIHN0cm9rZT0iYmxhY2siLz4KPHBhdGggZD0iTTc4MCAyMjIuNUgxMyIgc3Ryb2tlPSJibGFjayIvPgo8cGF0aCBkPSJNNjIwIDcwMC41VjY2NS41IiBzdHJva2U9ImJsYWNrIi8+CjxwYXRoIGQ9Ik00NjguNSA2NjYuNVY3MDAuNSIgc3Ryb2tlPSJibGFjayIvPgo8cGF0aCBkPSJNMzE2LjUgNjY1LjVWNzAwLjUiIHN0cm9rZT0iYmxhY2siLz4KPHBhdGggZD0iTTE2MyA2NjZWNzAwLjUiIHN0cm9rZT0iYmxhY2siLz4KPHRleHQgZmlsbD0iYmxhY2siIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJ3aGl0ZS1zcGFjZTogcHJlIiBmb250LWZhbWlseT0iSW50ZXIiIGZvbnQtc2l6ZT0iOCIgZm9udC13ZWlnaHQ9IjYwMCIgbGV0dGVyLXNwYWNpbmc9IjBlbSI+PHRzcGFuIHg9IjUzIiB5PSI2NzcuOTA5Ij5CQVNFIERFIENBTENVTE88L3RzcGFuPjwvdGV4dD4KPHRleHQgZmlsbD0iYmxhY2siIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJ3aGl0ZS1zcGFjZTogcHJlIiBmb250LWZhbWlseT0iSW50ZXIiIGZvbnQtc2l6ZT0iOCIgZm9udC13ZWlnaHQ9IjYwMCIgbGV0dGVyLXNwYWNpbmc9IjBlbSI+PHRzcGFuIHg9IjIxMiIgeT0iNjc3LjkwOSI+QUxJUVVPVEEgKCUpPC90c3Bhbj48L3RleHQ+Cjx0ZXh0IGZpbGw9ImJsYWNrIiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0id2hpdGUtc3BhY2U6IHByZSIgZm9udC1mYW1pbHk9IkludGVyIiBmb250LXNpemU9IjgiIGZvbnQtd2VpZ2h0PSI2MDAiIGxldHRlci1zcGFjaW5nPSIwZW0iPjx0c3BhbiB4PSIzNjgiIHk9IjY3Ny45MDkiPlZBTE9SIElDTVM8L3RzcGFuPjwvdGV4dD4KPHRleHQgZmlsbD0iYmxhY2siIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJ3aGl0ZS1zcGFjZTogcHJlIiBmb250LWZhbWlseT0iSW50ZXIiIGZvbnQtc2l6ZT0iOCIgZm9udC13ZWlnaHQ9IjYwMCIgbGV0dGVyLXNwYWNpbmc9IjBlbSI+PHRzcGFuIHg9IjUyMCIgeT0iNjc3LjkwOSI+SVNFTlRBUy9OVDwvdHNwYW4+PC90ZXh0Pgo8cGF0aCBkPSJNMTMuNSA2NDUuNVY4NTFINzc5LjVWNjQ1LjUiIHN0cm9rZT0iYmxhY2siLz4KPHBhdGggZD0iTTYyMCA2MzFINzc5LjUiIHN0cm9rZT0iYmxhY2siLz4KPC9zdmc+Cg==');
+	height: 1123px;
+	width: 794px;
+	position: relative;
+}
+
+.logo {
+	position: absolute;
+	height: 80px;
+	width: 80px;
+	margin-left: 690px;
+	margin-top: 103px;
+}
+
+.provedorDados {
+	position: absolute;
+	margin-top: 104px;
+	margin-left: 24px;
+}
+
+.clienteDados {
+	position: absolute;
+	margin-top: 235px;
+	margin-left: 24px;
+}
+.fatura {
+	position: absolute;
+	text-align: center;
+	margin-top: 22px;
+	margin-left: 24px;
+}
+.Nn {
+	position: absolute;
+	margin-top: 40px;
+	margin-left: 23px;
+}
+ 
+
+.itens {
+	position: absolute;
+	margin-top: 390px;
+	margin-left: 26px;
+}
+
+.item_dec {
+	position: relative;
+	margin-left: 0px;
+}
+
+.item_icms {
+	display: block;
+	position: absolute;
+	margin-top: -12px;
+	margin-left: 630px;
+}
+
+.item_valor {
+	text-align: end;
+	position: relative;
+	display: block;
+	margin-top: -12px;
+	margin-left: 707px;
+}
+
+.NF_total {
+	text-align: center;
+	position: relative;
+	display: block;
+	margin-top: 204px;
+	margin-left: 610px;
+}
+
+
+.reservado {
+	position: absolute;
+	margin-top: 836px;
+	margin-left: 25px;
+}
+.NFe {
+	font-size: 12px;
+	font-weight: bold;
+}
+.NF_obs {
+	position: absolute;
+	margin-top: 712px;
+	margin-left: 25px;
+}
+.itemBase {
+	position: absolute;
+	margin-top: 684px;
+}
+
+.NFe_calculo{
+	position: absolute;
+	text-align: center;
+	margin-left: 75px;
+}
+.NFe_aliquota {
+	position: absolute;
+	text-align: center;
+	margin-left: 226px;
+}
+.NFe_valor {
+	position: absolute;
+	text-align: center;
+	margin-left: 380px;
+}
+.NFe_isentas {
+	position: absolute;
+	text-align: center;
+	margin-left: 528px;
+}
+
+.NFe_outras {
+	position: absolute;
+	text-align: center;
+	margin-left: 680px;
+}
+</style> 
+</head>
+<body onLoad="printPage()">

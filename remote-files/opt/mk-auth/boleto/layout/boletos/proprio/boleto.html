@@ -1,0 +1,324 @@
+<!-- BEGIN BLOCK_AVALISTA -->
+<!-- END BLOCK_AVALISTA -->
+
+<table class="pnFatura2Via" border="0" cellSpacing="0" cellPadding="0" width="666">
+<tr>
+<td align="middle"><img src="{PROVEDORLOGO}" style="max-height: 75px" hspace="5" vspace="5" /> </td>
+<td align="middle"><span class="label11"> {PROVEDORNOME} </span> <BR>
+<span class="labels">CNPJ {PROVEDORCPF} </span> <BR>
+<span class="labels"> {PROVEDORENDERECO} - {PROVEDORBAIRRO} <br>
+CEP {PROVEDORCEP} - {PROVEDORCIDADE} - {PROVEDORESTADO}</span> </td>
+<td align="middle">
+
+<!-- BEGIN BLOCK_COMLOGOSVA -->
+<img src="{LOGOSVA}" style="max-height: 75px" hspace="5" vspace="5" />
+<!-- END BLOCK_COMLOGOSVA -->
+
+<!-- BEGIN BLOCK_SEMLOGOSVA -->
+<table id="Table1" width="100%">
+<tr>
+<td><span>Dados do Titulo</span> </td>
+</tr>
+<tr>
+<td class="Fatura-titulos"><span>NÚMERO</span> </td>
+</tr>
+<tr>
+<td id="spNumeroNF"><span> {NUMERO_DOCUMENTO} </span> </td>
+</tr>
+</table>
+<!-- END BLOCK_SEMLOGOSVA -->
+
+</td>
+</tr>
+</table>
+<table class="pnFatura2Via2" border="0" cellSpacing="0" cellPadding="3" width="666">
+<tr>
+<td class="tabBottom" colSpan="2" align="middle"><span class="titulos">DADOS DE ENTREGA</span> </td>
+</tr>
+<tr>
+<td class="tabBottom" colSpan="2"><table id="Table3" border="0" cellSpacing="2" cellPadding="2" width="100%">
+<tr>
+<td><span class="labels">NOME:</span> </td>
+<td colspan="3" class="labelsBold"><span> {SACADO_IDNOME} </span> </td>
+</tr>
+
+<tr>
+<td><span class="labels">ENDERE&Ccedil;O:</span> </td>
+<td class="labelsBold"><span> {SACADO_ENDERECO} </span> </td>
+<td><span style="WIDTH: 50px; DISPLAY: inline-block" class="labels">COMPL:</span> </td>
+<td width="110" class="labelsBold"><span> {SACADO_COMPLEMENTO} </span> </td>
+</tr>
+
+<tr>
+<td><span class="labels">BAIRRO:</span> </td>
+<td class="labelsBold" width="320"><span> {SACADO_BAIRRO} </span> </td>
+<td><span style="WIDTH: 50px; DISPLAY: inline-block" class="labels">CEP:</span> </td>
+<td class="labelsBold"><span> {SACADO_CEP} </span> </td>
+</tr>
+
+<tr>
+<td><span class="labels">MUNICÍPIO:</span> </td>
+<td class="labelsBold"><span> {SACADO_CIDADE} </span> </td>
+<td><span class="labels">ESTADO:</span> </td>
+<td class="labelsBold"> {SACADO_ESTADO} </td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td class="tabBottom" colSpan="2"><table id="Table2" border="0" cellSpacing="0" cellPadding="0" width="100%">
+<tr>
+<td width="70%" align="middle" bgcolor="#ffffcc"><span style="FONT-SIZE: 10pt" class="titulos"> DADOS DO CLIENTE E TÍTULO </span></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+
+<td class="tabBottom" colSpan="2">
+<table id="Table11" border="0" cellspacing="2" cellpadding="2" width="100%">
+<tr>
+<td width="1%"><span style="WIDTH: 110px; DISPLAY: inline-block" class="labels"> TÍTULO / NN: </span> </td>
+<td align="left" class="labelsBold"><span> {TITULONN} </span> <span class="labels"></span></td>
+<td><span class="labels">VENCIMENTO:</span> </td>
+<td width="110" align="left" class="labelsBold"><span> {DATA_ORIGINAL} </span> </td>
+</tr>
+<tr>
+<td><span class="labels">CPF:</span> </td>
+<td class="labelsBold"><span> {SACADO_CPF} </span> </td>
+<td><span class="labels">PROCESSAMENTO:</span> </td>
+<td class="labelsBold"><span> {DATA_PROC} </span> </td>
+</tr>
+</table>
+</td>
+
+</tr>
+<tr>
+<td class="tabBottom" colSpan="2"><table id="Table4" border="0" cellSpacing="0" cellPadding="2" width="100%">
+<tr>
+<td width="55%" align="middle"><span class="titulos">RESUMO DOS ACESSOS</span></td>
+<td align="middle"><span class="titulos">RESUMO DAS MOVIMENTAÇÕES (R$)</span></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+
+<td class="tabBottomRight" width="55%" align="left"><table id="Table5" border="0" cellSpacing="0" cellPadding="2" width="100%">
+<tr>
+<td class="titulos" width="40%"></td>
+<td width="30%" align="middle"><span class="titulos"> {MESANO_ANT} </span> </td>
+<td align="middle"><span class="titulos"> {MESANO_ATUAL} </span> </td>
+</tr>
+
+<tr>
+<td><span class="labels">DADOS TRAFEGADOS</span> </td>
+<td class="labelsBold" align="middle"><span> {DADOS_ANT} </span> </td>
+<td class="labelsBold" align="middle"><span> {DADOS_ATUAL} </span> </td>
+</tr>
+
+<tr>
+<td><span class="labels">NUMERO DE CONEXÕES </span> </td>
+<td class="labelsBold" align="middle"><span> {CONEXOES_ANT} </span> </td>
+<td class="labelsBold" align="middle"><span> {CONEXOES_ATUAL} </span> </td>
+</tr>
+
+<tr>
+<td><span class="labels">CHAMADOS SUPORTE </span> </td>
+<td class="labelsBold" align="middle"><span> {CHAMADOS_ANT} </span> </td>
+<td class="labelsBold" align="middle"><span> {CHAMADOS_ATUAL} </span> </td>
+</tr>
+
+<tr>
+<td><span class="labels">CONTAS DE ACESSO </span> </td>
+<td class="labelsBold" align="middle"><span> {CONTAS_ANT} </span> </td>
+<td class="labelsBold" align="middle"><span> {CONTAS_ATUAL} </span> </td>
+</tr>
+
+<tr>
+<td><span class="labels">TEMPO TOTAL DE USO </span> </td>
+<td class="labelsBold" align="middle"><span> {TEMPO_ANT} </span> </td>
+<td class="labelsBold" align="middle"><span> {TEMPO_ATUAL} </span> </td>
+</tr>
+</table>
+</td>
+
+<td class="tabBottom" vAlign="top" rowSpan="3"><table id="tbValores" border="0" cellSpacing="0" cellPadding="2" width="100%">
+<tr>
+<td class="labels"> {MOVIMENTO} </td>
+<td class="labelsBold" align="right"> {VALOR_COBRADO} </td>
+</tr>
+
+<tr>
+<td class="labels">taxa de cobrança </td>
+<td class="labelsBold" align="right"> {TAXA_BOLETO} </td>
+</tr>
+
+<tr>
+<td class="labels">desconto</td>
+<td class="labelsBold" align="right"> {DESCONTO} </td>
+</tr>
+<tr>
+<td class="labels">acrescimo</td>
+<td class="labelsBold" align="right"> {ACRESCIMO} </td>
+</tr>
+
+<!-- BEGIN BLOCK_KK -->
+<!-- BEGIN BLOCK_DADOSKK -->
+
+<tr>
+<td class="labels"> {KKNOME} </td>
+<td class="labelsBold" align="right"> {KKVALOR} </td>
+</tr>
+
+<!-- END BLOCK_DADOSKK -->
+<!-- END BLOCK_KK -->
+
+<!-- BEGIN BLOCK_K -->
+<!-- BEGIN BLOCK_DADOSK -->
+
+<tr>
+<td class="labels"> {KNOME} </td>
+<td class="labelsBold" align="right"> {KVALOR} </td>
+</tr>
+
+<!-- END BLOCK_DADOSK -->
+<!-- END BLOCK_K -->
+
+<!-- BEGIN BLOCK_Z -->
+<!-- BEGIN BLOCK_DADOSZ -->
+
+<tr>
+<td class="labels"><font color="#006699"> {ZNOME} </font></td>
+<td class="labelsBold" align="right"><font color="#006699"> {ZVALOR} </font></td>
+</tr>
+
+<!-- END BLOCK_DADOSZ -->
+<!-- END BLOCK_Z -->
+
+<tr>
+<td class="labels">multa e mora atualizada</td>
+<td class="labelsBold" align="right"> {MULTA_MORA} </td>
+</tr>
+
+<!-- BEGIN BLOCK_REFERENCIA -->
+<tr>
+<td class="labels">referente ao m&ecirc;s</td>
+<td class="labelsBold" align="right"> {REFERENCIA} </td>
+</tr>
+<!-- END BLOCK_REFERENCIA -->
+
+</table></td>
+</tr>
+<tr>
+<td class="tabBottomRight" align="middle"><span class="titulos">DEMONSTRATIVO </span> </td>
+</tr>
+
+<tr>
+<td class="tabBottomRight" align="middle"><span class="labels">
+{DEMONSTRATIVO1} <BR />
+{DEMONSTRATIVO2} <BR />
+{DEMONSTRATIVO3} <BR />
+{DEMONSTRATIVO4} <BR />
+<img src="{QRCODE}" width="75" height="75" /></span></td>
+</tr>
+
+<tr>
+<td class="tabBottom" colSpan="2"><table id="Table9" border="0" cellSpacing="0" cellPadding="2" width="100%">
+<tr>
+<td width="55%" align="middle"><span class="labels">AUTENTICAÇÃO MECANICA</span> </td>
+<td align="left" bgcolor="#ffffcc"><span class="labels">TOTAL A PAGAR (R$) </span> </td>
+<td align="right" bgcolor="#ffffcc" class="labelsBold"><span> {VALOR_BOLETO} </span> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+
+<table cellspacing="0" cellpadding="0" width="666" border="0">
+<tr>
+<td class="ct" width="666"></td>
+</tr>
+<tr>
+<td class="ct" width="666"><DIV align="right">Corte na linha pontilhada</DIV></td>
+</tr>
+<tr>
+<td class="ct" width="666"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAApkAAAACAQAAAAA76vpWAAAAGUlEQVR42mNgbDiQYCDBw8ZMPUYDAy0MBQCvGyXfT4/GUQAAAABJRU5ErkJggg==" width="665" border="0"></td>
+</tr>
+</table>
+<br />
+
+<table class="pnFatura2Via" border="0" cellSpacing="0" cellPadding="0" width="666">
+<tr>
+<td colSpan="2"><table id="Table10" border="0" cellSpacing="0" cellPadding="4" width="100%">
+<tr>
+<td vAlign="center"><table width="100%">
+
+<tr>
+<td><span style="font-size:12px"> TÍTULO / NOSSO NUMERO: </span> </td>
+<td class="labelsBold" width="35%"><span> {TITULONN} </span> </td>
+<td><span style="font-size:12px"> VENCIMENTO: </span> </td>
+<td class="labelsBold"><span> {DATA_VENC} </span> </td>
+</tr>
+
+<tr>
+<td><span style="font-size:12px"> PROCESSAMENTO: </span> </td>
+<td class="labelsBold"><span> {DATA_PROC} </span> </td>
+<td><span style="font-size:12px"> TOTAL: </span> </td>
+<td class="labelsBold"><span> {VALOR_BOLETO} </span> </td>
+</tr>
+
+<tr>
+<td><span style="font-size:12px"> CLIENTE: </span> </td>
+<td class="labelsBold" colSpan="3"><span> {SACADO_NOME} </span> </td>
+</tr>
+<tr align="right">
+<td class="labelsBold" colSpan="4">&nbsp;</td>
+</tr>
+
+<!-- BEGIN BLOCK_INSTAUTO -->
+<tr>
+<td class="labelsBold" colSpan="4"> {TEXTO_MULTAMORA} </td>
+</tr>
+<!-- END BLOCK_INSTAUTO -->
+
+<tr>
+<td class="labelsBold" colSpan="4"> {INSTRUCOES1} </td>
+</tr>
+
+<tr>
+<td class="labelsBold" colSpan="4"> {INSTRUCOES2} </td>
+</tr>
+
+<tr>
+<td class="labelsBold" colSpan="4"> {INSTRUCOES3} </td>
+</tr>
+
+<tr>
+<td class="labelsBold" colSpan="4"> {INSTRUCOES4} </td>
+</tr>
+
+<tr>
+<td class="labelsBold" colSpan="4"> {INSTRUCOES5} </td>
+</tr>
+
+<tr>
+<td class="labelsBold" colSpan="4"></td>
+</tr>
+
+<tr>
+<td class="labelsBold" colSpan="4"><span> {LINHA_DIGITAVEL} </span> </td>
+</tr>
+
+<tr>
+<td class="labelsBold" colSpan="4"> {BOLETO_BARCODE2} </td>
+</tr>
+
+</table>
+</td>
+</tr>
+
+</table>
+</td>
+</tr>
+</table>

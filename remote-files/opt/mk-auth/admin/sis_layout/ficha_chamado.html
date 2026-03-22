@@ -1,0 +1,269 @@
+<div style="page-break-after: always">
+
+<table width="100%" align="center" border="0" cellpadding="2" cellspacing="3">
+<tr>
+<td>
+
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="right"></td>
+</tr>
+</table>
+
+<table style="border-top: 1px dotted rgb(0, 0, 0)" width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height="20"></td>
+</tr>
+<tr>
+<td>
+
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tr valign="middle">
+<td><div align="left"> <strong> <span class="textoazul"> {PROVEDORNOME} </span> <br />
+</strong> {PROVEDORENDERECO} - {PROVEDORBAIRRO} - {PROVEDORCIDADE} / {PROVEDORESTADO} <br />
+Fone: {PROVEDORFONE}<br />
+<br />
+<span class="textoazul"> <strong> <font color="#000099"> Registro Chamado: {CHAMADO} </font> </strong> </span> </div></td>
+<td><img src="../mkfiles/logo.jpg" style="max-height:75px" hspace="5" vspace="5" align="right" /></td>
+</tr>
+<tr>
+<td colspan="2">
+<hr style="border-style: solid none none; border-color: rgb(0, 0, 0) -moz-use-text-color -moz-use-text-color; border-width: 1px 0pt 0pt; height: 1px; clear: both;" width="100%" align="right">
+</td>
+</tr>
+
+<tr>
+<td height="80" colspan="2" valign="top">
+
+<table width="100%" border="0" cellpadding="2" cellspacing="2">
+<tr>
+<td valign="top" width="50%">
+Tecnico: <strong> {TECNICO} </strong><br />
+Data do Registro: <strong> {DATA_REGISTRO} </strong><br />
+<strong>{CLIENTE_COMODATO}</strong><br />
+Plano: <strong> {CLIENTE_PLANO} </strong><br />
+Agendado visita para: <strong> {DATA_VISITA} </strong><br />
+Login: <strong> {CLIENTE_LOGIN} </strong><br />
+Tipo acesso: <strong> {CLIENTE_TIPO} </strong><br />
+Senha: <strong> {CLIENTE_SENHA} </strong><br />
+Chave: <strong> {CLIENTE_CHAVE} </strong><br />
+IP / MAC: <strong> {CLIENTE_IP} / {CLIENTE_MAC} </strong><br />
+Ramal: <strong> {CLIENTE_RAMAL} </strong><br />
+Coordenadas:<strong> {CLIENTE_COORDENADAS} </strong>
+</td>
+<td valign="top" width="50%">
+Atendente: <strong>{ATENDENTE}</strong><br />
+Cliente: <strong> {CLIENTE_NOME} </strong><br />
+Codigo: <strong> {CLIENTE_CODIGO} </strong><br />
+Endereço: <strong> {CLIENTE_ENDERECO} </strong><br />
+Bairro: <strong> {CLIENTE_BAIRRO} </strong><br />
+Cidade: <strong> {CLIENTE_CIDADE} </strong><br />
+Complemento: <strong> {CLIENTE_COMPLEMENTO} </strong><br />
+Telefone:<strong> {CLIENTE_TELEFONE} </strong><br />
+Celular:<strong> {CLIENTE_CELULAR} </strong><br />
+Cadastro:<strong> {CLIENTE_CADASTRO} </strong><br />
+Grupo:<strong> {CLIENTE_GRUPO} </strong>
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+<tr>
+<td colspan="2"><hr style="border-style: solid none none; border-color: rgb(0, 0, 0) -moz-use-text-color -moz-use-text-color; border-width: 1px 0pt 0pt; height: 1px; clear: both;" width="100%" align="right">
+<table width="100%" border="0" cellpadding="2" cellspacing="2">
+<tr>
+<td><strong>Atendimento Iniciado:</strong> (&nbsp;) Sim (&nbsp;) N&atilde;o - <strong>Motivo: </strong> ________________________________________________ </td>
+</tr>
+
+<tr>
+<td><strong>Relatos anteriores: </strong></td>
+</tr>
+
+<!-- BEGIN BLOCK_RELATOS -->
+<tr>
+<td> {RELATO} </td>
+</tr>
+<!-- END BLOCK_RELATOS -->
+</table>
+
+<br />
+<br />
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td><div align="right" id="recibo"><font color="#666666">(corte aqui e deixe a parte superior caso o cliente esteja ausente)</font></div></td>
+</tr>
+</table></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="20"><hr style="border-style: dashed none none; border-color: rgb(0, 0, 0) -moz-use-text-color -moz-use-text-color; border-width: 1px 0pt 0pt; height: 1px; clear: both;" width="100%" align="right">
+<table width="100%" border="0" cellpadding="2" cellspacing="2">
+<tr>
+<td colspan="4"><strong>Lista de Problemas:</strong></td>
+</tr>
+<tr>
+<td width="1%">(&nbsp;)</td>
+<td>Antena Desregulada</td>
+<td width="1%">(&nbsp;)</td>
+<td>Access Point Resetado</td>
+</tr>
+<tr>
+<td width="1%">(&nbsp;)</td>
+<td>Cabo com Problema</td>
+<td width="1%">(&nbsp;)</td>
+<td>Access Point Desconfigurado</td>
+</tr>
+<tr>
+<td width="1%">(&nbsp;)</td>
+<td>Cabo Mal Encaixado</td>
+<td width="1%">(&nbsp;)</td>
+<td>Access Point Desligado</td>
+</tr>
+<tr>
+<td width="1%">(&nbsp;)</td>
+<td>Usu&aacute;rio/Senha incorretos</td>
+<td width="1%">(&nbsp;)</td>
+<td>Redes Incorretas Adicionadas</td>
+</tr>
+<tr>
+<td width="1%">(&nbsp;)</td>
+<td>Problemas no Cadastro</td>
+<td width="1%">(&nbsp;)</td>
+<td>Falta de Mem&oacute;ria RAM</td>
+</tr>
+<tr>
+<td width="1%">(&nbsp;)</td>
+<td>Configura&ccedil;&atilde;o de Conex&atilde;o Alterada </td>
+<td width="1%">(&nbsp;)</td>
+<td>Computador com V&iacute;rus</td>
+</tr>
+<tr>
+<td width="1%">(&nbsp;)</td>
+<td>Placa Desinstalada do sistema</td>
+<td width="1%">(&nbsp;)</td>
+<td>Nenhum Problema Encontrado</td>
+</tr>
+<tr>
+<td width="1%">(&nbsp;)</td>
+<td>Placa Desativada</td>
+<td width="1%">(&nbsp;)</td>
+<td>Problemas com o PC</td>
+</tr>
+<tr>
+<td width="1%">(&nbsp;)</td>
+<td>Driver da Placa Desatualizado</td>
+<td width="1%">(&nbsp;)</td>
+<td>Discador PPPoE com Problema</td>
+</tr>
+<tr>
+<td width="1%">(&nbsp;)</td>
+<td>Placa Wireless Danificada</td>
+<td width="1%">(&nbsp;)</td>
+<td>Antena com Defeito</td>
+</tr>
+<tr>
+<td width="1%">(&nbsp;)</td>
+<td>Obstrução de sinal</td>
+<td width="1%">(&nbsp;)</td>
+<td>___________________________</td>
+</tr>
+</table>
+<br />
+<table width="100%" border="0" cellpadding="2" cellspacing="2">
+<tr>
+<td><strong>Relato do T&eacute;cnico:</strong></td>
+</tr>
+<tr>
+<td>_______________________________________________________________________________________________________</td>
+</tr>
+<tr>
+<td>_______________________________________________________________________________________________________</td>
+</tr>
+<tr>
+<td>_______________________________________________________________________________________________________</td>
+</tr>
+<tr>
+<td>_______________________________________________________________________________________________________</td>
+</tr>
+</table>
+<br />
+<table width="100%" border="0" cellpadding="2" cellspacing="2">
+<tr>
+<td><strong>Data e Hora da Sa&iacute;da: </strong>____ / ____ / _______ - ____ : ____ </td>
+</tr>
+<tr>
+<td><strong>Resolveu o Problema:</strong> (&nbsp;) Sim (&nbsp;) N&atilde;o - <strong>Motivo:</strong> ________________________________________________ </td>
+</tr>
+<tr>
+<td><strong>Agendar Novo Suporte:</strong> (&nbsp;) Sim (&nbsp;) N&atilde;o</td>
+</tr>
+</table>
+<br />
+<table width="100%" border="0" cellpadding="2" cellspacing="2">
+<tr>
+<td><strong>Suporte Gratuito:</strong> (&nbsp;) Sim (&nbsp;) N&atilde;o - <strong>Valor:</strong> ______________ </td>
+</tr>
+<tr>
+<td><strong>Pagamento Efetuado: </strong>(&nbsp;) Sim (&nbsp;) N&atilde;o - <strong>Data  do Pagamento:</strong> ____ / ____ / _______</td>
+</tr>
+<tr>
+<td><strong>Observa&ccedil;&atilde;o do Pagamento:</strong> ______________________________________________________</td>
+</tr>
+</table>
+<br />
+<table width="100%" border="0" cellpadding="2" cellspacing="2">
+<tr>
+<td><strong>Satisfa&ccedil;&atilde;o do Cliente com este Atendimento: </strong> (&nbsp;) Ruim (&nbsp;) Regular
+(&nbsp;) Bom (&nbsp;)
+&Oacute;timo<font color="#666666"></font></td>
+</tr>
+<tr>
+<td><font color="#003399">Registro Chamado: <strong> {CHAMADO} </strong></font></td>
+</tr>
+</table>
+<br />
+<br />
+</td>
+</tr>
+<tr>
+<td height="20"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td><div align="center"> _______________________________________________ </div></td>
+</tr>
+<tr>
+<td height="2"></td>
+</tr>
+<tr>
+<td width="50%"><div align="center"><strong> {CLIENTE_NOME} </strong></div></td>
+</tr>
+</table></td>
+<td valign="top"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td><div align="center"> _______________________________________________ </div></td>
+</tr>
+<tr>
+<td height="2"></td>
+</tr>
+<tr>
+<td width="50%"><div align="center"><strong>T&Eacute;CNICO RESPONS&Aacute;VEL </strong></div></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<blockquote></blockquote></td>
+</tr>
+</table>
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="right"></td>
+</tr>
+</table></td>
+</tr>
+</table>

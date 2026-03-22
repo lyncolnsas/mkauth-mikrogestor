@@ -1,0 +1,188 @@
+<?php
+
+#@@@ sis_caixa
+#??? uuid_caixa
+
+class caixa {
+
+	private $dados = array();
+
+	public function carregarDados($valor) {
+
+		$comandoSQL = 'SELECT *
+		FROM sis_caixa
+		WHERE uuid_caixa = :uuid
+		LIMIT 1';
+		$rotinaSQL = DB::prepare($comandoSQL);
+		$rotinaSQL -> bindParam('uuid', $valor);
+		$rotinaSQL -> execute();
+		$resultadosSQL = $rotinaSQL -> fetch(PDO::FETCH_ASSOC);
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+
+		if ($numeroDeLinhas > 0) {
+
+			$this->dados = $resultadosSQL;
+
+		}
+
+	}
+
+	public function get_show($valor) {
+
+		$this->carregarDados($valor);
+
+		echo json_encode($this->dados);
+
+	}
+
+	public function get_listagem() {
+
+		// apenas para compatibilidade
+		$this->get_listar('listagem');
+		return;
+
+	}
+
+	public function get_listar($valor = null) {
+
+		$comandoSQL = 'SELECT *, uuid_caixa AS uuid
+		FROM sis_caixa';
+
+		$sql = new SQL($valor);
+		if ($valor == 'listagem') $sql->limite = 999999999;
+		$sql->comandoSQL = $comandoSQL;
+		$sql->tabela = 'sis_caixa';
+		$sql->gerarSQL();
+
+		$comandoSQL = $sql->comandoSQL;
+		$rotinaSQL = DB::prepare($comandoSQL);
+
+		if (isset($sql->binds)) {
+
+			foreach ($sql->binds as $bind) {
+
+				$rotinaSQL -> bindParam("{$bind[0]}", $bind[1], $bind[2]);
+
+			}
+
+		}
+
+		$rotinaSQL -> execute();
+		$resultadosSQL = $rotinaSQL -> fetchAll();
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+
+		if ($numeroDeLinhas == 0) {
+			
+			echo json_encode(array('status' => 'erro', 'mensagem' => 'Registros nao encontrados'));
+			return;
+			
+		} 
+
+		if ($valor == 'listagem') {
+
+			echo json_encode(array('caixa' => $resultadosSQL));
+			return;
+
+		}
+
+		echo json_encode(array('total_registros' => $sql->total_registros,
+		'consulta_atual' => $numeroDeLinhas,
+		'pagina_atual' => $sql->pagina,
+		'total_paginas' => $sql->total_paginas,
+		'caixa' => $resultadosSQL));
+
+	}
+
+	public function post_inserir($data) {
+
+		$historico = $data->historico;
+		$tipo = $data->tipo;
+		$valor = $data->valor;
+
+		$entrada = ($tipo == 'entrada') ? $valor : '0.00';
+		$saida = ($tipo == 'saida') ? $valor : '0.00';
+
+		$comandoSQL = "INSERT INTO sis_caixa (uuid_caixa, data, usuario, complemento, historico, entrada, saida, tipomov)
+		VALUES (uuid(), now(), 'API', 'Inserido via API', :historico, :entrada, :saida, 'man')";
+		$rotinaSQL = DB::prepare($comandoSQL);
+		$rotinaSQL -> bindParam('historico', $historico);
+		$rotinaSQL -> bindParam('entrada', $entrada);
+		$rotinaSQL -> bindParam('saida', $saida);
+		$rotinaSQL -> execute();
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+
+		echo json_encode(array('status' => 'sucesso', 'mensagem' => 'Movimento no caixa inserido com sucesso', 'dados' => $data));
+
+	}
+
+	public function put_editar($data) {
+
+		$uuid = $data->uuid;
+
+		$this->carregarDados($uuid);
+
+		if (count($this->dados) == 0) {
+			
+			echo json_encode(array('status' => 'erro', 'mensagem' => 'Registro nao encontrado'));
+			return;
+
+		}
+
+		$colunas = array();
+
+		foreach ($data as $coluna => $valor) {
+			if (array_key_exists($coluna, $this->dados)) $colunas[$coluna] = $valor;
+		}
+
+		$colunas['entrada'] = ($data->tipo == 'entrada') ? $data->valor : '0.00';
+		$colunas['saida'] = ($data->tipo != 'entrada') ? $data->valor : '0.00';
+		$colunas['usuario'] = 'API';
+
+		$comandoSQL = "UPDATE sis_caixa SET";
+
+		foreach ($colunas as $c => $v) {
+		
+			$comandoSQL .= " {$c} = :{$c},";
+
+		}
+
+		$comandoSQL = rtrim($comandoSQL, ',');
+
+		$comandoSQL .= " WHERE uuid_caixa = :uuid";
+
+		$rotinaSQL = DB::prepare($comandoSQL);
+
+		foreach ($colunas as $c => $v) {
+
+			$rotinaSQL -> bindValue(":{$c}", $v);
+
+		}
+
+		$rotinaSQL -> bindParam('uuid', $uuid);
+		$rotinaSQL -> execute();
+
+		echo json_encode(array('status' => 'sucesso', 'mensagem' => 'Movimento no caixa editado com sucesso', 'dados' => $data));
+
+	}
+
+	public function delete_id($key) {
+
+		$comandoSQL = 'DELETE FROM sis_caixa
+		WHERE uuid_caixa = :uuid';
+		$rotinaSQL = DB::prepare($comandoSQL);
+		$rotinaSQL -> bindParam('uuid', $key);
+		$rotinaSQL -> execute();
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+		
+		if ($numeroDeLinhas > 0) {
+
+			echo json_encode(array('status' => 'sucesso', 'mensagem' => 'Registro excluido com sucesso'));
+			return;
+
+		}
+		
+		echo json_encode(array('status' => 'erro', 'mensagem' => 'Registro nao encontrado'));
+
+	}
+
+}

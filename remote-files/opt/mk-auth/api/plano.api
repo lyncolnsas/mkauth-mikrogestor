@@ -1,0 +1,239 @@
+<?php
+
+#@@@ sis_plano
+#??? uuid_plano
+
+class plano {
+
+	private $dados = array();
+
+	public function carregarDados($valor) {
+
+		$comandoSQL = 'SELECT *
+		FROM sis_plano
+		WHERE nome = :plano OR uuid_plano = :plano
+		LIMIT 1';
+		$rotinaSQL = DB::prepare($comandoSQL);
+		$rotinaSQL -> bindParam('plano', $valor);
+		$rotinaSQL -> execute();
+		$resultadosSQL = $rotinaSQL -> fetch(PDO::FETCH_ASSOC);
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+
+		if ($numeroDeLinhas > 0) {
+
+			$this->dados = $resultadosSQL;
+			
+		}
+
+	}
+
+	public function get_show($valor) {
+
+		$this->carregarDados($valor);
+
+		echo json_encode($this->dados);
+
+	}
+
+	public function get_listagem() {
+
+		// apenas para compatibilidade
+		$this->get_listar('listagem');
+		return;
+
+	}
+
+	public function get_listar($valor = null) {
+
+		$comandoSQL = 'SELECT *, uuid_plano AS uuid
+		FROM sis_plano';
+
+		$sql = new SQL($valor);
+		if ($valor == 'listagem') $sql->limite = 999999999;
+		$sql->comandoSQL = $comandoSQL;
+		$sql->tabela = 'sis_plano';
+		$sql->gerarSQL();
+
+		$comandoSQL = $sql->comandoSQL;
+		$rotinaSQL = DB::prepare($comandoSQL);
+
+		if (isset($sql->binds)) {
+
+			foreach ($sql->binds as $bind) {
+
+				$rotinaSQL -> bindParam("{$bind[0]}", $bind[1], $bind[2]);
+
+			}
+
+		}
+
+		$rotinaSQL -> execute();
+		$resultadosSQL = $rotinaSQL -> fetchAll();
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+
+		if ($numeroDeLinhas == 0) {
+			
+			echo json_encode(array('status' => 'erro', 'mensagem' => 'Registros nao encontrados'));
+			return;
+			
+		} 
+
+		if ($valor == 'listagem') {
+
+			echo json_encode(array('planos' => $resultadosSQL));
+			return;
+
+		}
+
+		echo json_encode(array('total_registros' => $sql->total_registros,
+		'consulta_atual' => $numeroDeLinhas,
+		'pagina_atual' => $sql->pagina,
+		'total_paginas' => $sql->total_paginas,
+		'planos' => $resultadosSQL));
+
+	}
+
+	public function post_inserir($data) {
+
+		$nome = $data -> nome;
+		$descricao_titulo = $data -> titulo;
+		$descricao = $data -> descricao;
+		$tipo = $data -> tipo;
+		$valor = $data -> valor;
+		$velup = $data -> velup;
+		$veldown = $data -> veldown;
+		
+		$prioridade = isset($data->prioridade) ? $data->prioridade : 8;
+
+		$comandoSQL = "INSERT INTO sis_plano
+		(uuid_plano, nome, tipo, valor, velup, veldown, prioridade, descricao, desc_titulo, tecnologia, aliquota, faixa)
+		VALUES
+		(uuid(), :nome, :tipo, :valor, :velup, :veldown, :prioridade, :descricao, :descricao_titulo, 'H', '0.00', '15')";
+		$rotinaSQL = DB::prepare($comandoSQL);
+		$rotinaSQL -> bindParam('nome', preg_replace('/[^0-9a-zA-Z]/', NULL, $nome));
+		$rotinaSQL -> bindParam('descricao_titulo', preg_replace('/[^0-9a-zA-Z]/', NULL, $descricao_titulo));
+		$rotinaSQL -> bindParam('tipo', $tipo);
+		$rotinaSQL -> bindParam('descricao', $descricao);
+		$rotinaSQL -> bindParam('valor', $valor);
+		$rotinaSQL -> bindParam('velup', $velup);
+		$rotinaSQL -> bindParam('veldown', $veldown);
+		$rotinaSQL -> bindParam('prioridade', $prioridade);
+		$rotinaSQL -> execute();
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+
+		echo json_encode(array('status' => 'sucesso', 'mensagem' => 'Registro inserido com sucesso', 'dados' => $data));
+
+	}
+
+	public function put_turbo($data){
+
+		$garup = $data -> garup;
+		$gardown = $data -> gardown;
+		$maxup = $data -> maxup;
+		$maxdown = $data -> maxdown;
+		$desaup = $data -> desaup;
+		$desadown = $data -> desadown;
+		$tempoup = $data -> tempoup;
+		$tempodown = $data -> tempodown;
+		$uuid = $data -> uuid;
+
+		$comandoSQL = "UPDATE sis_plano
+		SET garup =:garup, gardown = :gardown, maxup = :maxup, maxdown = :maxdown, desaup = :desaup, desadown = :desadown, tempoup = :tempoup, tempodown = :tempodown, burst = 'sim'
+		WHERE uuid_plano = :uuid";
+
+		$rotinaSQL = DB::prepare($comandoSQL);
+		$rotinaSQL -> bindParam('garup', $garup);
+		$rotinaSQL -> bindParam('gardown', $gardown);
+		$rotinaSQL -> bindParam('maxup', $maxup);
+		$rotinaSQL -> bindParam('maxdown', $maxdown);
+		$rotinaSQL -> bindParam('desaup', $desaup);
+		$rotinaSQL -> bindParam('desadown', $desadown);
+		$rotinaSQL -> bindParam('tempoup', $tempoup);
+		$rotinaSQL -> bindParam('tempodown', $tempodown);
+		$rotinaSQL -> bindParam('uuid', $uuid);
+		$rotinaSQL -> execute();
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+
+		if($numeroDeLinhas > 0){
+			echo json_encode(array('status' => 'sucesso', 'mensagem' => 'Registro editado com sucesso', 'dados' => $data));
+		} else {
+			echo json_encode(array('status' => 'erro', 'mensagem' => 'Registro não encontrado'));
+		}
+		
+	}
+
+	public function put_editar($data) {
+
+		$uuid = $data->uuid;
+
+		$this->carregarDados($uuid);
+
+		if (count($this->dados) == 0) {
+			
+			echo json_encode(array('status' => 'erro', 'mensagem' => 'Registro nao encontrado'));
+			return;
+
+		}
+
+		$colunas = array();
+
+		foreach ($data as $coluna => $valor) {
+			if (array_key_exists($coluna, $this->dados)) $colunas[$coluna] = $valor;
+		}
+
+		if (count($colunas) == 0) {
+			
+			echo json_encode(array('status' => 'erro', 'mensagem' => 'Nenhum campo valido para alteracao'));
+			return;
+
+		}
+
+		// montagem da query
+		$comandoSQL = "UPDATE sis_plano SET";
+
+		foreach ($colunas as $c => $v) {
+		
+			$comandoSQL .= " {$c} = :{$c},";
+
+		}
+
+		$comandoSQL = rtrim($comandoSQL, ',');
+
+		$comandoSQL .= " WHERE uuid_plano = :uuid";
+
+		$rotinaSQL = DB::prepare($comandoSQL);
+
+		foreach ($colunas as $c => $v) {
+
+			$rotinaSQL -> bindValue(":{$c}", $v);
+
+		}
+
+		$rotinaSQL -> bindParam('uuid', $uuid);
+		$rotinaSQL -> execute();
+
+		echo json_encode(array('status' => 'sucesso', 'mensagem' => 'Plano editado com sucesso', 'dados' => $data));
+
+	}
+
+	public function delete_id($key) {
+
+		$comandoSQL = 'DELETE FROM sis_plano
+		WHERE uuid_plano = :uuid';
+		$rotinaSQL = DB::prepare($comandoSQL);
+		$rotinaSQL -> bindParam('uuid', $key);
+		$rotinaSQL -> execute();
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+		
+		if ($numeroDeLinhas > 0) {
+
+			echo json_encode(array('status' => 'sucesso', 'mensagem' => 'Registro excluido com sucesso'));
+			return;
+
+		}
+		
+		echo json_encode(array('status' => 'erro', 'mensagem' => 'Registro nao encontrado'));
+
+	}
+
+}

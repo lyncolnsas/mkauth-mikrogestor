@@ -1,0 +1,604 @@
+
+<table class="pnFatura2Via" border="0" cellSpacing="0" cellPadding="0" width="666">
+<tr>
+<td align="middle"><img src="{PROVEDORLOGO}" style="max-height: 75px" hspace="5" vspace="5" /></td>
+<td align="middle"><span class="label11"> {PROVEDORNOME} </span> <BR>
+<span class="labels">CNPJ {PROVEDORCPF} </span> <BR>
+<span class="labels"> {PROVEDORENDERECO} - {PROVEDORBAIRRO} <br>
+CEP {PROVEDORCEP} - {PROVEDORCIDADE} - {PROVEDORESTADO}</span> </td>
+<td align="middle">
+
+<!-- BEGIN BLOCK_COMLOGOSVA -->
+<img src="{LOGOSVA}" style="max-height: 75px" hspace="5" vspace="5" />
+<!-- END BLOCK_COMLOGOSVA -->
+
+<!-- BEGIN BLOCK_SEMLOGOSVA -->
+<table id="Table1" width="100%">
+<tr>
+<td align="center"><span>Dados do Titulo</span> </td>
+</tr>
+<tr>
+<td align="center" class="Fatura-titulos"><span>NÚMERO</span> </td>
+</tr>
+<tr>
+<td align="center" id="spNumeroNF"><span> {NUMERO_DOCUMENTO} </span> </td>
+</tr>
+</table>
+<!-- END BLOCK_SEMLOGOSVA -->
+
+</td>
+</tr>
+</table>
+<table class="pnFatura2Via2" border="0" cellSpacing="0" cellPadding="3" width="666">
+<tr>
+<td class="tabBottom" colSpan="2" align="middle"><span class="titulos">DADOS DO CLIENTE E TITULO</span> </td>
+</tr>
+<tr>
+<td class="tabBottom" colSpan="2"><table id="Table3" border="0" cellSpacing="2" cellPadding="2" width="100%">
+<tr>
+<td><span class="labels">NOME:</span> </td>
+<td colspan="3" class="labelsBold"><span> {SACADO_IDNOME} </span> </td>
+</tr>
+
+<tr>
+<td><span class="labels">ENDERE&Ccedil;O:</span> </td>
+<td class="labelsBold"><span> {SACADO_ENDERECO} </span> </td>
+<td><span style="WIDTH: 50px; DISPLAY: inline-block" class="labels">COMPL:</span> </td>
+<td width="110" class="labelsBold"><span> {SACADO_COMPLEMENTO} </span> </td>
+</tr>
+
+<tr>
+<td><span class="labels">BAIRRO:</span> </td>
+<td class="labelsBold" width="320"><span> {SACADO_BAIRRO} </span> </td>
+<td><span style="WIDTH: 50px; DISPLAY: inline-block" class="labels">CEP:</span> </td>
+<td class="labelsBold"><span> {SACADO_CEP} </span> </td>
+</tr>
+
+<tr>
+<td><span class="labels">MUNICÍPIO:</span> </td>
+<td class="labelsBold"><span> {SACADO_CIDADE} </span> </td>
+<td><span class="labels">ESTADO:</span> </td>
+<td class="labelsBold"> {SACADO_ESTADO} </td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td class="tabBottom" colSpan="2">
+<table id="Table11" border="0" cellspacing="2" cellpadding="2" width="100%">
+<tr>
+<td width="1%"><span style="WIDTH: 110px; DISPLAY: inline-block" class="labels"> TÍTULO / NN: </span> </td>
+<td align="left" class="labelsBold"><span> {TITULONN} </span> <span class="labels"></span></td>
+<td><span class="labels">VENCIMENTO ORIGINAL:</span> </td>
+<td width="110" align="left" class="labelsBold"><span> {DATA_ORIGINAL} </span> </td>
+</tr>
+
+<tr>
+<td><span class="labels">CPF:</span> </td>
+<td class="labelsBold"><span> {SACADO_CPF} </span> </td>
+<td><span class="labels">PROCESSAMENTO:</span> </td>
+<td class="labelsBold"><span> {DATA_PROC} </span> </td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td class="tabBottom" colSpan="2"><table id="Table4" border="0" cellSpacing="0" cellPadding="2" width="100%">
+<tr>
+<td width="55%" align="middle"><span class="titulos">RESUMO DOS ACESSOS</span></td>
+<td align="middle"><span class="titulos">RESUMO DAS MOVIMENTAÇÕES (R$)</span></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+
+<td class="tabBottomRight" width="55%" align="left"><table id="Table5" border="0" cellSpacing="0" cellPadding="2" width="100%">
+<tr>
+<td class="titulos" width="40%"></td>
+<td width="30%" align="middle"><span class="titulos"> {MESANO_ANT} </span> </td>
+<td align="middle"><span class="titulos"> {MESANO_ATUAL} </span> </td>
+</tr>
+
+<tr>
+<td><span class="labels">DADOS TRAFEGADOS</span> </td>
+<td class="labelsBold" align="middle"><span> {DADOS_ANT} </span> </td>
+<td class="labelsBold" align="middle"><span> {DADOS_ATUAL} </span> </td>
+</tr>
+
+<tr>
+<td><span class="labels">NUMERO DE CONEXÕES </span> </td>
+<td class="labelsBold" align="middle"><span> {CONEXOES_ANT} </span> </td>
+<td class="labelsBold" align="middle"><span> {CONEXOES_ATUAL} </span> </td>
+</tr>
+
+<tr>
+<td><span class="labels">CHAMADOS SUPORTE </span> </td>
+<td class="labelsBold" align="middle"><span> {CHAMADOS_ANT} </span> </td>
+<td class="labelsBold" align="middle"><span> {CHAMADOS_ATUAL} </span> </td>
+</tr>
+
+<tr>
+<td><span class="labels">CONTAS DE ACESSO </span> </td>
+<td class="labelsBold" align="middle"><span> {CONTAS_ANT} </span> </td>
+<td class="labelsBold" align="middle"><span> {CONTAS_ATUAL} </span> </td>
+</tr>
+
+<tr>
+<td><span class="labels">TEMPO TOTAL DE USO </span> </td>
+<td class="labelsBold" align="middle"><span> {TEMPO_ANT} </span> </td>
+<td class="labelsBold" align="middle"><span> {TEMPO_ATUAL} </span> </td>
+</tr>
+</table>
+</td>
+
+<td class="tabBottom" vAlign="top" rowSpan="3"><table id="tbValores" border="0" cellSpacing="0" cellPadding="2" width="100%">
+<tr>
+<td class="labels"> {MOVIMENTO} </td>
+<td class="labelsBold" align="right"> {VALOR_COBRADO} </td>
+</tr>
+
+<tr>
+<td class="labels">taxa de cobrança </td>
+<td class="labelsBold" align="right"> {TAXA_BOLETO} </td>
+</tr>
+
+<!-- BEGIN BLOCK_K -->
+<!-- BEGIN BLOCK_DADOSK -->
+
+<tr>
+<td class="labels"> {KNOME} </td>
+<td class="labelsBold" align="right"> {KVALOR} </td>
+</tr>
+
+<!-- END BLOCK_DADOSK -->
+<!-- END BLOCK_K -->
+
+<!-- BEGIN BLOCK_Z -->
+<!-- BEGIN BLOCK_DADOSZ -->
+
+<tr>
+<td class="labels"><font color="#006699"> {ZNOME} </font></td>
+<td class="labelsBold" align="right"><font color="#006699"> {ZVALOR} </font></td>
+</tr>
+
+<!-- END BLOCK_DADOSZ -->
+<!-- END BLOCK_Z -->
+
+<tr>
+<td class="labels">multa e mora atualizada</td>
+<td class="labelsBold" align="right"> {MULTA_MORA} </td>
+</tr>
+
+<!-- BEGIN BLOCK_REFERENCIA -->
+<tr>
+<td class="labels">referente ao m&ecirc;s</td>
+<td class="labelsBold" align="right"> {REFERENCIA} </td>
+</tr>
+<!-- END BLOCK_REFERENCIA -->
+
+</table></td>
+</tr>
+<tr>
+<td class="tabBottomRight" align="middle"><span class="titulos">DEMONSTRATIVO </span> </td>
+</tr>
+
+<tr>
+<td class="tabBottomRight" align="middle">
+<span class="labels">
+{DEMONSTRATIVO1} <BR />
+{DEMONSTRATIVO2} <BR />
+{DEMONSTRATIVO3} <BR />
+{DEMONSTRATIVO4} <BR />
+</span>
+<img src="{QRCODE}" hspace="1" vspace="1" />
+</td>
+</tr>
+
+<tr>
+<td class="tabBottom" colSpan="2">
+<table id="Table9" border="0" cellSpacing="0" cellPadding="2" width="100%">
+<tr>
+<td width="55%" align="middle"><span class="cp">RESERVADO AO FISCO: {NOTA_CHAVE}</span> </td>
+<td align="left" bgcolor="#ffffcc"><span class="labels">TOTAL A PAGAR (R$) </span> </td>
+<td align="right" bgcolor="#ffffcc" class="labelsBold"><span> {VALOR_BOLETO} </span></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<table width="666" height="30" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="ct" width="666"></td>
+</tr>
+<tr>
+<td class="ct" width="666" height="1"><DIV align="right">Corte na linha pontilhada</DIV></td>
+</tr>
+<tr>
+<td class="ct" width="666"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAApkAAAACAQAAAAA76vpWAAAAGUlEQVR42mNgbDiQYCDBw8ZMPUYDAy0MBQCvGyXfT4/GUQAAAABJRU5ErkJggg==" width="665" border="0"></td>
+</tr>
+</table>
+
+<table cellspacing="0" cellpadding="0" width="666" border="0">
+<tr>
+<td class="cp" width="150">{LOGOMARCA}</td>
+<td width="3" valign="bottom"><img height="22" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAATAQMAAACA8k5ZAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="2" border="0"></td>
+<td class="cpt" width="58" valign="bottom"><DIV align="center"> <font class="bc"> {CODIGO_BANCO_COM_DV} </font> </DIV></td>
+<td width="3" valign="bottom"><img height="22" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAATAQMAAACA8k5ZAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="2" border="0"></td>
+<td class="ld" align="right" width="453" valign="bottom"><span class="ld"> <span class="campotitulo"> {LINHA_DIGITAVEL} </span> </span> </td>
+</tr>
+<tr>
+<td colspan="5"><img height="2" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="666" border="0"></td>
+</tr>
+</table>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="ct" valign="top" width="7" height="13"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" width="472" height="13">Local de pagamento</td>
+<td class="ct" valign="top" width="7" height="13"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" width="180" height="13">Vencimento</td>
+</tr>
+<tr>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="cp" valign="top" width="472" height="12"> {LOCAL_PAGAMENTO} </td>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="cp" valign="top" align="right" width="180" height="12"><span class="campo"> {DATA_VENC} </span> </td>
+</tr>
+
+<tr>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="7" border="0"></td>
+<td valign="top" width="472" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="472" border="0"></td>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="7" border="0"></td>
+<td valign="top" width="180" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="180" border="0"></td>
+</tr>
+</table>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="ct" valign="top" width="7" height="13"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" width="472" height="13">Beneficiário</td>
+<td class="ct" valign="top" width="7" height="13"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" width="180" height="13"> Agência/Código do Beneficiário </td>
+</tr>
+
+<tr>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="cp" valign="top" width="472" height="12"><span class="campo"> {CEDENTE} </span></td>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="cp" valign="top" align="right" width="180" height="12"><span class="campo"> {AGENCIA_CODIGO} </span></td>
+</tr>
+
+<tr>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="7" border="0"></td>
+<td valign="top" width="472" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="472" border="0"></td>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="7" border="0"></td>
+<td valign="top" width="180" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="180" border="0"></td>
+</tr>
+</table>
+
+<table width="666" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="ct" valign="top" width="7" height="100%"><img height="100%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" width="113" height="100%">Data do documento</td>
+<td class="ct" valign="top" width="7" height="100%"><img height="100%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" height="100%">Número do Documento</td>
+<td class="ct" valign="top" width="7" height="100%"><img height="100%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" width="67" height="100%">Espécie doc.</td>
+<td class="ct" valign="top" width="7" height="100%"><img height="100%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" width="34" height="100%">Aceite</td>
+<td class="ct" valign="top" width="7" height="100%"><img height="100%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" width="87" height="100%">Data processamento</td>
+<td class="ct" valign="top" width="7" height="100%"><img height="100%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" width="180" height="100%">Nosso número</td>
+</tr>
+
+<tr>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="cp" valign="top" width="113" height="12"><div align="left"> <span class="campo"> {DATA_DOCUMENTO} </span> </div></td>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="cp" valign="top" height="12"><span class="campo"> {NUMERO_DOCUMENTO} </span> </td>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="cp" valign="top" width="67" height="12"><div align="left"> <span class="campo"> {ESPECIE_DOC} </span> </div></td>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="cp" valign="top" width="34" height="12"><div align="left"> <span class="campo">N</span> </div></td>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="cp" valign="top" width="87" height="12"><div align="left"> <span class="campo"> {DATA_PROC} </span> </div></td>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="cp" valign="top" align="right" width="180" height="12"><span class="campo"> {NOSSO_NUMERO} </span> </td>
+</tr>
+
+<tr>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="7" border="0"></td>
+<td valign="top" width="113" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="113" border="0"></td>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="7" border="0"></td>
+<td valign="top" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="100%" border="0"></td>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="7" border="0"></td>
+<td valign="top" width="67" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="67" border="0"></td>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="7" border="0"></td>
+<td valign="top" width="34" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="34" border="0"></td>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="7" border="0"></td>
+<td valign="top" width="87" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="87" border="0"></td>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="7" border="0"></td>
+<td valign="top" width="180" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="180" border="0"></td>
+</tr>
+</table>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="ct" valign="top" width="7" height="13"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" colspan="3" height="13"> Uso do banco </td>
+<td class="ct" valign="top" height="13" width="7"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" width="83" height="13"> Carteira </td>
+<td class="ct" valign="top" height="13" width="7"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" width="53" height="13"> Espécie </td>
+<td class="ct" valign="top" height="13" width="7"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" width="123" height="13"> Quantidade </td>
+<td class="ct" valign="top" height="13" width="7"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" width="72" height="13"> Valor </td>
+<td class="ct" valign="top" width="7" height="13"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" width="180" height="13"> (=) Valor documento </td>
+</tr>
+
+<tr>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td valign="top" class="cp" height="12" colspan="3"><div align=left> </div></td>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="cp" valign="top" width="83"><div align=left> <span class="campo"> {CARTEIRA} {VAR_CARTEIRA} </span></div></td>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="cp" valign="top"  width="53"><div align=left><span class="campo"> {ESPECIE} </span> </div></td>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="cp" valign="top"  width="123"><span class="campo"><!-- {QUANTIDADE} --></span> </td>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="cp" valign="top"  width="72"><span class="campo"><!-- {VALOR_UNITARIO} --></span></td>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="cp" valign="top" align="right" width="180" height="12"><span class="campo"> {VALOR_BOLETO} </span></td>
+</tr>
+
+<tr>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="7" border="0"></td>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="75" border="0"></td>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="7" border="0"></td>
+<td valign="top" width="31" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="31" border="0"></td>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="7" border="0"></td>
+<td valign="top" width="83" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="83" border="0"></td>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="7" border="0"></td>
+<td valign="top" width="53" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="53" border="0"></td>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="7" border="0"></td>
+<td valign="top" width="123" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="123" border="0"></td>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="7" border="0"></td>
+<td valign="top" width="72" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="72" border="0"></td>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="7" border="0"></td>
+<td valign="top" width="180" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="180" border="0"></td>
+</tr>
+</table>
+
+<table cellspacing="0" cellpadding="0" width="666" border="0">
+<tr>
+<td align="right" width="10"><table cellspacing="0" cellpadding="0" border="0" align="left">
+<tr>
+<td class="ct" valign="top" width="7" height="13"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+</tr>
+<tr>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+</tr>
+<tr>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="1" border="0"></td>
+</tr>
+</table>
+
+</td>
+<td valign="top" width="468" rowspan="5"><font class="ct"> Instruções de responsabilidade do Beneficiário. Qualquer dúvida sobre este boleto, contate o beneficiário. </font><br>
+<span class="cp"><font class="campo">
+
+<!-- BEGIN BLOCK_INSTAUTO -->
+{TEXTO_MULTAMORA} <br />
+<!-- END BLOCK_INSTAUTO -->
+{INSTRUCOES1} <br />
+{INSTRUCOES2} <br />
+{INSTRUCOES3} <br />
+{INSTRUCOES4} <br />
+{INSTRUCOES5} <br />
+
+</font></span></td>
+<td align="right" width="188">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="ct" valign="top" width="7" height="13"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" width="180" height="13">(-) Desconto / Abatimentos</td>
+</tr>
+<tr>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="cp" valign="top" align="right" width="180" height="12"></td>
+</tr>
+<tr>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="7" border="0"></td>
+<td valign="top" width="180" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="180" border="0"></td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td align="right" width="10"><table cellspacing="0" cellpadding="0" border="0" align="left">
+<tr>
+<td class="ct" valign="top" width="7" height="13"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+</tr>
+<tr>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+</tr>
+<tr>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="1" border="0"></td>
+</tr>
+</table></td>
+<td align="right" width="188"><table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="ct" valign="top" width="7" height="13"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" width="180" height="13">(-) Outras deduções </td>
+</tr>
+<tr>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="cp" valign="top" align="right" width="180" height="12"></td>
+</tr>
+<tr>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="7" border="0"></td>
+<td valign="top" width="180" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="180" border="0"></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td align="right" width="10"><table cellspacing="0" cellpadding="0" border="0" align="left">
+<tr>
+<td class="ct" valign="top" width="7" height="13"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+</tr>
+<tr>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+</tr>
+<tr>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="1" border="0"></td>
+</tr>
+</table></td>
+<td align="right" width="188"><table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="ct" valign="top" width="7" height="13"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" width="180" height="13">(+)Mora / Multa</td>
+</tr>
+<tr>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="cp" valign="top" align="right" width="180" height="12"></td>
+</tr>
+<tr>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="7" border="0"></td>
+<td valign="top" width="180" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="180" border="0"></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td align="right" width="10"><table cellspacing="0" cellpadding="0" border="0" align="left">
+<tr>
+<td class="ct" valign="top" width="7" height="13"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+</tr>
+<tr>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+</tr>
+<tr>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="1" border="0"></td>
+</tr>
+</table></td>
+<td align="right" width="188"><table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="ct" valign="top" width="7" height="13"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" width="180" height="13">(+) Outros acréscimos</td>
+</tr>
+<tr>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="cp" valign="top" align="right" width="180" height="12"></td>
+</tr>
+<tr>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="7" border="0"></td>
+<td valign="top" width="180" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="180" border="0"></td>
+</tr>
+</table></td>
+</tr>
+
+<tr>
+<td align="right" width="10"><table cellspacing="0" cellpadding="0" border="0" align="left">
+<tr>
+<td class="ct" valign="top" width="7" height="13"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+</tr>
+<tr>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+</tr>
+</table>
+</td>
+
+<td align="right" width="188">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="ct" valign="top" width="7" height="13"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" width="180" height="13">(=) Valor cobrado</td>
+</tr>
+<tr>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="cp" valign="top" align="right" width="180" height="12"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<table cellspacing="0" cellpadding="0" width="666" border="0">
+<tr>
+<td valign="top" width="666" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="666" border="0"></td>
+</tr>
+</table>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="ct" valign="top" width="7" height="13"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" width="659" height="13">Pagador</td>
+</tr>
+<tr>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="cp" valign="top" width="659" height="12"><span class="campo"> {SACADO_NOME} - {TIPO_PSACADO} {SACADO_CPF} </span> </td>
+</tr>
+</table>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="cp" valign="top" width="7" height="12"><img height="12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="cp" valign="top" width="659" height="12"><span class="campo"> {SACADO_ENDERECO} - {SACADO_BAIRRO} - {SACADO_COMPLEMENTO} </span> </td>
+</tr>
+</table>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="ct" valign="top" width="7" height="13"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td width="659" height="13" valign="top" class="cp"><span class="campo"> {SACADO_CIDADE} - {SACADO_ESTADO} - CEP: {SACADO_CEP} </span> </td>
+</tr>
+</table>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<!-- BEGIN BLOCK_AVALISTA -->
+<tr>
+<td class="ct" valign="top" width="7" height="13"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td height="13" valign="top" class="ct">Pagador/Avalista</td>
+<td class="ct" valign="top" width="7" height="13"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" width="180" height="13"></td>
+</tr>
+
+<tr>
+<td class="ct" valign="top" width="7" height="13"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="cp" valign="top" width="472" height="13"> {SACADO_AVALISTA} </td>
+<td class="ct" valign="top" width="7" height="13"><img height="13" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATAQMAAABrxfVaAAAAA1BMVEUAAACnej3aAAAADElEQVR42mNgIAYAAAAmAAEy2MJFAAAAAElFTkSuQmCC" width="1" border="0"></td>
+<td class="ct" valign="top" width="180" height="13">Cód. baixa</td>
+</tr>
+<!-- END BLOCK_AVALISTA -->
+
+<tr>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="7" border="0"></td>
+<td valign="top" width="472" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="472" border="0"></td>
+<td valign="top" width="7" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="7" border="0"></td>
+<td valign="top" width="180" height="1"><img height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==" width="180" border="0"></td>
+</tr>
+</table>
+
+<table cellSpacing="0" cellPadding="0" border="0" width="666">
+<tr>
+<td colspan="2" height="2"></td>
+</tr>
+
+<tr>
+<td width="1%" nowrap="nowrap" class="ct"> {BOLETO_BARCODE2} </td>
+<td>
+<div class="ct" align="center">Autenticação mecânica </div><br />
+<div class="cp" align="center"><strong>Ficha de Compensação</strong></div>
+</td>
+</tr>
+
+<tr>
+<td class="ct" colspan="3"></td>
+</tr>
+</table>

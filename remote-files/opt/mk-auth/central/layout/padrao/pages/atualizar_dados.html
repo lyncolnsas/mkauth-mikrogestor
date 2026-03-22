@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<title>Central do assinante</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="./layout/{CENTRAL_TEMPLATE}/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="./layout/{CENTRAL_TEMPLATE}/css/vendor.css">
+<link rel="stylesheet" type="text/css" href="./layout/{CENTRAL_TEMPLATE}/css/bootstrap-icons.css">
+<link rel="stylesheet" type="text/css" href="./layout/{CENTRAL_TEMPLATE}/css/flat.css?v=20210317">
+<link rel="stylesheet" type="text/css" id="theme" href="./layout/{CENTRAL_TEMPLATE}/css/light_mode.css">
+</head>
+<body>
+<div class="app app-default">
+	<aside class="app-sidebar" id="sidebar">
+		<div class="sidebar-header"> <span class="sidebar-brand"><span class="highlight">Central</span></span>
+			<button type="button" class="sidebar-toggle"> <i class="fa fa-times"></i></button>
+		</div>
+		<div class="sidebar-menu">
+			<ul class="sidebar-nav">
+				<li> <a href="./index.hhvm">
+					<div class="icon"> <i class="fa fa-tasks" aria-hidden="true"></i></div>
+					<div class="title">Inicio</div>
+					</a> </li>
+				<li class="dropdown active"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<div class="icon"> <i class="fa fa-user" aria-hidden="true"></i></div>
+					<div class="title">Dados</div>
+					</a>
+					<div class="dropdown-menu">
+						<ul>
+							<li class="section"><i class="fa fa-user" aria-hidden="true"></i> Meus dados</li>
+							<li><a href="./atualizar_dados.hhvm"> Atualizar dados </a></li>
+							<!-- BEGIN BLOCK_MENUSENHA -->
+							<li><a href="./trocar_senha.hhvm"> Trocar senha </a></li>
+							<!-- END BLOCK_MENUSENHA -->
+							<li><a href="./foto.hhvm"> Trocar foto </a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<div class="icon"> <i class="fa fa-money" aria-hidden="true"></i></div>
+					<div class="title">Financeiro</div>
+					</a>
+					<div class="dropdown-menu">
+						<ul>
+							<li class="section"><i class="fa fa-money" aria-hidden="true"></i> Financeiro</li>
+							<!-- BEGIN BLOCK_MENU2VIA -->
+							<li><a href="./2_via.hhvm"> 2&#176; via on-line </a></li>
+							<!-- END BLOCK_MENU2VIA -->
+							<li><a href="./servicos.hhvm"> Servi&ccedil;os contratados </a></li>
+							<li><a href="./faturas.hhvm"> Faturas geradas </a></li>
+							<li><a href="./comprovante.hhvm"> Enviar comprovante </a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<div class="icon"> <i class="fa fa-globe" aria-hidden="true"></i></div>
+					<div class="title">Acesso</div>
+					</a>
+					<div class="dropdown-menu">
+						<ul>
+							<li class="section"><i class="fa fa-globe" aria-hidden="true"></i> Acesso a internet</li>
+							<li><a href="./relatorio.hhvm"> Relat&oacute;rio de conex&otilde;es </a></li>
+							<!-- BEGIN BLOCK_MENUDISCO -->
+							<li><a href="./disco_virtual.hhvm"> Disco virtual </a></li>
+							<!-- END BLOCK_MENUDISCO -->
+						</ul>
+					</div>
+				</li>
+				<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<div class="icon"> <i class="fa fa-envelope" aria-hidden="true"></i></div>
+					<div class="title">Suporte</div>
+					</a>
+					<div class="dropdown-menu">
+						<ul>
+							<li class="section"><i class="fa fa-envelope" aria-hidden="true"></i> Suporte t&eacute;cnico</li>
+							<!-- BEGIN BLOCK_MENUCHAMADOS -->
+							<li><a href="./suporte.hhvm"> Chamados t&eacute;cnicos </a></li>
+							<!-- END BLOCK_MENUCHAMADOS -->
+							<li><a href="./downloads.hhvm"> Downloads </a></li>
+							<!-- BEGIN BLOCK_MENUFALE -->
+							<li><a href="./fale_conosco.hhvm"> Fale conosco </a></li>
+							<!-- END BLOCK_MENUFALE -->
+						</ul>
+					</div>
+				</li>
+				<li> <a href="./executar_central.hhvm?acao=sair">
+					<div class="icon"> <i class="fa fa-unlock" aria-hidden="true"></i></div>
+					<div class="title">Sair</div>
+					</a> </li>
+			</ul>
+		</div>
+	</aside>
+	<div class="app-container">
+		<nav class="navbar navbar-default" id="navbar">
+			<div class="container-fluid">
+				<div class="navbar-collapse collapse in">
+					<ul class="nav navbar-nav navbar-mobile">
+						<li>
+							<button type="button" class="sidebar-toggle"> <i class="fa fa-bars"></i></button>
+						</li>
+						<li class="logo">
+							<div class="navbar-brand"><img class="my-logo" src="../mkfiles/logo.jpg"></div>
+						</li>
+						<li>
+							<button type="button" class="navbar-toggle"> <img class="profile-img" src="../mkfiles/{CLIENTE_FOTO}"> </button>
+						</li>
+						<div class="tema mobile-tema">
+							<span class="btn btn-outline-light btn-social"><i class="iconT"></i></span>
+						</div>
+					</ul>
+					<ul class="nav navbar-nav navbar-left">
+						<li class="navbar-title"><img class="my-logo" src="../mkfiles/logo.jpg"></li>
+						<p><span class="provedor-nome"> {PROVEDOR_NOME} </span></p>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<div class="tema desktop-tema">
+							<span class="btn btn-outline-light btn-social"><i class="iconT"></i></span>
+						</div>
+						<li class="dropdown notification danger"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<div class="icon"><i class="fa fa-bell" aria-hidden="true"></i></div>
+							<div class="title"> Avisos </div>
+							<div class="count"> {TOTAL_AVISOS} </div>
+							</a>
+							<div class="dropdown-menu">
+								<ul>
+									<li class="dropdown-header">Avisos</li>
+									<!-- BEGIN BLOCK_DADOSAVISOS -->
+									<li><a href="{CLIENTE_AVISO_LINK}"> {CLIENTE_AVISO_MSG} </a></li>
+									<!-- END BLOCK_DADOSAVISOS -->
+								</ul>
+							</div>
+						</li>
+						<li class="dropdown profile"> <a href="./atualizar_dados.hhvm" class="dropdown-toggle"  data-toggle="dropdown"> <img class="profile-img" src="../mkfiles/{CLIENTE_FOTO}">
+							<div class="title"> Perfil </div>
+							</a>
+							<div class="dropdown-menu">
+								<div class="profile-info">
+									<h4 class="username"> {CLIENTE_NOME_RES} </h4>
+								</div>
+								<ul class="action">
+									<li><a href="./atualizar_dados.hhvm"> Dados </a></li>
+									<li><a href="./foto.hhvm"> Foto </a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="row">
+			<div class="col-lg-12 space">
+				<div class="card card-tab">
+					<div class="card-header">
+						<ul class="nav nav-tabs">
+							<li role="tab1" class="active"> <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab"> Dados </a></li>
+						</ul>
+					</div>
+					<div class="card-body no-padding tab-content">
+						<div role="tabpanel" class="tab-pane active" id="tab1">
+							<div class="row">
+								<div class="col-md-3 col-sm-12">
+									<div class="section">
+										<div class="section-title"><i class="icon fa fa-user" aria-hidden="true"></i> Atualizar dados </div>
+										<div class="section-body __indent"> Mantenha seus dados atualizados, isso &eacute; muito importante para temos um melhor relacionamento com voc&ecirc; caro cliente.<br /><br />
+										<a href="./down_lgpd.hhvm"><strong> Clique aqui </strong></a> e baixe os seus dados em nossa empresa.</div>
+									</div>
+								</div>
+								<div class="col-md-9 col-sm-12">
+									<form action="executar_central.hhvm?acao=altcliente" method="post" name="form" id="form" class="form form-horizontal">
+										<div class="section">
+											<div class="section-title">Dados pessoais</div>
+											<div class="section-body">
+												<!-- BEGIN BLOCK_ALTLOGIN -->
+												<div class="form-group">
+													<label class="col-md-3 control-label">Login:</label>
+													<div class="col-md-4">
+														<input type="text" class="form-control" name="login" id="txt_login" value="{CLIENTE_LOGIN}">
+													</div>
+												</div>
+												<!-- END BLOCK_ALTLOGIN -->
+												<div class="form-group">
+													<label class="col-md-3 control-label">Nome completo:</label>
+													<div class="col-md-5">
+														<input type="text" class="form-control" name="nome" id="txt_nome" value="{CLIENTE_NOME}" required>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label">Data de nascimento:</label>
+													<div class="col-md-5">
+														<input type="text" class="form-control" name="nascimento" id="txt_nascimento" value="{CLIENTE_NASCIMENTO}" placeholder="DD/MM/AAAA">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label">RG:</label>
+													<div class="col-md-5">
+														<input type="text" class="form-control" name="rg" id="txt_rg" value="{CLIENTE_RG}">
+													</div>
+												</div>
+												<!-- BEGIN BLOCK_ALTCPF -->
+												<div class="form-group">
+													<label class="col-md-3 control-label">CPF:</label>
+													<div class="col-md-5">
+														<input type="text" class="form-control" name="cpf_cnpj" id="txt_cpf_cnpj" value="{CLIENTE_CPF_CNPJ}" required>
+													</div>
+												</div>
+												<!-- END BLOCK_ALTCPF -->
+												<div class="form-group">
+													<label class="col-md-3 control-label">E-MAIL:</label>
+													<div class="col-md-5">
+														<input type="email" class="form-control" name="email" id="txt_email" value="{CLIENTE_EMAIL}">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label">Telefone:</label>
+													<div class="col-md-4">
+														<input type="text" class="form-control" name="telefone" id="txt_telefone" value="{CLIENTE_FONE}">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label">Celular:</label>
+													<div class="col-md-4">
+														<input type="text" class="form-control" name="celular" id="txt_celular" value="{CLIENTE_CELULAR}" required>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="section">
+											<div class="section-title">Endere&ccedil;o de instala&ccedil;&atilde;o</div>
+											<div class="section-body">
+												<div class="form-group">
+													<label class="col-md-3 control-label">CEP:</label>
+													<div class="col-md-4">
+														<input type="text" class="form-control" name="cep_res" id="txt_cep_res" value="{CLIENTE_CEP_RES}" required>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label">Endere&ccedil;o:</label>
+													<div class="col-md-5">
+														<input type="text" class="form-control" name="endereco_res" id="txt_endereco_res" value="{CLIENTE_ENDERECO_RES}" required>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label">Numero:</label>
+													<div class="col-md-4">
+														<input type="text" class="form-control" name="numero_res" id="txt_numero_res" value="{CLIENTE_NUMERO_RES}" required>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label">Complemento:</label>
+													<div class="col-md-5">
+														<input type="text" class="form-control" name="complemento_res" id="txt_complemento_res" value="{CLIENTE_COMPLEMENTO_RES}">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label">Bairro:</label>
+													<div class="col-md-5">
+														<input type="text" class="form-control" name="bairro_res" id="txt_bairro_res" value="{CLIENTE_BAIRRO_RES}" required>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label">Cidade:</label>
+													<div class="col-md-5">
+														<input type="text" class="form-control" name="cidade_res" id="txt_cidade_res" value="{CLIENTE_CIDADE_RES}" required>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label">Estado</label>
+													<div class="col-md-4">
+														<div class="input-group">
+															<select class="select2" name="estado_res" id="txt_estado_res">
+																<option value="AC">Acre</option>
+																<option value="AL">Alagoas</option>
+																<option value="AP">Amapa</option>
+																<option value="AM">Amazonas</option>
+																<option value="BA">Bahia</option>
+																<option value="CE">Ceara</option>
+																<option value="DF">Distrito Federal</option>
+																<option value="ES">Espirito Santo</option>
+																<option value="GO">Goias</option>
+																<option value="MA">Maranhao</option>
+																<option value="MT">Mato Grosso</option>
+																<option value="MS">Mato Grosso do Sul</option>
+																<option value="MG">Minas Gerais</option>
+																<option value="PA">Para</option>
+																<option value="PB">Paraiba</option>
+																<option value="PR">Parana</option>
+																<option value="PE">Pernambuco</option>
+																<option value="PI">Piaui</option>
+																<option value="RJ">Rio de Janeiro</option>
+																<option value="RN">Rio Grande do Norte</option>
+																<option value="RS">Rio Grande do Sul</option>
+																<option value="RO">Rondonia</option>
+																<option value="RR">Roraima</option>
+																<option value="SC">Santa Catarina</option>
+																<option value="SP">Sao Paulo</option>
+																<option value="SE">Sergipe</option>
+																<option value="TO">Tocantins</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="section">
+											<div class="section-title">Endere&ccedil;o de cobran&ccedil;a</div>
+											<div class="section-body">
+												<div class="form-group">
+													<label class="col-md-3 control-label">CEP:</label>
+													<div class="col-md-4">
+														<input type="text" class="form-control" name="cep" id="txt_cep" value="{CLIENTE_CEP}">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label">Endere&ccedil;o:</label>
+													<div class="col-md-5">
+														<input type="text" class="form-control" name="endereco" id="txt_endereco" value="{CLIENTE_ENDERECO}">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label">Numero:</label>
+													<div class="col-md-4">
+														<input type="text" class="form-control" name="numero" id="txt_numero" value="{CLIENTE_NUMERO}">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label">Complemento:</label>
+													<div class="col-md-5">
+														<input type="text" class="form-control" name="complemento" id="txt_complemento" value="{CLIENTE_COMPLEMENTO}">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label">Bairro:</label>
+													<div class="col-md-5">
+														<input type="text" class="form-control" name="bairro" id="txt_bairro" value="{CLIENTE_BAIRRO}">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label">Cidade:</label>
+													<div class="col-md-5">
+														<input type="text" class="form-control" name="cidade" id="txt_cidade" value="{CLIENTE_CIDADE}">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label">Estado</label>
+													<div class="col-md-4">
+														<div class="input-group">
+															<select class="select2" name="estado" id="txt_estado">
+																<option value="AC">Acre</option>
+																<option value="AL">Alagoas</option>
+																<option value="AP">Amapa</option>
+																<option value="AM">Amazonas</option>
+																<option value="BA">Bahia</option>
+																<option value="CE">Ceara</option>
+																<option value="DF">Distrito Federal</option>
+																<option value="ES">Espirito Santo</option>
+																<option value="GO">Goias</option>
+																<option value="MA">Maranhao</option>
+																<option value="MT">Mato Grosso</option>
+																<option value="MS">Mato Grosso do Sul</option>
+																<option value="MG">Minas Gerais</option>
+																<option value="PA">Para</option>
+																<option value="PB">Paraiba</option>
+																<option value="PR">Parana</option>
+																<option value="PE">Pernambuco</option>
+																<option value="PI">Piaui</option>
+																<option value="RJ">Rio de Janeiro</option>
+																<option value="RN">Rio Grande do Norte</option>
+																<option value="RS">Rio Grande do Sul</option>
+																<option value="RO">Rondonia</option>
+																<option value="RR">Roraima</option>
+																<option value="SC">Santa Catarina</option>
+																<option value="SP">Sao Paulo</option>
+																<option value="SE">Sergipe</option>
+																<option value="TO">Tocantins</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-footer">
+											<div class="form-group">
+												<div class="col-md-9 col-md-offset-3">
+													<button type="submit" class="btn btn-primary btn-sm"> <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Salvar </button>
+													<input type="hidden" name="uuid_cliente" id="uuid_cliente" value="{CLIENTE_UUID_CLIENTE}">
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="app-footer">
+			<div class="row">
+				<div class="col-xs-12 footer">
+					<div class="redes-sociais d-flex">
+						<a class="btn btn-outline-light btn-social" href="{INSTAGRAM}" target="_blank" id="instagram"><i class="bi bi-instagram"></i></a>
+						<a class="btn btn-outline-light btn-social" href="{WHATSAPP}" target="_blank" id="whatsapp"><i class="bi bi-whatsapp"></i></a>
+						<a class="btn btn-outline-light btn-social" href="{TIKTOK}" target="_blank" id="tiktok"><i class="bi bi-tiktok"></i></a>
+						<a class="btn btn-outline-light btn-social" href="{TWITTER}" target="_blank" id="twitter"><i class="bi bi-twitter"></i></a>
+						<a class="btn btn-outline-light btn-social" href="{FACEBOOK}" target="_blank" id="facebook"><i class="bi bi-facebook"></i></a>
+						<a class="btn btn-outline-light btn-social" href="{LINKEDIN}" target="_blank" id="linkedin"><i class="bi bi-linkedin"></i></a>
+						<a class="btn btn-outline-light btn-social" href="{YOUTUBE}" target="_blank" id="youtube"><i class="bi bi-youtube"></i></a>
+						<a class="btn btn-outline-light btn-social" href="{TELEGRAM}" target="_blank" id="telegram"><i class="bi bi-telegram"></i></a>
+						<a class="btn btn-outline-light btn-social" href="{SKYPE}" target="_blank" id="skype"><i class="bi bi-skype"></i></a>
+						<a class="btn btn-outline-light btn-social" href="{KWAI}" target="_blank" id="kwai"><i class="bi bi-camera-reels-fill"></i></a>
+					</div>
+					<div class="footer-copyright"> Copyright &copy; {ANO_ATUAL} MK-AUTH </div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</div>
+<script src="./layout/{CENTRAL_TEMPLATE}/js/jquery.js"></script>
+<script src="./layout/{CENTRAL_TEMPLATE}/js/bootstrap.js"></script>
+<script src="./layout/{CENTRAL_TEMPLATE}/js/vendor.js"></script>
+<script src="./layout/{CENTRAL_TEMPLATE}/js/app.js"></script>
+<script src="./layout/{CENTRAL_TEMPLATE}/js/mk-auth.js"></script>
+<script>
+// procura cep residencial do cliente
+jQuery("#txt_cep_res").change(function () {
+var cep_res = jQuery("#txt_cep_res").val();
+
+$.ajax({
+type: "GET",
+url: "busca_cep.hhvm",
+data: "cep=" + cep_res,
+contentType: "application/json; charset=utf-8",
+dataType: "json",
+
+success: function(txt) {
+	if (txt!='ERRO') {
+		// altera os campos
+		jQuery('#txt_endereco_res').val(txt['endereco']);
+		jQuery('#txt_bairro_res').val(txt['bairro']);
+		jQuery('#txt_complemento_res').val(txt['complemento']);
+		jQuery('#txt_cidade_res').val(txt['cidade']);
+		jQuery('#txt_estado_res option[value="' + txt['estado'] + '"]').attr({ selected : "selected" });
+	}
+},
+
+error: function(txt) {
+	alert('Houve um problema interno.\ntente novamente mais tarde.');
+}
+});
+});
+
+// procura cep correspondecia do cliente
+jQuery("#txt_cep").change(function () {
+var cep = jQuery("#txt_cep").val();
+
+$.ajax({
+type: "GET",
+url: "busca_cep.hhvm",
+data: "cep=" + cep,
+contentType: "application/json; charset=utf-8",
+dataType: "json",
+
+success: function(txt) {
+	if (txt!='ERRO') {
+		// altera os campos
+		jQuery('#txt_endereco').val(txt['endereco']);
+		jQuery('#txt_bairro').val(txt['bairro']);
+		jQuery('#txt_complemento').val(txt['complemento']);
+		jQuery('#txt_cidade').val(txt['cidade']);
+		jQuery('#txt_estado option[value="' + txt['estado'] + '"]').attr({ selected : "selected" });
+	}
+},
+
+error: function(txt) {
+	alert('Houve um problema interno.\ntente novamente mais tarde.');
+}
+});
+});
+
+jQuery(document).ready(function() {
+	jQuery('#txt_estado_res option[value="{CLIENTE_ESTADO_RES}"]').attr({ selected : "selected" });
+	jQuery('#txt_estado_res :selected').change();
+	jQuery('#txt_estado option[value="{CLIENTE_ESTADO}"]').attr({ selected : "selected" });
+	jQuery('#txt_estado :selected').change();
+});
+</script>
+</body>
+</html>

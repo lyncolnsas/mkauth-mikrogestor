@@ -1,0 +1,151 @@
+<?php
+
+#@@@ sis_carne
+#??? uuid_carne
+
+class carnes {
+
+	private $dados = array();
+
+	public function carregarDados($valor) {
+
+		$comandoSQL = 'SELECT *
+		FROM sis_carne
+		WHERE uuid_carne = :carne OR codigo = :carne
+		LIMIT 1';	
+		$rotinaSQL = DB::prepare($comandoSQL);
+		$rotinaSQL -> bindParam('carne', $valor);
+		$rotinaSQL -> execute();
+		$resultadoSQL = $rotinaSQL -> fetch(PDO::FETCH_ASSOC);
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+
+		$carne = $resultadoSQL->codigo;
+
+		if ($numeroDeLinhas > 0) {
+			
+			$subComandoSQL = "SELECT vtab_titulos.uuid_lanc AS uuid, login, vtab_titulos.titulo, valor, valorpag, datavenc, nossonum, linhadig, nome, login, cpf_cnpj, tipo, email, endereco, numero, bairro, complemento, cidade, estado, cep, status, cli_ativado, sis_qrpix.qrcode AS pix
+			FROM vtab_titulos
+			LEFT JOIN sis_qrpix ON vtab_titulos.uuid_lanc = sis_qrpix.titulo
+			WHERE vtab_titulos.deltitulo = 0 AND vtab_titulos.codigo_carne = '{$carne}'";
+			$subConsultaSQL = DB::prepare($subComandoSQL);
+			$subConsultaSQL -> execute();
+			$resultadosSubSQL = $subConsultaSQL -> fetchAll();
+			$numeroTitulos = $subConsultaSQL -> rowCount();
+
+			if (function_exists('api_linkpix')) {
+
+				foreach ($resultadosSubSQL as $Titulo) {
+
+					if ($Titulo -> pix !== null) {
+
+						$Titulo -> pix_link = api_linkpix($Titulo->uuid);
+						$Titulo -> pix_qr = api_qrpix($Titulo->uuid);
+
+					}
+
+				}
+
+			}
+
+			$resultadoSQL->titulos = $resultadosSubSQL;
+
+		}
+
+		if ($numeroDeLinhas > 0) {
+
+			$this->dados = $resultadosSQL;
+			
+		}
+
+	}
+
+	public function get_show($valor) {
+
+		$this->carregarDados($valor);
+
+		echo json_encode($this->dados);
+
+	}
+
+	public function get_listagem() {
+
+		// apenas para compatibilidade
+		$this->get_listar('listagem');
+		return;
+
+	}
+
+	public function get_listar($valor = null) {
+
+		$comandoSQL = 'SELECT *
+		FROM sis_carne';
+
+		$sql = new SQL($valor);
+		if ($valor == 'listagem') $sql->limite = 999999999;
+		$sql->comandoSQL = $comandoSQL;
+		$sql->tabela = 'sis_carne';
+		$sql->gerarSQL();
+
+		$comandoSQL = $sql->comandoSQL;
+		$rotinaSQL = DB::prepare($comandoSQL);
+
+		if (isset($sql->binds)) {
+
+			foreach ($sql->binds as $bind) {
+
+				$rotinaSQL -> bindParam("{$bind[0]}", $bind[1], $bind[2]);
+
+			}
+
+		}
+
+		$rotinaSQL -> execute();
+		$resultadosSQL = $rotinaSQL -> fetchAll();
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+
+		if ($numeroDeLinhas == 0) {
+			
+			echo json_encode(array('status' => 'erro', 'mensagem' => 'Registros nao encontrados'));
+			return;
+
+		} 
+
+		if ($valor == 'listagem') {
+
+			echo json_encode(array('Total' => $numeroDeLinhas, 'carnes' => $resultadosSQL));
+			return;
+
+		}
+
+		echo json_encode(array('total_registros' => $sql->total_registros,
+		'consulta_atual' => $numeroDeLinhas,
+		'pagina_atual' => $sql->pagina,
+		'total_paginas' => $sql->total_paginas,
+		'carnes' => $resultadosSQL));
+
+	}
+
+	public function delete_id($key) {
+
+		$comandoSQL = 'UPDATE sis_carne
+		INNER JOIN sis_lanc ON sis_carne.codigo = sis_lanc.codigo_carne
+		SET sis_lanc.deltitulo = 1, sis_carne.delcarne = 1
+		WHERE sis_carne.uuid_carne = :carne OR sis_carne.codigo = :carne';
+		
+		$rotinaSQL = DB::prepare($comandoSQL);
+		$rotinaSQL -> bindParam('carne', $key);
+		$rotinaSQL -> execute();
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+
+		if ($numeroDeLinhas > 0) {
+
+			echo json_encode(array('status' => 'sucesso', 'mensagem' => 'Registro excluido com sucesso'));
+			return;
+
+		}
+		
+		echo json_encode(array('status' => 'erro', 'mensagem' => 'Registro nao encontrado'));
+
+	}
+
+}

@@ -1,0 +1,87 @@
+<!-- BEGIN BLOCK_COMLOGOSVA -->
+<!-- END BLOCK_COMLOGOSVA -->
+
+<!-- BEGIN BLOCK_SEMLOGOSVA -->
+<!-- END BLOCK_SEMLOGOSVA -->
+
+<!-- BEGIN BLOCK_KK -->
+<!-- BEGIN BLOCK_DADOSKK -->
+<!-- END BLOCK_DADOSKK -->
+<!-- END BLOCK_KK -->
+
+<!-- BEGIN BLOCK_K -->
+<!-- BEGIN BLOCK_DADOSK -->
+<!-- END BLOCK_DADOSK -->
+<!-- END BLOCK_K -->
+
+<!-- BEGIN BLOCK_Z -->
+<!-- BEGIN BLOCK_DADOSZ -->
+<!-- END BLOCK_DADOSZ -->
+<!-- END BLOCK_Z -->
+<div class="container">
+    
+  <div class="logoMarca">
+    {LOGOMARCA}
+  </div>
+  <div class="logoMarca2">
+    {LOGOMARCA}
+  </div>
+  <p class="linhaD">{LINHA_DIGITAVEL}</p>
+  <div class="dadosCarne">
+    <p>{NUMERO_DOCUMENTO}</p>
+    <p>{DATA_VENC}</p>
+    <P>{AGENCIA_CODIGO}</P>
+    <p>{NOSSO_NUMERO}</p>
+    <p>{ESPECIE}</p>
+    <p>{VALOR_BOLETO}</p>
+  </div>
+  <div class="dadosCarne2">
+    <p>{SACADO_CPF}</p>
+    <p class="cedente">{CEDENTE}</p>
+  </div>
+    <p class="codigoB">{CODIGO_BANCO_COM_DV}</p>
+  <!-- Ficha de Compensação -->
+  <p class="codigoB2">{CODIGO_BANCO_COM_DV}</p>
+  <div class="FichaCompensacao">
+    <div class="ficha1">
+      <p>{LOCAL_PAGAMENTO}</p>
+      <p>{CEDENTE}</p>
+      <p>{DATA_DOCUMENTO}</p>
+    </div>
+    <p class="numeroD">{NUMERO_DOCUMENTO}</p>
+    <p class="especie">{ESPECIE}</p>
+    <p class="dataP">{DATA_PROC}</p>
+    <p class="carteira">{CARTEIRA} {VAR_CARTEIRA}</p>
+    <p class="especieDoc">{ESPECIE_DOC}</p>
+    <div class="dadosLateral">
+      <p>{DATA_VENC}</p>
+      <p>{AGENCIA_CODIGO}</p>
+      <p>{NOSSO_NUMERO}</p>
+      <p>{VALOR_BOLETO}</p>
+    </div>
+  </div>
+  <div class="instrucoes">
+    <!-- BEGIN BLOCK_INSTAUTO -->
+      <p>{TEXTO_MULTAMORA}</p>
+    <!-- END BLOCK_INSTAUTO -->
+      <p>{INSTRUCOES1}</p>
+      <p>{INSTRUCOES2}</p>
+      <p>{INSTRUCOES3}</p>
+      <p>{INSTRUCOES4}</p>
+      <p>{INSTRUCOES5}</p>
+    <!-- BEGIN BLOCK_REFERENCIA -->
+      <p>referente ao m&ecirc;s {REFERENCIA}</p>
+    <!-- END BLOCK_REFERENCIA -->
+  </div>
+  <div class="pagadorF">
+    <p>{SACADO_NOME} - {TIPO_PSACADO} {SACADO_CPF}</p>
+    <p>{SACADO_ENDERECO1}  {SACADO_ENDERECO2}</p>
+  </div>
+  <p class="sacadoF">{SACADO_AVALISTA}</p>
+  <div class="qrcode">
+    <img src="{QRCODE}"/>
+  </div>
+  <div class="barcode">
+    {BOLETO_BARCODE2}
+  </div>
+</div>

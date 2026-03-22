@@ -1,0 +1,67 @@
+144910014|ICMS Normal vencimento 10º dia após o período de apuração, o devido apurado no mês|01012009|
+144910022|ICMS Normal vencimento 10º dia do mês subseqüente, para detentores de regime especial|01012009|
+144910065|ICMS Normal vencimento 10º dia do mês subseqüente, para recolhimentos de 70% do imposto por empresa de transporte aéreo|01012009|
+144910103|ICMS Normal vencimento 16º dia após o período de apuração, contribuintes com regularidade|01012009|
+144910073|ICMS Normal vencimento 9º dia do mês seguinte à prestações, para operadoras de encomendas aéreas internacionais com regime especial|01012009|
+144910120|ICMS Normal vencimento 20º dia do mês subseqüente, para operadoras de transporte ferroviário interestadual e internacional|01012009|
+144910138|ICMS Normal vencimento 20º dia do mês subseqüente, para recolhimentos pela CONAB/PGPM|01012009|
+144910189|ICMS Normal vencimento no último dia útil do mês subseqüente, para recolhimentos de 30% do imposto por empresa de transporte aéreo|01012009|
+144910197|ICMS Normal vencimento 10º dia do 24º mês subseqüente, para estabelecimentos detentores de regime especial na importação do exterior do país|01012009|02012009
+144910294|ICMS Normal vencimento conforme definido em regime especial (COMPEX, PROEMPREGO)|01012009|
+144910308|ICMS Normal vencimento 10º dia após o período de apuração do terceiro decêndio, para detentor de regime especial de apuração decendial|01012009|
+144910316|ICMS Normal vencimento 10º após o primeiro decêndio, para primeira parcela devida pela distribuição de energia elétrica ou prestação de serviço de telecomunicação|01012009|31122012
+144910340|ICMS Normal vencimento 10º após o primeiro decêndio, para detentor de regime especial de apuração decendial|01012009|
+144910359|ICMS Normal vencimento 10º após o segundo decendio, para detentor de regime especial de apuração decendial|01012009|
+144910375|ICMS Normal vencimento dia 25 de cada mês, para segunda parcela do imposto devido pela distribuição de energia elétrica ou prestação de serviço de telecomunicação|01012009|31122012
+144910383|ICMS Normal vencimento dia 18 de cada mês, 100% do devido no mês anterior, para contribuintes que operem com combustíveis|01012009|
+144910391|ICMS Normal vencimento dia 18 do mês subseqüente, saldo remanescente, para contribuintes que operem com combustíveis|01012009|
+144910421|ICMS Normal vencimento 20º dia após o período de apuração, contribuintes com regularidade|01012009|
+144910448|ICMS Normal vencimento conforme previsto em TTD e dispuser a legislação|01012009|
+146510278|ICMS Estimativa Fixa vencimento 20º dia após o período de apuração, para imposto apurado pela compensação semestral|01012009|
+147310022|ICMS Substituição Tributária vencimento 10º dia do mês subseqüente, para detentores de regime especial AEHC|01012009|
+147310030|ICMS Substituição Tributária vencimento 10º dia do mês subseqüente, para repasse do imposto retido pela refinaria sobre combustíveis|01012009|
+147310049|ICMS Substituição Tributária vencimento 10º dia do mês subseqüente|01012009|
+147310200|ICMS Substituição Tributária vencimento 5º dia subseqüente ao da entrada da mercadoria, oriunda de estado signatário, desacompanhada de documento de arrecadação|01012009|
+147310251|ICMS Substituição Tributária vencimento 20º dia do mês subseqüente, para repasse do imposto retido pela refinaria e por outros contribuintes sobre combustíveis|01012009|
+147310383|ICMS Substituição Tributária vencimento dia 18 de cada mês, 100% do devido no mês anterior, para contribuintes que operem com combustíveis|01012009|
+147310391|ICMS Substituição Tributária vencimento dia 18 do mês subseqüente, saldo remanescente, para contribuintes que operem com combustíveis|01012009|
+147310430|ICMS Substituição Tributária vencimento 20º dia após o período de apuração, para distribuidor ou atacadista detentor de regime especial|01012009|
+147310448|ICMS Substituição Tributária vencimento conforme previsto em TTD e dispuser a legislação|01012009|
+155419992|ICMS Outros vencimento com vencimento na operação ou prestação|01012009|
+157019992|ICMS Antecipado Intraestadual com vencimento na data da operação ou prestação|01012009|
+158919992|ICMS Antecipado Interestadual com vencimento na data da operação ou prestação|01012009|
+160010014|ICMS Diferencial de Alíquota de Ativo e Material de Uso e Consumo vencimento 10º dia após o período de apuração|01012009|
+160010103|ICMS Diferencial de Alíquota de Ativo e Material de Uso e Consumo vencimento 16º dia após o período de apuração, contribuintes com regularidade|01012009|
+160010421|ICMS Diferencial de Alíquota de Ativo e Material de Uso e Consumo vencimento 20º dia após o período de apuração, contribuintes com regularidade|01012009|
+164310308|ICMS Antecipado Entrada de Mercadorias ou Bens de Outro Estado vencimento 10º dia após o período de apuração do terceiro decêndio, para detentor de regime especial de apuração decendial|01012009|
+164310340|ICMS Antecipado Entrada de Mercadorias ou Bens de Outro Estado vencimento 10º após o primeiro decêndio, para detentor de regime especial de apuração decendial|01012009|
+164310359|ICMS Antecipado Entrada de Mercadorias ou Bens de Outro Estado vencimento 10º após o segundo decendio, para detentor de regime especial de apuração decendial|01012009|
+165119992|ICMS Responsabilidade Tributária com vencimento na data da operação ou prestação|01012009|
+171619992|ICMS Importação com vencimento na data da operação ou prestação|01012009|
+172419992|ICMS Antecipado Entrada de Mercadorias ou Bens de Outro Estado com vencimento na data da operação ou prestação|01012009|
+175919992|ICMS Antecipado para Regime Especial de Diferimento na Importação e vencimento na data da operação ou prestação|01012009|
+176710014|ICMS Responsabilidade Tributária vencimento 10º dia após o período de apuração|01012009|
+176710022|ICMS Responsabilidade Tributária vencimento 10º dia do mês subseqüente, para detentores de regime especial|01012009|
+176710308|ICMS Responsabilidade Tributária vencimento 10º dia após o período de apuração do terceiro decêndio, para detentor de regime especial de apuração decendial|01012009|
+176710340|ICMS Responsabilidade Tributária vencimento 10º após o primeiro decêndio, para detentor de regime especial de apuração decendial|01012009|
+176710359|ICMS Responsabilidade Tributária vencimento 10º após o segundo decendio, para detentor de regime especial de apuração decendial|01012009|
+174019992|ICMS Substituição Tributária com vencimento na data da operação ou prestação|01012009|
+300010243|PRODEC para Contrato PRODEC (Dec. nº 704/07)|01012009|
+300010405|PRODEC para Contrato PRODEC com redução (Dec. nº 704/07)|01012009|
+146510014|ICMS estimativa fixa vencimento 10º dia do período seguinte|01012009|
+1970|ICMS Sustituição Tributária sobre o Estoque – Parcelamento|01012009|31012013
+1783|ICMS Sustituição Tributária sobre o Estoque – ESTOQUE|01012009|
+2542|ICMS Consumidor Final Não Contribuinte Outra UF - Por Operação|01012016|
+2550|ICMS Consumidor Final Não Contribuinte Outra UF - Por Apuração|01012016|
+249610014|ICMS Resultante da Utilização de Crédito Presumido - 10º dia do período seguinte|01042017|
+249610103|ICMS Resultante da Utilização de Crédito Presumido - 16º dia do período seguinte|01042017|
+249610421|ICMS Resultante da Utilização de Crédito Presumido - 20º dia do período seguinte|01042017|
+249610448|ICMS Resultante da Utilização de Crédito Presumido - vencimento conforme previsto em TTD e dispuser a legislação|01052017|
+144910480|ICMS Normal vencimento no dia 4 do mês subsequente ao do período de apuração, 12% do devido no mês anterior,pela distribuição de energia elétrica|01082018|
+147310480|ICMS Substituição Tributária vencimento no dia 4 do mês subsequente ao do período de apuração, devido pela distribuição de energia elétrica|01082018|
+144910499|ICMS Normal vencimento no dia 16 do mês subsequente ao do período de apuração, devido pela distribuição de energia elétrica|01082018|
+144910456|ICMS Normal vencimento dia 22 de cada mês, 50% do devido no mês anterior, pela distribuição de energia elétrica|01012013|
+144910375|ICMS Normal vencimento dia 25 de cada mês, para segunda parcela do imposto devido pela prestação de serviço de telecomunicação|01012013|
+144910316|ICMS Normal vencimento 10º após o primeiro decêndio, para primeira parcela devida pela prestação de serviço de telecomunicação|01012013|
+144910197|ICMS Normal vencimento 10º dia do 24º mês subsequente, para estabelecimentos detentores de benefício do PRÓ-MPREGO|03012009|
+147310502|Recolhimento da complementação da diferença do ICMS substituição tributário retido|01032018|

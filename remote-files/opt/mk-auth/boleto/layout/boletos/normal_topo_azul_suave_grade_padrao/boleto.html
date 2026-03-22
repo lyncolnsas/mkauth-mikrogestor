@@ -1,0 +1,112 @@
+<div class="container" >
+  <img class="logo" src="{PROVEDORLOGO}"/>
+<div class="fatura">
+  <p>FATURA</p>
+    <p>N. {NUMERO_DOCUMENTO}</p>
+</div>
+  <div class="provedorDados">
+    <p>{PROVEDORNOME} <br>
+      CNPJ {PROVEDORCPF} <br>
+      {PROVEDORENDERECO} - {PROVEDORBAIRRO} <br>
+      CEP {PROVEDORCEP} - {PROVEDORCIDADE} - {PROVEDORESTADO}</p>
+  </div>
+  <div class="dadosPagador">
+    <p> PAGADOR: <br>
+      {SACADO_NOME} - {TIPO_PSACADO} {SACADO_CPF} <br>
+      {SACADO_BAIRRO} - {SACADO_ENDERECO} - {SACADO_COMPLEMENTO} <br>
+      {SACADO_CIDADE} - {SACADO_ESTADO} - CEP: {SACADO_CEP} </p>
+    </div>
+    <div>
+      <p class="linhaD">{LINHA_DIGITAVEL}</p>
+      <p class="pagador">{SACADO_NOME} - {SACADO_CPF}</p>
+      <p class="dataV">{DATA_VENC}</p>
+      <p class="valorB2">{VALOR_BOLETO}</p>
+    </div> 
+    <div class="pix">
+      <img src="{QRCODE}"/>
+    </div>
+    <div class="bg"></div>
+    <div class="print">
+      <div class="pixCopiaCola">
+        <p class="f12">Pague via Pix - Pr&#225;tico e R&#225;pido!</p> 
+        <p>Agora voc&#234; pode pagar nossos boletos pelo Pix. <br>
+        Basta abrir o aplicativo, escanear o QR Code e pronto! <br>
+        Experimente essa forma de pagamento &#225;gil e conveniente.</p>
+      </div>
+      <p class="clique">Clique no bot&#227;o abaixo para <br>
+      pagar via PIX copia e cola
+    </p> 
+
+    <div class="Pagar">
+      <!-- BEGIN BLOCK_PIX -->
+      <div class="botao">
+        <span class="copyP"></span>
+        <a href="{LINKCOPIACOLA}">Pagar via Pix Copia e cola</a>
+      </div>
+      <!-- END BLOCK_PIX -->
+  </div>
+
+  </div>
+  <div class="navegador">
+    <div class="textN">
+      <p class="f12">Pague via Pix - Pr&#225;tico e R&#225;pido!</p> 
+          <p>Agora voc&#234; pode pagar nossos boletos pelo Pix. <br>
+          Basta abrir o aplicativo, escanear o QR Code e pronto! <br>
+          Experimente essa forma de pagamento &#225;gil e conveniente.</p>
+      </div>
+      <div class="copy">
+        <p>{COPIACOLA}</p>
+      </div>
+  </div>
+
+  <!-- Segunda parte -->
+  <div class="loterica">
+    <div class="dadosBoleto2">
+      <div class="logoMarca">
+        {LOGOMARCA}
+      </div>
+      <p class="codigoBancoDv">{CODIGO_BANCO_COM_DV}</p>
+      <div style="position: relative;">
+        <p class="linhaDigitavelB">{LINHA_DIGITAVEL}</p>
+      </div>
+      <div class="dadosL">
+        <p class="vencL">{DATA_VENC}</p>
+        <p class="agenciaL">{AGENCIA_CODIGO}</p>
+        <p class="nossoNL">{NOSSO_NUMERO}</p>
+        <p class="valorL">{VALOR_BOLETO}</p>
+      </div>
+      <div class="dadosD">
+        <p class="localPagamento">{LOCAL_PAGAMENTO}</p>
+        <p class="cedenteB">{CEDENTE}</p>
+        <p class="dataDocumento">{DATA_DOCUMENTO}</p>
+        <p class="numeroDocumento">{NUMERO_DOCUMENTO}</p>
+        <p class="especieDoc">{ESPECIE_DOC}</p>
+        <p class="dataProc">{DATA_PROC}</p>
+        <p class="carteira">{CARTEIRA} {VAR_CARTEIRA}</p>
+        <p class="especie">{ESPECIE}</p>
+      </div>
+      <div class="instrucoes">
+        <p>
+          <!-- BEGIN BLOCK_INSTAUTO -->
+          {TEXTO_MULTAMORA} <br />
+          <!-- END BLOCK_INSTAUTO -->
+        </p>
+        <p>{INSTRUCOES1}</p>
+        <p>{INSTRUCOES2}</p>
+        <p>{INSTRUCOES3}</p>
+        <p>{INSTRUCOES4}</p>
+        <p>{INSTRUCOES5}</p>
+      </div>
+      <div class="pagadorF">
+        <p>{SACADO_NOME} - {TIPO_PSACADO} {SACADO_CPF} <br>
+        {SACADO_ENDERECO} - {SACADO_BAIRRO} {SACADO_COMPLEMENTO} <br>
+        {SACADO_CIDADE} - {SACADO_ESTADO} - CEP: {SACADO_CEP}</p> <br>
+        <p class="sacadoA">{SACADO_AVALISTA}</p>
+      </div>
+      <div class="barCode">
+        {BOLETO_BARCODE2}
+      </div>
+    </div>
+  </div>
+<!-- Fim segunda parte -->
+</div>

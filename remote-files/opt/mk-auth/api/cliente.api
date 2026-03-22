@@ -1,0 +1,243 @@
+<?php
+
+#@@@ sis_cliente
+#??? uuid_cliente
+
+class cliente {
+
+	private $dados = array();
+
+	public function carregarDados($valor) {
+
+		$comandoSQL = 'SELECT *
+		FROM sis_cliente
+		WHERE login = :valor OR uuid_cliente = :valor OR cpf_cnpj = :valor
+		LIMIT 1';
+		$rotinaSQL = DB::prepare($comandoSQL);
+		$rotinaSQL -> bindParam('valor', $valor);
+		$rotinaSQL -> execute();
+		$resultadosSQL = $rotinaSQL -> fetch(PDO::FETCH_ASSOC);
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+
+		if ($numeroDeLinhas > 0) {
+
+			$this->dados = $resultadosSQL;
+			
+		}
+
+	}
+
+	public function get_online() {
+
+		$comandoSQL = "SELECT uuid_cliente, status_corte, cli_ativado, statusdown, bloqueado, observacao, id, login, plano, ip, ramal, nome
+		FROM vtab_conectados
+		WHERE cli_ativado = 's'";
+		$rotinaSQL = DB::prepare($comandoSQL);
+		$rotinaSQL -> execute();
+		$resultadosSQL = $rotinaSQL -> fetchAll();
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+
+		if ($numeroDeLinhas > 0) {
+
+			echo json_encode(array('clientes' => $resultadosSQL));
+			return;
+			
+		}
+
+	}
+
+	public function get_show($valor) {
+
+		$this->carregarDados($valor);
+
+		echo json_encode($this->dados);
+
+	}
+
+	public function get_listagem() {
+
+		// apenas para compatibilidade
+		$this->get_listar('listagem');
+		return;
+
+	}
+
+	public function get_listar($valor = null) {
+
+		$comandoSQL = 'SELECT *, uuid_cliente AS uuid
+		FROM sis_cliente';
+
+		$sql = new SQL($valor);
+		if ($valor == 'listagem') $sql->limite = 999999999;
+		$sql->comandoSQL = $comandoSQL;
+		$sql->tabela = 'sis_cliente';
+		$sql->gerarSQL();
+
+		$comandoSQL = $sql->comandoSQL;
+		$rotinaSQL = DB::prepare($comandoSQL);
+
+		if (isset($sql->binds)) {
+
+			foreach ($sql->binds as $bind) {
+
+				$rotinaSQL -> bindParam("{$bind[0]}", $bind[1], $bind[2]);
+
+			}
+
+		}
+
+		$rotinaSQL -> execute();
+		$resultadosSQL = $rotinaSQL -> fetchAll();
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+
+		if ($numeroDeLinhas == 0) {
+			
+			echo json_encode(array('status' => 'erro', 'mensagem' => 'Registros nao encontrados'));
+			return;
+			
+		} 
+
+		if ($valor == 'listagem') {
+
+			echo json_encode(array('clientes' => $resultadosSQL));
+			return;
+
+		}
+
+		echo json_encode(array('total_registros' => $sql->total_registros,
+		'consulta_atual' => $numeroDeLinhas,
+		'pagina_atual' => $sql->pagina,
+		'total_paginas' => $sql->total_paginas,
+		'clientes' => $resultadosSQL));
+
+		
+	}
+
+	public function post_cadastro($data) {
+
+		// apenas para compatibilidade
+		$this->post_inserir($data);
+		return;
+
+	}
+
+	public function post_inserir($data) {
+
+		$uuid = api_ulid();
+		$nome = $data->nome;
+		$login = $data->login;
+		$senha = $data->senha;
+		$email = $data->email;
+		$endereco = $data->endereco;
+		$bairro = $data->bairro;
+		$complemento = $data->complemento;
+		$cidade = $data->cidade;
+		$estado = $data->estado;
+		$cep = $data->cep;
+		$celular = $data->celular;
+		$numero = $data->numero;
+
+		$comandoSQL = "INSERT INTO sis_cliente (uuid_cliente, nome, login, senha, email, endereco, bairro, complemento, cidade, estado, cep, celular, numero, endereco_res, numero_res, bairro_res, cidade_res, cep_res, estado_res, complemento_res)
+		VALUES (:uuid, :nome, :login, :senha, :email, :endereco, :bairro, :complemento, :cidade, :estado, :cep, :celular, :numero, :endereco, :numero, :bairro, :cidade, :cep, :estado, :complemento)";
+
+		$rotinaSQL = DB::prepare($comandoSQL);
+		$rotinaSQL -> bindParam('uuid', $uuid);
+		$rotinaSQL -> bindParam('nome', $nome);
+		$rotinaSQL -> bindParam('login', $login);
+		$rotinaSQL -> bindParam('senha', $senha);
+		$rotinaSQL -> bindParam('email', $email);
+		$rotinaSQL -> bindParam('endereco', $endereco);
+		$rotinaSQL -> bindParam('bairro', $bairro);
+		$rotinaSQL -> bindParam('complemento', $complemento);
+		$rotinaSQL -> bindParam('cidade', $cidade);
+		$rotinaSQL -> bindParam('estado', $estado);
+		$rotinaSQL -> bindParam('cep', $cep);
+		$rotinaSQL -> bindParam('celular', $celular);
+		$rotinaSQL -> bindParam('numero', $numero);
+		$rotinaSQL -> execute();
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+
+		api_radius($data->login);
+
+		echo json_encode(array('status' => 'sucesso', 'dados' => $data));
+
+	}
+
+	public function put_editar($data) {
+
+		$uuid = $data->uuid;
+
+		$this->carregarDados($uuid);
+
+		if (count($this->dados) == 0) {
+			
+			echo json_encode(array('status' => 'erro', 'mensagem' => 'Registro nao encontrado'));
+			return;
+
+		}
+
+		$colunas = array();
+
+		foreach ($data as $coluna => $valor) {
+			if (array_key_exists($coluna, $this->dados)) $colunas[$coluna] = $valor;
+		}
+
+		if (count($colunas) == 0) {
+			
+			echo json_encode(array('status' => 'erro', 'mensagem' => 'Nenhum campo valido para alteracao'));
+			return;
+
+		}
+
+		// montagem da query
+		$comandoSQL = "UPDATE sis_cliente SET";
+
+		foreach ($colunas as $c => $v) {
+		
+			$comandoSQL .= " {$c} = :{$c},";
+
+		}
+
+		$comandoSQL = rtrim($comandoSQL, ',');
+
+		$comandoSQL .= " WHERE uuid_cliente = :uuid";
+
+		$rotinaSQL = DB::prepare($comandoSQL);
+
+		foreach ($colunas as $c => $v) {
+
+			$rotinaSQL -> bindValue(":{$c}", $v);
+
+		}
+
+		$rotinaSQL -> bindParam('uuid', $uuid);
+		$rotinaSQL -> execute();
+
+		if (isset($colunas['login'])) api_radius($colunas['login']);
+		if (!isset($colunas['login'])) api_radius($this->dados['login']);
+
+		echo json_encode(array('status' => 'sucesso', 'mensagem' => 'Cliente editado com sucesso', 'dados' => $data));
+
+	}
+
+	public function delete_id($key) {
+
+		$comandoSQL = 'DELETE FROM sis_cliente
+		WHERE uuid_cliente = :uuid';
+		$rotinaSQL = DB::prepare($comandoSQL);
+		$rotinaSQL -> bindParam('uuid', $key);
+		$rotinaSQL -> execute();
+		$numeroDeLinhas = $rotinaSQL -> rowCount();
+
+		if ($numeroDeLinhas > 0) {
+
+			echo json_encode(array('status' => 'sucesso', 'mensagem' => 'Registro excluido com sucesso'));
+			return;
+
+		}
+		
+		echo json_encode(array('status' => 'erro', 'mensagem' => 'Registro nao encontrado'));
+
+	}
+
+}

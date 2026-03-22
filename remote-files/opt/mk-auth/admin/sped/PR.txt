@@ -1,0 +1,30 @@
+1015|Regime Mensal de Apuração – GIA-ICMS|01012013|
+1023|Regime Individual de Pagamento|01012013|
+1112|Denúncia Espontânea|01012013|
+1210|Recolhimento Antecipado – Entrada do Exterior|01012013|
+1228|Recolhimento Antecipado – Entradas de Outros Estados|01012013|
+1236|Recolhimento Antecipado – Entradas do Estado|01012013|
+1244|Recolhimento Antecipado – Saídas para o Exterior|01012013|
+1252|Recolhimento Antecipado – Saídas para Outros Estados|01012013|
+1260|Recolhimento Antecipado – Saídas para o Estado|01012013|
+1317|Transporte – Recolh. Antecipado ou Realizado por Contrib. Não Inscrito|01012013|
+1414|Diferencial de Alíquota|01012013|
+1511|Venda Efetuada por Ambulantes|01012013|
+1619|Auto de Infração - ICMS|01012013|
+1627|Dívida Ativa – ICMS|01012013|
+1635|Parcelamento – ICMS|01012013|
+1716|ICMS – Recolhimento sobre Estoque|01012013|
+100013|ICMS Comunicação|01012013|
+100021|ICMS Energia Elétrica|01012013|
+100030|ICMS Transporte|01012013|
+100048|ICMS Substituição Tributária por Apuração|01012013|
+100056|ICMS Importação|01012013|
+100064|ICMS Autuação Fiscal|01012013|
+100072|ICMS Parcelamento|01012013|
+100099|ICMS Subst. Tributária por Operação|01012013|
+150010|ICMS Dívida Ativa|01012013|
+1058|Energia ACL - Distribuidoras e Geradoras (Operações Internas e Interestaduais)|01082015|
+1066|Energia ACL - Rede Básica|01082015|
+1643|Parcelamento - PPI - ICMS|01072015|
+5037|Fundo Estadual de Combate à Pobreza por Operação|01022016|
+5045|Fundo Estadual De Combate À Pobreza Por Apuração|01022016|

@@ -1,0 +1,36 @@
+cliente_ins:
+  - cliente_alt
+planos_ins:
+  - planos_alt
+ramal_ins:
+  - ramal_alt
+admin_ins:
+  - admin_alt
+contas_ins:
+  - contas_alt
+funcionarios_ins:
+  - funcionarios_alt
+pool_ins:
+   - pool_alt
+produto_ins: 
+  - produto_alt
+fornecedores_ins:
+  - fornecedores_alt
+documentos_ins:
+  - documentos_alt
+adicional_ins:
+  - adicional_alt
+contaspagar_ins:
+  - contaspagar_alt
+suporte_ins:
+  - suporte_alt
+instalar_ins:
+  - instalar_alt
+hotsite_newdownload:
+  - hotsite_altdownload
+hotsite_newpagina:
+  - hotsite_altpagina
+hotsite_newlink:
+  - hotsite_altlink
+hotsite_newnoticia:
+  - hotsite_altnoticia

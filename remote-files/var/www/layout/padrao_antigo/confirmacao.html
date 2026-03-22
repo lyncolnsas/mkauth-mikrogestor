@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<title>{PROVEDORNOME}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="provedor de internet via radio, provedor de internet wireless, provedor web, sistema mk-auth" />
+<meta name="robots" content="ALL" />
+<meta name="distribution" content="Global" />
+<meta name="rating" content="General" />
+<meta name="language" content="pt-br" />
+
+<link rel="stylesheet" type="text/css" href="estilos/estilo.css" />
+<link rel="stylesheet" type="text/css" href="estilos/jgrowl.css" />
+<style type="text/css">
+body {
+background: URL('{IMAGEMFUNDO}') fixed no-repeat;
+background-color: #000000;
+}
+</style>
+<script src="scripts/hotsite.js"></script>
+<script src="scripts/jquery.js"></script>
+<script src="scripts/jgrowl.js"></script>
+<script>
+var retorno;
+var mpg_popup;
+window.name = "sistema";
+function fabrewin() {
+if(navigator.appName.indexOf("Netscape") != -1)
+   mpg_popup = window.open("", "mpg_popup","toolbar=0, location=0, directories=0, status=1, menubar=0, scrollbars=1, resizable=0, screenX=0, screenY=0, left=0, top=0, width=440, height=220");
+else
+   mpg_popup = window.open("", "mpg_popup","toolbar=0, location=0, directories=0, status=0, menubar=0, scrollbars=1, resizable=0, screenX=0, screenY=0, left=0, top=0, width=440, height=220");
+	window.location = '#';
+	return true;
+}
+</script>
+
+</head>
+<body>
+<table width="745" align="center" background="imagens/img_border_fundo.png" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><table width="727" align="center" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="45" colspan="2" background="imagens/img_top_site_m_2.jpg"><div id="menu_funcionalidades">
+              <div id="link1" onClick="javascript: link('empresa.hhvm');" title="PROVEDOR"></div>
+              <div id="link2" onClick="javascript: link('cobertura.hhvm');" title="ÁREA DE COBERTURA"></div>
+              <div id="link3" onClick="javascript: link('planos.hhvm');" title="PLANOS DE ACESSO"></div>
+              <div id="link4" onClick="javascript: link('tecnologia.hhvm');" title="TECNOLOGIA"></div>
+              <div id="link5" onClick="javascript: link('suporte.hhvm');" title="ATENDIMENTO"></div>
+            </div></td>
+        </tr>
+        <tr background="imagens/img_topo.jpg">
+			<td><img src="imagens/topo_hotsite.jpg" hspace="0" vspace="0" /></td>
+        </tr>
+        <tr>
+          <td height="31" colspan="2" valign="top" background="imagens/img_fund_sub_c.jpg" class="txt_cinza"><table width="100%" border="0" cellpadding="0" cellspacing="0" height="31">
+              <tr>
+                <td class="txt_cinza" style="padding-left: 10px;"> {MOSTRADATA} </td>
+                <td style="padding-right: 15px;" class="txt_cinza" align="right"> Telefone: {PROVEDORFONE} &nbsp;|&nbsp; E-mail: <span class="item" style="font-size: 9px;"> <a href="javascript: link('mailto:{PROVEDOREMAIL}')" title="Suporte Tecnico">{PROVEDOREMAIL}</a> </span> </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td height="545" colspan="2" valign="top" class="txt_cinza"><table border="0" cellpadding="0" cellspacing="0" height="650">
+              <tr>
+                <td height="8"></td>
+              </tr>
+              <tr>
+                <td style="padding-left: 8px;" valign="top" width="177"><div class="txt_cinza">
+                    <table width="165" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td height="20"><img src="imagens/img_top_menu_serv.jpg" width="165" height="20"></td>
+                      </tr>
+                    </table>
+                    <table bgcolor="#e3e2e2" border="0" cellpadding="0" cellspacing="1">
+                      <tr>
+                        <td valign="top"><table class="item" width="163" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="index.hhvm" title="Início">Home</a></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="empresa.hhvm" title="Nossa Empresa">Provedor</a></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+
+                            <!-- BEGIN BLOCK_BATEPAPO -->
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="../chat/" title="Bate-papo" target="_blank" onClick="window.open(this.href, this.target, 'width=740,height=480,scrollbars=NO'); return false;"> Bate-Papo </a></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <!-- END BLOCK_BATEPAPO -->
+
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="noticias.hhvm" title="Notícias">Not&iacute;cias</a></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="tecnologia.hhvm" title="Tecnologia">Tecnologia</a></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="cobertura.hhvm" title="Área de Cobertura">&Aacute;rea de Cobertura</a></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="planos.hhvm" title="Planos de Acesso">Planos de Acesso</a></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="faq.hhvm" title="Planos Empresariais">Perguntas e Respostas</a></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="cadastro.hhvm" title="Faca Seu Cadastro">Fa&ccedil;a Seu Cadastro</a></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="downloads.hhvm" title="Atendimento">Downloads</a></td>
+                            </tr>
+                            <!-- BEGIN BLOCK_PAGINAS -->
+                            <!-- BEGIN BLOCK_DADOSPAGINAS -->
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="pagina.hhvm?id={PAGINAID}" title="{PAGINANOME}">{PAGINANOME}</a></td>
+                            </tr>
+                            <!-- END BLOCK_DADOSPAGINAS -->
+                            <!-- END BLOCK_PAGINAS -->
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="suporte.hhvm" title="Atendimento">Atendimento</a></td>
+                            </tr>
+                            <tr>
+                              <td background="imagens/hr_dot_black_2.gif" height="1"></td>
+                            </tr>
+                            <tr>
+                              <td style="padding-left: 10px;" height="22"><a href="fale.hhvm" title="Fale conosco">Fale Conosco</a></td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                    </table>
+                    <table width="165" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td height="15"></td>
+                      </tr>
+                      <tr>
+                        <td height="20"><img src="imagens/img_top_menu_news.jpg" title="Newsletter"></td>
+                      </tr>
+                    </table>
+                    <form action="newsletter.hhvm" method="post" name="formr" target="mpg_popup" onSubmit="javascript: fabrewin();">
+                      <table width="163" border="0" cellpadding="0" cellspacing="1" bgcolor="#e3e2e2">
+                        <tr>
+                          <td valign="top"><table width="163" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+                              <tr>
+                                <td style="padding-left: 10px;" valign="top"><table width="150" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                      <td height="10"></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="txt_cinza"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"> Cadastre seu e-mail e receba promo&ccedil;&otilde;es e novidades por e-mail.</font></td>
+                                    </tr>
+                                    <tr>
+                                      <td height="10"></td>
+                                    </tr>
+                                    <tr>
+                                      <td height="15" class="txt_cinza">Seu Nome:</td>
+                                    </tr>
+                                    <tr>
+                                      <td><div id="cp_user">
+                                          <input name="nome_news" style="width: 130px;" type="text">
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                      <td height="5"></td>
+                                    </tr>
+                                    <tr>
+                                      <td height="15" class="txt_cinza">E-mail:</td>
+                                    </tr>
+                                    <tr>
+                                      <td><div id="cp_user">
+                                          <input name="email_news" style="width: 130px;" type="text">
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                      <td height="15"></td>
+                                    </tr>
+                                    <tr>
+                                      <td style="padding-bottom: 2px;"><input name="enviar_news" id="enviar_news" value="Enviar" alt="Enviar" style="height: 20px; width: 80px;" type="submit" class="botao">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td height="15"></td>
+                                    </tr>
+                                  </table></td>
+                              </tr>
+                            </table></td>
+                        </tr>
+                      </table>
+                    </form>
+                  </div></td>
+                <td valign="top"><table width="540" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td><img src="imagens/img_assinante_t.gif"> </td>
+                    </tr>
+                    <tr>
+                      <td><img name="Imagem" src="imagens/img_central.jpg" style="background-color: rgb(226, 226, 226);" width="535" height="85"> </td>
+                    </tr>
+                    <tr>
+                      <td height="10">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-right: 30px; text-align: justify;" valign="top" height="435"> {PGCONFIRMACAO} </td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff" height="28" colspan="2"><table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td nowrap><!-- BEGIN BLOCK_ANATEL -->
+                  <img src="imagens/anatel.jpg" hspace="5" vspace="5" align="right">
+                <!-- END BLOCK_ANATEL --></td>
+              </tr>
+              <tr>
+                <td height="19" align="right" background="imagens/img_fundo_rodape.jpg" bgcolor="#006699" class="txt_rodape">&copy; {ANOATUAL} - Todos os direitos reservados - <span class="item3" style="font-size: 9px;"> <a href="secure.hhvm" target="_blank" onClick="window.open(this.href, this.target, 'width=380,height=340,scrollbars=yes'); return false;">site seguro</a></span> &nbsp;</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td height="5" colspan="2"></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</body>
+</html>

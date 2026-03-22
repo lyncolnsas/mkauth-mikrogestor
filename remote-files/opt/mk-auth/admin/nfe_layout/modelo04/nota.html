@@ -1,0 +1,81 @@
+<div style="page-break-after: always">
+<div id="wrapper">
+<table width="100%" cellspacing="0" cellpadding="4" style="margin-bottom: 20px">
+<tr>
+<td width="20%" valign="middle"><img src="{PROVEDORLOGO}" style="max-height:75px" hspace="5" vspace="5" /></td>
+<td width="60%" valign="middle"> OPERADORA: <b>{PROVEDORRAZAO}</b><br /><br />
+CNPJ: <b>{PROVEDORCNPJ} </b> - I.E.: <b> {PROVEDORIE}</b><br/>
+ENDERE&#199;O: <b>{PROVEDORENDERECO}</b><br />
+BAIRRO: <b>{PROVEDORBAIRRO}</b> - CEP:<b> {PROVEDORCEP}</b><br/>
+CIDADE: <b>{PROVEDORCIDADE} - {PROVEDORESTADO}</b><br/>
+E-MAIL: <b>{PROVEDOREMAIL}</b><br/>
+</td>
+<td width="20%" valign="middle"><p align="center">NOTA FISCAL<br/>
+S.C.M.</p>
+<div style="font-size: 11px;"> N&#186;: <b>{NOTA_NUMERO}</b><br/>
+CFOP: <b>{NOTA_CFOP}</b><br/>
+<br/>
+DATA EMISS&#195;O<b><br/>
+{NOTA_EMISSAO}</b> </div></td>
+</tr>
+<tr>
+<td colspan="3" align="center" valign="middle"><b>NOTA FISCAL DE SERVI&#199;O DE COMUNICA&#199;&#195;O - MODELO: 21 - SERIE: 001</b></td>
+</tr>
+<tr>
+<td colspan="3" valign="middle"> CLIENTE: <b>{CLIENTE_NOME}</b><br />
+CNPJ / CPF: <b>{CLIENTE_CPF} </b> - I.E / R.G: <b>{CLIENTE_RG}</b><br/>
+ENDERE&#199;O: <b>{CLIENTE_ENDERECO}, {CLIENTE_COMPLEMENTO} - {CLIENTE_BAIRRO}</b><br/>
+CEP: <b>{CLIENTE_CEP}</b> - CIDADE: <b>{CLIENTE_CIDADE} - {CLIENTE_ESTADO}</b><br/>
+FONES: <b>{CLIENTE_FONE}</b> - E-MAIL: <b>{CLIENTE_EMAIL}</b> </td>
+</tr>
+</table>
+<table width="100%" cellpadding="5" cellspacing="0" style="margin-bottom: 20px">
+<tr>
+<td width="60%" align="center"><b>DESCRI&#199;&#195;O DOS SERVI&#199;OS</b></td>
+<td width="15%" align="center"><b>ALIQ. ICMS</b></td>
+<td width="15%" align="center"><b>VALOR TOTAL</b></td>
+</tr>
+<!-- BEGIN BLOCK_ITENS -->
+<!-- BEGIN BLOCK_DADOSITENS -->
+<tr>
+<td width="60%" valign="top"> {ITEM_DESC} - {NOTA_REF}<br /></td>
+<td width="15%" align="center" valign="top"> {ITEM_ICMS}<br/></td>
+<td width="15%" align="center" valign="top"> R$ {ITEM_VALOR}<br/></td>
+</tr>
+<!-- END BLOCK_DADOSITENS -->
+<!-- END BLOCK_ITENS -->
+<tr>
+<td colspan="2" align="right" valign="top"><b>VALOR TOTAL</b></td>
+<td align="center" valign="top"><b>R$ {NOTA_VTOTAL}</b></td>
+</tr>
+</table>
+<table width="100%" cellpadding="5" cellspacing="0">
+<tr>
+<td colspan="3" align="center"><b>C&Aacute;LCULO DO IMPOSTO</b></td>
+</tr>
+<tr>
+<td width="33%"> BASE DE C&Aacute;LCULO DO ICMS<br/>
+<b>R$ {NOTA_BASE}</b> </td>
+<td width="33%"> AL&Iacute;QUOTA DO ICMS<br/>
+<b>{NOTA_ALIQ}</b> </td>
+<td width="33%"> VALOR DO ICMS<br/>
+<b>R$ {NOTA_ICMS}</b> </td>
+</tr>
+<tr>
+<td colspan="2" align="center">RESERVADO AO FISCO<br/>
+<b>{NOTA_CHAVE}</b> </td>
+<td>SITUA&#199;&#195;O DO DOCUMENTO FISCAL<br/>
+<b>ACEITA</b></td>
+</tr>
+<tr>
+<td colspan="3"><b>OBSERVA&#199;&#195;O:</b><br/>
+<span style="font-size: 11px">{NOTA_OBS}</span><br>
+<small>VALOR APROXIMADO DE IMPOSTOS: {NOTA_VALOR_IBPT} / PERCENTUAL: {NOTA_PERC_IBPT} <br />
+VALOR MUNICIPAL DE IMPOSTOS: {NOTA_VALOR_IBPT_M} / PERCENTUAL: {NOTA_PERC_IBPT_M} <br />
+VALOR ESTATUAL DE IMPOSTOS: {NOTA_VALOR_IBPT_E} / PERCENTUAL: {NOTA_PERC_IBPT_E} <br />
+VALOR FEDERAL DE IMPOSTOS: {NOTA_VALOR_IBPT_F} / PERCENTUAL: {NOTA_PERC_IBPT_F} <br /><br />
+CONSUMIDO {DADOS_ATUAL} DE DADOS EM {MESANO_ATUAL}</small> </td>
+</tr>
+</table>
+</div>
+</div>

@@ -1,0 +1,205 @@
+<div class="container">
+    <img class="logo" src="{PROVEDORLOGO}"/>
+  <div class="fatura">
+    <p>FATURA <br>
+      NÚMERO. <br>
+      {NUMERO_DOCUMENTO}</p>
+  </div>
+  <div class="provedorDados">
+    <p>{PROVEDORNOME} <br>
+      CNPJ {PROVEDORCPF} <br>
+      {PROVEDORENDERECO} - {PROVEDORBAIRRO} <br>
+      CEP {PROVEDORCEP} - {PROVEDORCIDADE} - {PROVEDORESTADO}</p>
+</div>
+<div class="referencia">
+  <!-- BEGIN BLOCK_REFERENCIA -->
+  <p>REFERENTE AO MÊS DE {REFERENCIA}</p>
+  <!-- END BLOCK_REFERENCIA -->
+</div>
+<div class="details">
+  <p class="RS">RESUMO DOS  ACESSOS</p>
+  <p class="RM">RESUMO DAS MOVIMENTAÇÕES (R$)</p>
+  <p class="pPIX">Pague via Pix - Prático e Rápido!</p>
+  <p class="total">TOTAL A PAGAR (R$)</p>
+</div>
+<div class="dadosPagador">
+  <table class="pagadorD">
+    <tr>
+      <td><span>NOME:</span></td>
+      <td><p>{SACADO_IDNOME}</p></td>
+    </tr>
+    <tr>
+      <td><span>CPF:</span></td>
+      <td><p>{SACADO_CPF}</p></td>
+    </tr>
+    <tr>
+      <td><span>ENDEREÇO:</span></td>
+      <td><p>{SACADO_ENDERECO}</p></td>
+    </tr>
+    <tr>
+      <td><span>BAIRRO:</span></td>
+      <td><p>{SACADO_BAIRRO}</p></td>
+    </tr>
+  </table>
+  
+  <table class="pagadorD2">
+    <tr>
+      <td><span>MUNICÍPIO:</span></td>
+      <td><p>{SACADO_CIDADE}</p></td>
+    </tr>
+    <tr>
+      <td><span>CEP:</span></td>
+      <td><p>{SACADO_CEP}</p></td>
+    </tr>
+    <tr>
+      <td><span>ESTADO:</span></td>
+      <td><p>{SACADO_ESTADO}</p></td>
+    </tr>
+    <tr>
+      <td><span>COMPLEMENTO:</span></td>
+      <td><p>{SACADO_COMPLEMENTO}</p></td>
+    </tr>
+  </table>
+
+    <table class="dadosBoleto">
+      <tr>
+        <td><span>PROCESSAMENTO:</span></td>
+        <td><p>{DATA_PROC}</p></td>
+      </tr>
+      <tr>
+        <td><span>VENCIMENTO ORIGINAL:</span></td>
+        <td><p>{DATA_ORIGINAL}</p></td>
+      </tr>
+      <tr class="tituloN">
+        <td><span>TÍTULO / NN:</span></td>
+        <td><p>{TITULONN}</p></td>
+      </tr>
+    </table> 
+</div>
+<table class="resumoAcessos">
+  <tr>
+    <th class="resumoRed Wi"></th>
+    <th class="resumoRed Wi"><p>DADOS TRAFEGADOS</p></th>
+    <th class="resumoRed Wi1"><p>NUMERO DE CONEXÕES</p></th>
+    <th class="resumoRed Wi2"><p>CHAMADOS SUPORTE</p></th>
+    <th class="resumoRed Wi3"><p>CONTAS DE ACESSO</p></th>
+    <th class="resumoRed Wi4"><p>TEMPO TOTAL DE USO</p></th>
+  </tr>
+  <tr>
+    <th class="resumoRed">{MESANO_ANT}</th>
+    <td>{DADOS_ANT}</td>
+    <td>{CONEXOES_ANT}</td>
+    <td>{CHAMADOS_ANT}</td>
+    <td>{CONTAS_ANT}</td>
+    <td>{TEMPO_ANT}</td>
+  </tr>
+  <tr>
+    <th class="resumoRed">{MESANO_ATUAL}</th>
+    <td>{DADOS_ATUAL}</td>
+    <td>{CONEXOES_ATUAL}</td>
+    <td>{CHAMADOS_ATUAL}</td>
+    <td>{CONTAS_ATUAL}</td>
+    <td>{TEMPO_ATUAL}</td>
+  </table>
+
+  <table class="resumoRS">
+    <tr>
+      <td>{MOVIMENTO}</td>
+      <td class="resumoML">{VALOR_COBRADO}</td>
+    </tr>
+    <tr>
+      <td>TAXA DE COBRANÇA</td>
+      <td class="resumoML">{TAXA_BOLETO}</td>
+    </tr>
+    <!-- BEGIN BLOCK_K -->
+    <!-- BEGIN BLOCK_DADOSK -->
+    <tr>
+      <td>{KNOME}</td>
+      <td class="resumoML">{KVALOR}</td>
+    </tr>
+    <!-- END BLOCK_DADOSK -->
+    <!-- END BLOCK_K -->
+
+    <!-- BEGIN BLOCK_Z -->
+    <!-- BEGIN BLOCK_DADOSZ -->
+    <tr>
+      <td>{ZNOME}</td>
+      <td class="resumoML">{ZVALOR}</td>
+    </tr>
+    <!-- END BLOCK_DADOSZ -->
+    <!-- END BLOCK_Z -->
+    <tr>
+      <td>MULTA E MORA ATUALIZADA</td>
+      <td class="resumoML">{MULTA_MORA}</td>
+    </tr>
+  </table>
+  <div class="valor">
+    <p>{VALOR_BOLETO}</p>
+  </div>
+  <!-- PIX -->
+  <div class="pix">
+    <img src="{QRCODE}"/>
+  </div>
+
+  <div class="cliqueB">
+    <p>Clique no botão abaixo para pagar via PIX copia e cola</p>
+  </div>
+  
+  <!-- BEGIN BLOCK_PIX -->
+  <div class="botao">
+    <span class="copy"></span>
+    <a href="{LINKCOPIACOLA}">Pagar via Pix Copia e cola</a>
+  </div>
+  <!-- END BLOCK_PIX -->
+
+  <!-- Segunda parte -->
+  <div class="loterica">
+    <div class="dadosBoleto2">
+      <div class="logoMarca">
+        {LOGOMARCA}
+      </div>
+      <p class="codigoBancoDv">{CODIGO_BANCO_COM_DV}</p>
+      <div style="position: relative;">
+        <p class="linhaDigitavelB">{LINHA_DIGITAVEL}</p>
+      </div>
+      <div class="dadosL">
+        <p class="vencL">{DATA_VENC}</p>
+        <p class="agenciaL">{AGENCIA_CODIGO}</p>
+        <p class="nossoNL">{NOSSO_NUMERO}</p>
+        <p class="valorL">{VALOR_BOLETO}</p>
+      </div>
+      <div class="dadosD">
+        <p class="localPagamento">{LOCAL_PAGAMENTO}</p>
+        <p class="cedenteB">{CEDENTE}</p>
+        <p class="dataDocumento">{DATA_DOCUMENTO}</p>
+        <p class="numeroDocumento">{NUMERO_DOCUMENTO}</p>
+        <p class="especieDoc">{ESPECIE_DOC}</p>
+        <p class="dataProc">{DATA_PROC}</p>
+        <p class="carteira">{CARTEIRA} {VAR_CARTEIRA}</p>
+        <p class="especie">{ESPECIE}</p>
+      </div>
+      <div class="instrucoes">
+        <p>
+          <!-- BEGIN BLOCK_INSTAUTO -->
+          {TEXTO_MULTAMORA} <br />
+          <!-- END BLOCK_INSTAUTO -->
+        </p>
+        <p>{INSTRUCOES1}</p>
+        <p>{INSTRUCOES2}</p>
+        <p>{INSTRUCOES3}</p>
+        <p>{INSTRUCOES4}</p>
+        <p>{INSTRUCOES5}</p>
+      </div>
+      <div class="pagadorF">
+        <p>{SACADO_NOME} - {TIPO_PSACADO} {SACADO_CPF} <br>
+        {SACADO_ENDERECO} - {SACADO_BAIRRO} {SACADO_COMPLEMENTO} <br>
+        {SACADO_CIDADE} - {SACADO_ESTADO} - CEP: {SACADO_CEP}</p> <br>
+      </div>
+      <p class="sacadoA">{SACADO_AVALISTA}</p>
+      <div class="barCode">
+        {BOLETO_BARCODE2}
+      </div>
+    </div>
+  </div>
+  
+</div>

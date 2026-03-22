@@ -1,0 +1,156 @@
+101-5|IPVA|01012013|
+102-3|IPVA - Auto de Infracao|01012013|
+103-1|IPVA - Notificacao de Debito|01012013|
+111-2|ITCD|01012013|
+112-0|ITCD - Auto de Infracao|01012013|
+113-9|ITCD - Notificacao de Debito|01012013|
+121-0|ICMS - Comercio|01012013|
+122-8|ICMS - Industria|01012013|
+123-6|ICMS - Servicos de Energia Eletrica|01012013|
+124-4|ICMS - Servicos de Comunicacao|01012013|
+125-2|ICMS - Servicos de Transporte - Empresas do Estado do Espirito Santo|01012013|
+126-0|ICMS - Servicos de Transporte - Empresa de Outros Estados|01012013|
+127-9|ICMS - Servicos de Transporte - Transportadores Autonomos|01012013|
+128-7|ICMS - Diferencial Aliquota do Comercio|01012013|
+129-5|ICMS - Diferencial Aliquota da Industria|01012013|
+130-9|ICMS - Diferencial de Aliquota de Servicos de Energia Eletrica|01012013|
+131-7|ICMS - Diferencial de Aliquota de Servicos de Comunicacao|01012013|
+132-5|ICMS - Diferencial de Aliquota de Servicos de Transportes|01012013|
+133-3|ICMS - Estimativa - comercio e servicos|01012013|
+134-1|ICMS - Estimativa - Empresa de Pequeno Porte Estadual|01012013|
+135-0|ICMS - FUNDAP|01012013|
+136-8|ICMS - Incentivos Fiscais|01012013|
+137-6|ICMS - Substituicao Tributaria - Outros Estados|01012013|
+138-4|ICMS - Substituicao Tributaria - Dentro do Estado|01012013|
+139-2|ICMS - Substituicao Tributaria - Fronteira|01012013|
+140-6|ICMS - Cafe - Operacao Interna|01012013|
+141-4|ICMS - Cafe Operacoes Interestaduais|01012013|
+142-2|ICMS - Cafe Exportacao|01012013|
+143-0|ICMS - Bovinos Operacoes Internas|01012013|
+144-9|ICMS - Bovinos Operacoes Interestaduais|01012013|
+145-7|ICMS - Demais Produtos|01012013|
+146-5|ICMS - Auto de Infracao|01012013|
+147-3|ICMS - Denuncia Espontanea|01012013|
+148-1|ICMS - Notificacao de Debito|01012013|
+149-0|ICMS - NOTIFICACAO DE DEBITO ELETRONICA|01012013|
+150-3|ICMS - AUTO DE INFRACAO PARCELAMENTO|01012013|
+151-1|ICMS - AUTO DE INFRACAO ELETRONICO|01012013|
+152-0|ICMS - PARCELAMENTO DE DEBITO VALOR DA ENTRADA|01012013|
+153-8|ICMS - CONTRIBUINTE CADASTRO ESPECIAL|01012013|
+154-6|ICMS - Estimativa Industria|01012013|
+155-4|ICMS - Substituicao Tributaria - Auto Pecas|01012013|
+159-7|Taxa de Concurso Publico do Poder Executivo|01012013|
+160-0|ICMS - DENUNCIA ESPONTANEA PARCELAMENTO|01012013|
+161-9|Ressarcimento Despesa com Processamento de ConsignacOES Indireta|01012013|
+162-7|ICMS - Fundo Estadual de Combate a Pobreza|01012013|
+170-8|ICMS - NOTIFICACAO DE DEBITO PARCELAMENTO|01012013|
+180-5|ICMS - PARCELAMENTO AGRUPADO|01012013|
+186-4|Ressarcimentos Imputados Pelo TCEES|01012013|
+190-2|ICMS - Auto de Infracao Parcelamento Bancario|01012013|
+191-0|ICMS - Denuncia Espontanea Parcelamento Bancario|01012013|
+192-9|ICMS - Notificacao de Debito Parcelamento Bancario|01012013|
+197-0|Restituicao de Convenio|01012013|
+199-6|Parcelamento de Debito - (Uso exclusivo da SEFA)|01012013|
+205-4|Taxa judiciaria|01012013|
+206-2|Emolumentos|01012013|
+207-0|Custas|01012013|
+208-9|Taxa aplicada pela Vigilancia Sanitaria|01012013|
+209-7|Taxa de Expediente e Servicos Diversos|01012013|
+216-0|Taxa  S/Transporte de Gado Bovino|01012013|
+217-8|Taxa Transporte de Marmore e Granito|01012013|
+220-8|TAXA DE PROCESSAMENTO DE LICENCAS AMBIENTAIS|01012013|
+242-9|ICMS - Diferencial de Aliquota de Produtor Rural|01012013|
+246-1|ICMS - Simples Nacional|01012013|
+247-0|Multa/Juros Mora Divida Ativa sobre ICMS|01012013|
+250-0|Multa/Juros Mora Simples Nacional|01012013|
+253-4|Receita de Conc de Direito de uso Area Publica|01012013|
+256-9|ICMS Importacao exceto FUNDAP|01012013|
+257-7|Multa p/Infracao a Lei 8.635/2007 Lei Seca|01012013|
+258-5|Taxa de Servicos Prestados pelo APEES|01012013|
+265-8|Doacao para desabrigados de enchentes|01012013|
+269-1|Multa p/Infracao a Lei N. 8.993/08|01012013|
+285-2|RECEITA CONCESSAO FACA FACIL|01012013|
+287-9|ICMS - POR APURACAO CAFE ARABICA|01012013|
+288-7|ICMS - POR APURACAO CAFE CONILON|01012013|
+291-7|Juros de Mora do ICMS - FUNDAP|01012013|
+292-5|Multa Moratoria p/ Infracao a Legisl. do ICMS - FUNDAP|01012013|
+293-3|IPVA - 1o. EMPLACAMENTO|01012013|
+294-1|MULTA MORATORIA IPVA - 1o. EMPLACAMENTO|01012013|
+295-0|JUROS DE MORA IPVA - 1o. EMPLACAMENTO|01012013|
+296-8|CORRECAO MONETARIA IPVA - 1o. EMPLACAMENTO|01012013|
+297-6|Correcao Monetaria do ICMS - FUNDAP|01012013|
+301-8|Contribuicoes Sociais|01012013|
+302-6|Contribuicoes Economicas|01012013|
+303-4|Outras Contribuicoes Economicas|01012013|
+307-7|Contribuicao s/Complementacao Aposentadoria e Pensao|01012013|
+309-3|Doacoes Projetos Esportivos de Inclusao Social/Patrocinio|01012013|
+310-7|Mensalidades de aula|01012013|
+315-8|CORRECAO MONETARIA NAO TRIBUTARIA - TESOURO ESTADUAL|01012013|
+326-3|PARCELAMENTO DIVIDA ATIVA NAO TRIBUTARIA - TESOURO ESTADUAL|01012013|
+341-7|MULTAS RELATIVAS A CONTRATOS DE PREST. DE SERVICOS - TESOURO ESTADUAL|01012013|
+401-4|Laudemio|01012013|
+402-2|Alugueis|01012013|
+403-0|Arrendamentos|01012013|
+404-9|Dividendos|01012013|
+405-7|Outras Receitas Patrimoniais|01012013|
+501-0|Producao  Vegetal|01012013|
+502-9|Producao Animal e Derivados|01012013|
+503-7|Outras Receitas Agropecuarias|01012013|
+601-7|Juros de Emprestimos|01012013|
+602-5|Outros servicos|01012013|
+641-6|Ressarcimento Desp. c/ Processamento de Consignacao Direta|01012013|
+701-3|Receitas de Recursos|01012013|
+702-1|Receitas de Fianca Crime|01012013|
+703-0|Outras Receitas do bloco Receitas Diversas|01012013|
+801-0|Multa Punitiva por Infracao a Legislacao do ICMS|01012013|
+802-8|Multa Moratoria por Infracao a Legislacao do ICMS|01012013|
+803-6|Multa por infracao a Legislacao do IPVA|01012013|
+804-4|Multa por Infracao a Legislacao do ITCD|01012013|
+806-0|Multa por Infracao a Legislacao do Meio Ambiente|01012013|
+807-9|Multa por Infracao a Legislacao Policia Civil|01012013|
+808-7|Multa por Infracao a Legislacao Policia Militar|01012013|
+810-9|Multa por Infracao ao Codigo Penal e demais Leis Penais|01012013|
+811-7|Multa por Descumprimento de Acoes Judiciais  em Acoes Coletivos|01012013|
+812-5|Multa por Violacao ao Direito da Infancia e do Adolecente|01012013|
+813-3|Multa Fixada nas Sentencas Judiciais|01012013|
+814-1|Multa por Infracao a Legislacao do Trabalho Coletivo Intermunicipal|01012013|
+815-0|Juros de Mora do ICMS|01012013|
+816-8|Juros de Mora de IPVA|01012013|
+817-6|Juros de Mora de ITCD|01012013|
+818-4|Receita da Divida Ativa - ICMS|01012013|
+819-2|Receita da Divida Ativa - IPVA|01012013|
+820-6|Receita da Divida Ativa - ITCD|01012013|
+821-4|Receita da Divida Ativa - Custas Processuais|01012013|
+822-2|Indenizacoes|01012013|
+823-0|Restituicoes|01012013|
+824-9|Diversos Responsaveis|01012013|
+825-7|Correcao Monetaria - ICMS|01012013|
+826-5|Correcao Monetaria - IPVA|01012013|
+827-3|Correcao Monetaria - ITCD|01012013|
+866-4|IRRF - ORGAOS DO ESTADO - ES|01012013|
+872-9|OUTRAS RECEITAS do bloco OUTRAS RECEITAS CORRENTES|01012013|
+875-3|Receita da Divida Ativa - Multas Punitivas|01012013|
+880-0|DIVIDA ATIVA DOCUMENTO BANCARIO - ICMS|01012013|
+882-6|DIVIDA ATIVA NAO TRIBUTARIA - SEFAZ|01012013|
+888-5|IRRF - SERVIDORES|01012013|
+889-3|IRRF SERVICO PRESTADO POR PESSOA FISICA|01012013|
+890-7|Substituicao tributaria - Auto Pecas|01012013|
+894-0|IRRF PESSOA JURIDICA|01012013|
+895-8|MULTA POR INFR. A LEG. DE LICIT. E CONTR. ADM|01012013|
+898-2|Receita da Divida Ativa ICMS-Parcelamento Bancario|01012013|
+899-0|RECEITA DA DIVIDA ATIVA ICMS PARCELAMENTO|01012013|
+901-6|Alienacao de Bens Moveis - SEFAZ|01012013|
+902-4|Alienacao de Bens Imoveis|01012013|
+903-2|Amortizacao de Emprestimos Imobiliarios|01012013|
+904-0|Outras Receitas do bloco RECEITAS DE CAPITAL|01012013|
+915-6|Receita de Leilao Administrativo FUNDAP|01012013|
+918-1|Transf. de Convenios do Estado DF e suas entidades|01012013|
+919-9|EMPRESTIMO IMOBILIARIO - SEFAZ|01012013|
+346-8|ICMS - FUNDAP - Resolução 13|01012013|
+380-8|ICMS COMPETE - ES 1,1%|01092015|
+385-9|ICMS - COMPETE E-COMMERCE|01012016|
+386-7|ICMS - DIFERENCIAL DE ALIQUOTA EC87|01012016|
+390-5|ICMS - DIFERENCIAL DE ALIQUOTA FUNDAP|01012016|
+472-3|ICMS - Estabilização Fiscal - Lei 10.630/17|01062017|
+477-4|ICMS - Substituição Tributária - Energia Elétrica|01082017|
+492-8|ICMS - Substituição Tributária - Parcelamento de ICMS ST decorrente de denúncia espontânea apresentada por contribuinte substituido|01012015|

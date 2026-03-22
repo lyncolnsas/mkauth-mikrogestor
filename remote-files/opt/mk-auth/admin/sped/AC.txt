@@ -1,0 +1,36 @@
+1013|ICMS GNRE Comunicação|01122016|
+1021|ICMS GNRE Energia|01122016|
+1030|ICMS GNRE Transporte|01122016|
+1045|ICMS GNRE Combustíveis|01122016|
+1046|ICMS GNRE Gás|01122016|
+1047|ICMS GNRE Comércio Outros|01122016|
+1048|ICMS GNRE Indústria Outros|01122016|
+1102|ICMS GNRE EC/87 por Operação|01122016|
+1110|ICMS GNRE EC/87 por Apuração|01122016|
+1221|ICMS Produto Primário Agricultura|01122016|
+1222|ICMS Produto Primário Pecuária|01122016|
+1223|ICMS Produto Primário Extrativismo|01122016|
+1229|ICMS Outros produtos primários|01122016|
+1320|ICMS Produção de Energia Elétrica|01122016|
+1420|ICMS Comércio Atacado|01122016|
+1430|ICMS Comércio Varejo|01122016|
+1440|ICMS Energia Elétrica Distribuição|01122016|
+1450|ICMS Combustível e Lubrificantes Normal|01122016|
+1510|ICMS Serviço de Transporte Cargas|01122016|
+1511|ICMS Serviço de Transporte Passageiros|01122016|
+1512|ICMS Serviço de Transporte Outros|01122016|
+1520|ICMS Serviço de Comunicação|01122016|
+1610|ICMS Importação|01122016|
+1620|ICMS Antecipação Parcial|01122016|
+1630|ICMS Substituição Tributária Externa|01122016|
+1631|ICMS Substituição Tributária Interna|01122016|
+1632|ICMS Substituição Tributária na Entrada|01122016|
+1633|ICMS Substituição Tributária Importação|01122016|
+1634|ICMS ST Combustível e Lubrificantes|01122016|
+1640|ICMS Antecipação Cesta Básica|01122016|
+1641|ICMS Dif. de Alíquotas Uso e Consumo|01122016|
+1642|ICMS Dif. de Alíquotas Ativo Imobilizado|01122016|
+1760|ICMS Denúncia Espontânea|01122016|
+1761|ICMS Diferença de ST recolhimento espontâneo|01122016|
+5110|Depósito ao FEFAC|01052017|
+1460|ICMS Indústria|01012019|

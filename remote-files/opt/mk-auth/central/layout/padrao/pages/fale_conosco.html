@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<title>Central do assinante</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="./layout/{CENTRAL_TEMPLATE}/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="./layout/{CENTRAL_TEMPLATE}/css/vendor.css">
+<link rel="stylesheet" type="text/css" href="./layout/{CENTRAL_TEMPLATE}/css/bootstrap-icons.css">
+<link rel="stylesheet" type="text/css" href="./layout/{CENTRAL_TEMPLATE}/css/flat.css?v=20210317">
+<link rel="stylesheet" type="text/css" id="theme" href="./layout/{CENTRAL_TEMPLATE}/css/light_mode.css">
+</head>
+<body>
+<div class="app app-default">
+	<aside class="app-sidebar" id="sidebar">
+		<div class="sidebar-header"> <span class="sidebar-brand"><span class="highlight">Central</span></span>
+			<button type="button" class="sidebar-toggle"> <i class="fa fa-times"></i></button>
+		</div>
+		<div class="sidebar-menu">
+			<ul class="sidebar-nav">
+				<li> <a href="./index.hhvm">
+					<div class="icon"> <i class="fa fa-tasks" aria-hidden="true"></i></div>
+					<div class="title">Inicio</div>
+					</a> </li>
+				<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<div class="icon"> <i class="fa fa-user" aria-hidden="true"></i></div>
+					<div class="title">Dados</div>
+					</a>
+					<div class="dropdown-menu">
+						<ul>
+							<li class="section"><i class="fa fa-user" aria-hidden="true"></i> Meus dados</li>
+							<li><a href="./atualizar_dados.hhvm"> Atualizar dados </a></li>
+							<!-- BEGIN BLOCK_MENUSENHA -->
+							<li><a href="./trocar_senha.hhvm"> Trocar senha </a></li>
+							<!-- END BLOCK_MENUSENHA -->
+							<li><a href="./foto.hhvm"> Trocar foto </a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<div class="icon"> <i class="fa fa-money" aria-hidden="true"></i></div>
+					<div class="title">Financeiro</div>
+					</a>
+					<div class="dropdown-menu">
+						<ul>
+							<li class="section"><i class="fa fa-money" aria-hidden="true"></i> Financeiro</li>
+							<!-- BEGIN BLOCK_MENU2VIA -->
+							<li><a href="./2_via.hhvm"> 2&#176; via on-line </a></li>
+							<!-- END BLOCK_MENU2VIA -->
+							<li><a href="./servicos.hhvm"> Servi&ccedil;os contratados </a></li>
+							<li><a href="./faturas.hhvm"> Faturas geradas </a></li>
+							<li><a href="./comprovante.hhvm"> Enviar comprovante </a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<div class="icon"> <i class="fa fa-globe" aria-hidden="true"></i></div>
+					<div class="title">Acesso</div>
+					</a>
+					<div class="dropdown-menu">
+						<ul>
+							<li class="section"><i class="fa fa-globe" aria-hidden="true"></i> Acesso a internet</li>
+							<li><a href="./relatorio.hhvm"> Relatorio de conex&otilde;es </a></li>
+							<!-- BEGIN BLOCK_MENUDISCO -->
+							<li><a href="./disco_virtual.hhvm"> Disco virtual </a></li>
+							<!-- END BLOCK_MENUDISCO -->
+						</ul>
+					</div>
+				</li>
+				<li class="dropdown active"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<div class="icon"> <i class="fa fa-envelope" aria-hidden="true"></i></div>
+					<div class="title">Suporte</div>
+					</a>
+					<div class="dropdown-menu">
+						<ul>
+							<li class="section"><i class="fa fa-envelope" aria-hidden="true"></i> Suporte t&eacute;cnico</li>
+							<!-- BEGIN BLOCK_MENUCHAMADOS -->
+							<li><a href="./suporte.hhvm"> Chamados t&eacute;cnicos </a></li>
+							<!-- END BLOCK_MENUCHAMADOS -->
+							<li><a href="./downloads.hhvm"> Downloads </a></li>
+							<!-- BEGIN BLOCK_MENUFALE -->
+							<li><a href="./fale_conosco.hhvm"> Fale conosco </a></li>
+							<!-- END BLOCK_MENUFALE -->
+						</ul>
+					</div>
+				</li>
+				<li> <a href="./executar_central.hhvm?acao=sair">
+					<div class="icon"> <i class="fa fa-unlock" aria-hidden="true"></i></div>
+					<div class="title">Sair</div>
+					</a> </li>
+			</ul>
+		</div>
+	</aside>
+	<div class="app-container">
+		<nav class="navbar navbar-default" id="navbar">
+			<div class="container-fluid">
+				<div class="navbar-collapse collapse in">
+					<ul class="nav navbar-nav navbar-mobile">
+						<li>
+							<button type="button" class="sidebar-toggle"> <i class="fa fa-bars"></i></button>
+						</li>
+						<li class="logo">
+							<div class="navbar-brand"><img class="my-logo" src="../mkfiles/logo.jpg"></div>
+						</li>
+						<li>
+							<button type="button" class="navbar-toggle"> <img class="profile-img" src="../mkfiles/{CLIENTE_FOTO}"> </button>
+						</li>
+						<div class="tema mobile-tema">
+							<span class="btn btn-outline-light btn-social"><i class="iconT"></i></span>
+						</div>
+					</ul>
+					<ul class="nav navbar-nav navbar-left">
+						<li class="navbar-title"><img class="my-logo" src="../mkfiles/logo.jpg"></li>
+						<p><span class="provedor-nome"> {PROVEDOR_NOME} </span></p>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<div class="tema desktop-tema">
+							<span class="btn btn-outline-light btn-social"><i class="iconT"></i></span>
+						</div>
+						<li class="dropdown notification danger"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<div class="icon"><i class="fa fa-bell" aria-hidden="true"></i></div>
+							<div class="title"> Avisos </div>
+							<div class="count"> {TOTAL_AVISOS} </div>
+							</a>
+							<div class="dropdown-menu">
+								<ul>
+									<li class="dropdown-header">Avisos</li>
+									<!-- BEGIN BLOCK_DADOSAVISOS -->
+									<li><a href="{CLIENTE_AVISO_LINK}"> {CLIENTE_AVISO_MSG} </a></li>
+									<!-- END BLOCK_DADOSAVISOS -->
+								</ul>
+							</div>
+						</li>
+						<li class="dropdown profile"> <a href="./atualizar_dados.hhvm" class="dropdown-toggle"  data-toggle="dropdown"> <img class="profile-img" src="../mkfiles/{CLIENTE_FOTO}">
+							<div class="title"> Perfil </div>
+							</a>
+							<div class="dropdown-menu">
+								<div class="profile-info">
+									<h4 class="username"> {CLIENTE_NOME_RES} </h4>
+								</div>
+								<ul class="action">
+									<li><a href="./atualizar_dados.hhvm"> Dados </a></li>
+									<li><a href="./foto.hhvm"> Foto </a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="row">
+			<div class="col-lg-12 space">
+				<div class="card card-tab">
+					<div class="card-header">
+						<ul class="nav nav-tabs">
+							<li role="tab1" class="active"> <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab"> Suporte </a></li>
+						</ul>
+					</div>
+					<div class="card-body no-padding tab-content">
+						<div role="tabpanel" class="tab-pane active" id="tab1">
+							<div class="row">
+								<div class="col-md-3 col-sm-12">
+									<div class="section">
+										<div class="section-title"><i class="icon fa fa-envelope" aria-hidden="true"></i> Fale conosco </div>
+										<div class="section-body __indent"> Envie uma mensagem para o provedor. </div>
+									</div>
+								</div>
+								<div class="col-md-9 col-sm-12">
+									<form action="executar_central.hhvm?acao=contato" method="post" enctype="multipart/form-data" name="form" id="form" class="form form-horizontal">
+										<div class="section">
+											<div class="section-title"> Mensagem </div>
+											<div class="section-body">
+												<div class="form-group">
+													<label class="col-md-3 control-label">Nome:</label>
+													<div class="col-md-6">
+														<input type="text" class="form-control" name="nome" id="txt_nome" value="{CLIENTE_NOME_RES}">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label">Assunto:</label>
+													<div class="col-md-6">
+														<div class="input-group">
+															<select class="select2" name="assunto" id="txt_assunto">
+																<option value="Financeiro">Financeiro</option>
+																<option value="D&uacute;vidas">D&uacute;vidas</option>
+																<option value="Conex&atilde;o">Conex&atilde;o</option>
+																<option value="Cadastro">Cadastro</option>
+																<option value="Cr&iacute;tica">Cr&iacute;tica</option>
+																<option value="Sugest&atilde;o">Sugest&atilde;o</option>
+																<option value="Outros">Outros</option>
+															</select>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3 control-label">Mensagem:</label>
+													<div class="col-md-6">
+														<textarea name="msg" id="txt_msg" rows="5" class="form-control"></textarea>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-3"></label>
+													<div class="col-md-5">
+														<input name="arquivo" type="file" id="txt_arquivo">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-footer">
+											<div class="form-group">
+												<div class="col-md-9 col-md-offset-3">
+													<button type="submit" class="btn btn-primary btn-sm"> <span class="glyphicon glyphicon-send" aria-hidden="true"></span> Enviar </button>
+												</div>
+											</div>
+										</div>
+										<input name="login" type="hidden" id="txt_login" value="{CLIENTE_LOGIN}">
+										<input name="telefone" type="hidden" id="txt_telefone" value="{CLIENTE_FONE}">
+										<input name="email" type="hidden" id="txt_email" value="{CLIENTE_EMAIL}">
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="app-footer">
+			<div class="row">
+				<div class="col-xs-12 footer">
+					<div class="redes-sociais d-flex">
+						<a class="btn btn-outline-light btn-social" href="{INSTAGRAM}" target="_blank" id="instagram"><i class="bi bi-instagram"></i></a>
+						<a class="btn btn-outline-light btn-social" href="{WHATSAPP}" target="_blank" id="whatsapp"><i class="bi bi-whatsapp"></i></a>
+						<a class="btn btn-outline-light btn-social" href="{TIKTOK}" target="_blank" id="tiktok"><i class="bi bi-tiktok"></i></a>
+						<a class="btn btn-outline-light btn-social" href="{TWITTER}" target="_blank" id="twitter"><i class="bi bi-twitter"></i></a>
+						<a class="btn btn-outline-light btn-social" href="{FACEBOOK}" target="_blank" id="facebook"><i class="bi bi-facebook"></i></a>
+						<a class="btn btn-outline-light btn-social" href="{LINKEDIN}" target="_blank" id="linkedin"><i class="bi bi-linkedin"></i></a>
+						<a class="btn btn-outline-light btn-social" href="{YOUTUBE}" target="_blank" id="youtube"><i class="bi bi-youtube"></i></a>
+						<a class="btn btn-outline-light btn-social" href="{TELEGRAM}" target="_blank" id="telegram"><i class="bi bi-telegram"></i></a>
+						<a class="btn btn-outline-light btn-social" href="{SKYPE}" target="_blank" id="skype"><i class="bi bi-skype"></i></a>
+						<a class="btn btn-outline-light btn-social" href="{KWAI}" target="_blank" id="kwai"><i class="bi bi-camera-reels-fill"></i></a>
+					</div>
+					<div class="footer-copyright"> Copyright &copy; {ANO_ATUAL} MK-AUTH </div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</div>
+<script src="./layout/{CENTRAL_TEMPLATE}/js/jquery.js"></script>
+<script src="./layout/{CENTRAL_TEMPLATE}/js/bootstrap.js"></script>
+<script src="./layout/{CENTRAL_TEMPLATE}/js/vendor.js"></script>
+<script src="./layout/{CENTRAL_TEMPLATE}/js/app.js"></script>
+<script src="./layout/{CENTRAL_TEMPLATE}/js/mk-auth.js"></script>
+</body>
+</html>

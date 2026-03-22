@@ -1,0 +1,226 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Nota Fiscal</title>
+<script>
+function printPage() {
+	print(document); 
+}
+// -->
+</script>
+
+<style type="text/css">
+
+@charset "charset=ISO-8859-1";
+
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td { 
+margin:0; 
+padding:0; 
+}
+
+img,body,html { 
+border:0; 
+}
+
+body,td,p { 
+font-family:Verdana,Arial,Helvetica;
+font-size:10px;
+}
+
+a {
+text-decoration:none;
+color:#000000;
+}
+
+a:hover {
+text-decoration:underline;
+color:#000000;
+}
+
+a:visited {
+text-decoration:none;
+}
+
+strong,b {
+font-weight:bold;
+}
+
+.textoazul	{
+font-size:14px;
+font-family:Trebuchet MS,Verdana,Arial,Helvetica,sans-serif;
+text-decoration:none;line-height:120%;
+}
+
+body {
+margin-left: 5px;
+margin-top: 5px;
+margin-right: 5px;
+margin-bottom: 5px;
+}
+
+.container {
+	background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzk0IiBoZWlnaHQ9IjExMjMiIHZpZXdCb3g9IjAgMCA3OTQgMTEyMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9Ijc5NCIgaGVpZ2h0PSIxMTIzIiBmaWxsPSIjMUUxRTFFIi8+CjxyZWN0IHdpZHRoPSI3OTQiIGhlaWdodD0iMTEyMyIgZmlsbD0id2hpdGUiLz4KPHJlY3QgeD0iMTguNSIgeT0iMTc4LjUiIHdpZHRoPSI3NDYiIGhlaWdodD0iMTI5IiByeD0iMTEuNSIgc3Ryb2tlPSIjMjUyNTI1Ii8+CjxyZWN0IHg9IjE4LjUiIHk9IjMyOS41IiB3aWR0aD0iNzQ2IiBoZWlnaHQ9IjEyOSIgcng9IjExLjUiIHN0cm9rZT0iIzI1MjUyNSIvPgo8cmVjdCB4PSIyMSIgeT0iNDgwIiB3aWR0aD0iNzQwIiBoZWlnaHQ9IjI4MSIgcng9IjEyIiBmaWxsPSIjRjJGMkYyIi8+CjxyZWN0IHg9IjI3IiB5PSIzMCIgd2lkdGg9IjczNiIgaGVpZ2h0PSI0MCIgcng9IjEyIiBmaWxsPSIjRjJGMkYyIi8+CjxyZWN0IHg9IjI3IiB5PSIxMDQiIHdpZHRoPSIxNDAiIGhlaWdodD0iNDAiIHJ4PSIxMiIgZmlsbD0iI0YyRjJGMiIvPgo8cmVjdCB4PSIxNzYiIHk9IjEwNCIgd2lkdGg9IjE0MCIgaGVpZ2h0PSI0MCIgcng9IjEyIiBmaWxsPSIjRjJGMkYyIi8+CjxyZWN0IHg9IjMyNSIgeT0iMTA0IiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjQwIiByeD0iMTIiIGZpbGw9IiNGMkYyRjIiLz4KPHJlY3QgeD0iNDc0IiB5PSIxMDQiIHdpZHRoPSIxNDAiIGhlaWdodD0iNDAiIHJ4PSIxMiIgZmlsbD0iI0YyRjJGMiIvPgo8cmVjdCB4PSI2MjMiIHk9IjEwNCIgd2lkdGg9IjE0MCIgaGVpZ2h0PSI0MCIgcng9IjEyIiBmaWxsPSIjRjJGMkYyIi8+CjxyZWN0IHg9IjIyLjUiIHk9Ijc4Mi41IiB3aWR0aD0iMTM5IiBoZWlnaHQ9IjM5IiByeD0iMTEuNSIgc3Ryb2tlPSJibGFjayIvPgo8cmVjdCB4PSIxNzEuNSIgeT0iNzgyLjUiIHdpZHRoPSIxMzkiIGhlaWdodD0iMzkiIHJ4PSIxMS41IiBzdHJva2U9ImJsYWNrIi8+CjxyZWN0IHg9IjMyMC41IiB5PSI3ODIuNSIgd2lkdGg9IjEzOSIgaGVpZ2h0PSIzOSIgcng9IjExLjUiIHN0cm9rZT0iYmxhY2siLz4KPHJlY3QgeD0iNDY5LjUiIHk9Ijc4Mi41IiB3aWR0aD0iMTM5IiBoZWlnaHQ9IjM5IiByeD0iMTEuNSIgc3Ryb2tlPSJibGFjayIvPgo8cmVjdCB4PSI2MTguNSIgeT0iNzgyLjUiIHdpZHRoPSIxMzkiIGhlaWdodD0iMzkiIHJ4PSIxMS41IiBzdHJva2U9ImJsYWNrIi8+CjxyZWN0IHg9IjE4LjUiIHk9Ijg0My41IiB3aWR0aD0iNzQyIiBoZWlnaHQ9IjE0NSIgcng9IjExLjUiIHN0cm9rZT0iYmxhY2siLz4KPC9zdmc+Cg==');
+	height: 1123px;
+	width: 794px;
+	position: relative;
+}
+
+.logo {
+	position: absolute;
+	height: 80px;
+	width: 80px;
+	margin-left: 670px;
+	margin-top: 190px;
+}
+
+.provedorDados {
+	position: absolute;
+	margin-top: 188px;
+	margin-left: 40px;
+}
+
+.clienteDados {
+	position: absolute;
+	margin-top: 338px;
+	margin-left: 40px;
+}
+.fatura {
+	position: absolute;
+	text-align: center;
+	margin-top: 42px;
+	margin-left: 176px;
+}
+.Nn {
+	position: absolute;
+	text-align: center;
+	margin-top: 110px;
+	margin-left: 54px;
+}
+.NFs {
+	position: absolute;
+	text-align: center;
+	margin-top: 110px;
+	margin-left: 222px;
+}
+.NFr {
+	position: absolute;
+	text-align: center;
+	margin-top: 110px;
+	margin-left: 362px;
+}
+
+.NFem {
+	position: absolute;
+	text-align: center;
+	margin-top: 110px;
+	margin-left: 510px;
+}
+.NFcfop {
+	position: absolute;
+	text-align: center;
+	margin-top: 110px;
+	margin-left: 674px;
+}
+
+.itens {
+	position: absolute;
+	margin-top: 493px;
+	margin-left: 40px;
+}
+
+.item_dec_t {
+	position: relative;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+.item_icms_t {
+	position: relative;
+	margin-top: 0px;
+	margin-left: 370px;
+}
+
+.item_valor_t {
+	position: relative;
+	margin-top: 0px;
+	margin-left: 84px;
+}
+
+.item_dec {
+	position: relative;
+	margin-left: 0px;
+}
+
+.item_icms {
+	display: block;
+	position: absolute;
+	margin-top: -12px;
+	margin-left: 485px;
+}
+
+.item_valor {
+	text-align: end;
+	position: relative;
+	display: block;
+	margin-top: -12px;
+	margin-left: 104px;
+}
+
+.NF_total {
+	text-align: end;
+	position: relative;
+	display: block;
+	margin-top: 160px;
+	margin-left: 400px;
+}
+
+
+.reservado {
+	position: absolute;
+	margin-top: 968px;
+	margin-left: 32px;
+}
+.NFe {
+	font-size: 12px;
+	font-weight: bold;
+}
+.NF_obs {
+	position: absolute;
+	margin-top: 852px;
+	margin-left: 33px;
+}
+
+.NFe_calculo {
+	position: absolute;
+	text-align: center;
+	margin-top: 790px;
+	margin-left: 30px;
+}
+.NFe_aliquota {
+	position: absolute;
+	text-align: center;
+	margin-top: 790px;
+	margin-left: 188px;
+}
+.NFe_valor {
+	position: absolute;
+	text-align: center;
+	margin-top: 790px;
+	margin-left: 345px;
+}
+.NFe_isentas {
+	position: absolute;
+	text-align: center;
+	margin-top: 790px;
+	margin-left: 497px;
+}
+
+.NFe_outras {
+	position: absolute;
+	text-align: center;
+	margin-top: 790px;
+	margin-left: 660px;
+}
+</style> 
+</head>
+<body onLoad="printPage()">

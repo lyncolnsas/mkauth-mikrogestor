@@ -1,0 +1,112 @@
+<div style="page-break-after: always" class="container">
+    <img src="{PROVEDORLOGO}" class="logo" style="max-height:75px">
+    <div class="provedorDados">
+        <h3>{PROVEDORNOME}</h3>
+        <p>{PROVEDORRAZAO} <br>
+            CNPJ: {PROVEDORCNPJ} - IE: {PROVEDORIE} <br>
+            ENDERE&Ccedil;O: {PROVEDORENDERECO} <br>
+            BAIRRO: {PROVEDORBAIRRO} <br>
+            CEP: {PROVEDORCEP}  <br>
+            CIDADE: {PROVEDORCIDADE} <br>
+            ESTADO: {PROVEDORESTADO}</p>
+    </div>
+    <div class="fatura">
+        <p class="NFe">NOTA FISCAL DE SERVICO DE COMUNICACAO - MODELO {NOTA_MODELO}</p>
+    </div>
+
+    <div class="Nn">
+        <p class="NFe">Nota fiscal N&deg;</p>
+        <p>{NOTA_NUMERO}</p>
+    </div>
+
+    <div class="NFs">
+        <p class="NFe">Serie</p>
+        <p>{NOTA_SERIE}</p>
+    </div>
+
+    <div class="NFr">
+        <p class="NFe">Refer&ecirc;ncia</p>
+        <p>{NOTA_REF}</p>
+    </div>
+
+    <div class="NFem">
+        <p class="NFe">Emiss&atilde;o</p>
+        <p>{NOTA_EMISSAO}</p>
+    </div>
+
+    <div class="NFcfop">
+        <p class="NFe">CFOP</p>
+        <p>{NOTA_CFOP}</p>
+    </div>
+
+    <div class="clienteDados">
+        <h3>DESTINAT&Aacute;RIO</h3>
+        <p>NOME: {CLIENTE_NOME} <br>
+            CPF/CNPJ: {CLIENTE_CPF} <br>
+            ENDERE&Ccedil;O: {CLIENTE_ENDERECO} <br>
+            BAIRRO: {CLIENTE_BAIRRO} <br>
+            CIDADE: {CLIENTE_CIDADE} - CEP: {CLIENTE_CEP} - ESTADO: {CLIENTE_ESTADO}<br>
+            E-MAIL: {CLIENTE_EMAIL} <br>
+            TELEFONE: {CLIENTE_TELEFONE}</p>
+    </div>
+
+    <div class="itens">
+        <span class="item_dec_t NFe">DESCRI&Ccedil;&Atilde;O</span>
+        <span class="item_icms_t NFe">VALOR ICMS</span>
+        <span class="item_valor_t NFe">VALOR (R$)</span>
+        <div class="itens_dados">
+            <!-- BEGIN BLOCK_ITENS -->
+            <!-- BEGIN BLOCK_DADOSITENS -->
+            <span class="item_dec"> {ITEM_DESC} </span>
+            <span class="item_icms"> {ITEM_ICMS} </span>
+            <span class="item_valor"> {ITEM_VALOR} </span>
+            <!-- END BLOCK_DADOSITENS -->
+            <!-- END BLOCK_ITENS -->
+        </div>
+        <span class="NFe NF_total">VALOR TOTAL: {NOTA_VTOTAL}</span>
+
+    </div>
+        <div class="NF_obs">
+        <p class="obs">OBSERVACAO: {NOTA_OBS}</p>
+
+        <p class="itemTotal1">VALOR APROXIMADO DE IMPOSTOS: {NOTA_VALOR_IBPT} / PERCENTUAL: {NOTA_PERC_IBPT} <br>
+            VALOR MUNICIPAL DE IMPOSTOS: {NOTA_VALOR_IBPT_M} / PERCENTUAL: {NOTA_PERC_IBPT_M} <br>
+            VALOR ESTATUAL DE IMPOSTOS: {NOTA_VALOR_IBPT_E} / PERCENTUAL: {NOTA_PERC_IBPT_E} <br>
+            VALOR FEDERAL DE IMPOSTOS: {NOTA_VALOR_IBPT_F} / PERCENTUAL: {NOTA_PERC_IBPT_F} <br>
+            CONSUMIDO {DADOS_ATUAL} DE DADOS EM {MESANO_ATUAL}</p>
+
+    </div>
+
+    <div class="itemTotal2">
+        <div class="NFe_calculo">
+            <p class="NFe">BASE DE CALCULO</p>
+            <p>{NOTA_BASE}</p>
+        </div>
+
+        <div class="NFe_aliquota">
+            <p class="NFe">ALIQUOTA (%)</p>
+            <p>{NOTA_ALIQ}</p>
+        </div>
+
+        <div class="NFe_valor">
+            <p class="NFe">VALOR ICMS</p>
+            <p>{NOTA_ICMS}</p>
+        </div>
+
+        <div class="NFe_isentas"> 
+            <p class="NFe">ISENTAS/NT</p>
+            <p>{NOTA_ISENTAS}</p>
+        </div>
+
+        <div class="NFe_outras">
+            <p class="NFe">OUTRAS</p>
+            <p>{NOTA_OUTROS}</p>
+        </div>
+        
+    </div>
+
+    <div>
+        <p class="reservado">RESERVADO AO FISCO: {NOTA_CHAVE}</p>
+    </div>
+</div>
+

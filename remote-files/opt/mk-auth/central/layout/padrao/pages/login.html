@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<title>Central do assinante</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="./layout/{CENTRAL_TEMPLATE}/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="./layout/{CENTRAL_TEMPLATE}/css/vendor.css">
+<link rel="stylesheet" type="text/css" href="./layout/{CENTRAL_TEMPLATE}/css/bootstrap-icons.css">
+<link rel="stylesheet" type="text/css" href="./layout/{CENTRAL_TEMPLATE}/css/flat.css?v=20210317">
+<link rel="stylesheet" type="text/css" id="theme" href="./layout/{CENTRAL_TEMPLATE}/css/light_mode.css">
+</head>
+<body>
+<div class="app app-default">
+	<div class="app-container app-login">
+		<div class="flex-center">
+			<div class="app-header"></div>
+			<div class="app-body">
+				<div class="app-block">
+					<div class="app-right-section">
+						<div class="app-brand"><span class="highlight">Central</span> do assinante</div>
+						<div class="app-info">
+							<ul class="list">
+								<li>
+									<div class="icon"> <i class="fa fa-user" aria-hidden="true"></i></div>
+									<div class="title"><strong>Dados</strong> cadastrados </div>
+								</li>
+								<li>
+									<div class="icon"> <i class="fa fa-money" aria-hidden="true"></i></div>
+									<div class="title">Controle <strong>financeiro</strong> </div>
+								</li>
+								<li>
+									<div class="icon"> <i class="fa fa-globe" aria-hidden="true"></i></div>
+									<div class="title">Itens de <strong>acesso</strong> </div>
+								</li>
+								<li>
+									<div class="icon"> <i class="fa fa-envelope" aria-hidden="true"></i></div>
+									<div class="title"><strong>Suporte</strong> tecnico </div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- BEGIN BLOCK_PAGESENHA -->
+					<div class="app-form">
+						<div class="form-header">
+							<div class="app-brand"><img class="my-logo" src="../mkfiles/logo.jpg"></div>
+						</div>
+						<form action="./executar_senha.hhvm" method="POST" id="central_login">
+							<div class="input-group"> <span class="input-group-addon" id="basic-addon1"> <i class="fa fa-envelope" aria-hidden="true"></i></span>
+								<input type="text" class="form-control" placeholder="LOGIN ou CPF" id="txt_login" name="login" aria-describedby="basic-addon1">
+							</div>
+							<div class="text-center">
+								<input type="submit" class="btn btn-warning btn-submit" value="Enviar" id="btn_submit" name="btn_submit">
+							</div>
+						</form>
+					</div>
+					<!-- END BLOCK_PAGESENHA -->
+					<!-- BEGIN BLOCK_PAGEDEFAULT -->
+					<div class="app-form">
+						<div class="form-header">
+							<div class="app-brand"><img class="my-logo" src="../mkfiles/logo.jpg"></div>
+						</div>
+						<form action="./executar_login.hhvm" method="POST" id="central_login">
+							{CSRF}
+							<!-- BEGIN BLOCK_CAMPOLOGIN -->
+							<div class="input-group"> <span class="input-group-addon" id="basic-addon1"> <i class="fa fa-user" aria-hidden="true"></i></span>
+								<input type="text" class="form-control" placeholder="Login" id="txt_login" name="txt_login" value="{POST_LOGIN}" aria-describedby="basic-addon1" autofocus>
+							</div>
+							<!-- END BLOCK_CAMPOLOGIN -->
+							<!-- BEGIN BLOCK_CAMPOCPF -->
+							<div class="input-group"> <span class="input-group-addon" id="basic-addon2"> <i class="fa fa-shield" aria-hidden="true"></i></span>
+								<input type="text" class="form-control" placeholder="CPF / CNPJ" id="txt_cpf" name="txt_cpf" aria-describedby="basic-addon2">
+							</div>
+							<!-- END BLOCK_CAMPOCPF -->
+							<!-- BEGIN BLOCK_CAMPOSENHA -->
+							<div class="input-group"> <span class="input-group-addon" id="basic-addon3"> <i class="fa fa-key" aria-hidden="true"></i></span>
+								<input type="password" class="form-control" placeholder="Senha" id="txt_senha" name="txt_senha" value="{POST_SENHA}" aria-describedby="basic-addon3">
+							</div>
+							<!-- END BLOCK_CAMPOSENHA -->
+							<div class="text-center">
+								<input type="submit" class="btn btn-success btn-submit" value="Login" id="btn_submit" name="btn_submit">
+							</div>
+						</form>
+						<!-- BEGIN BLOCK_CAMPOLEMBRAR -->
+						<div class="form-line">
+							<div class="title"><small> OU </small></div>
+						</div>
+						<div class="form-footer">
+							<input type="none" class="btn btn-default btn-sm" value="Esqueci a senha" id="btn_senha" name="btn_senha">
+						</div>
+						<!-- END BLOCK_CAMPOLEMBRAR -->
+					</div>
+					<!-- END BLOCK_PAGEDEFAULT -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="./layout/{CENTRAL_TEMPLATE}/js/jquery.js"></script>
+<script src="./layout/{CENTRAL_TEMPLATE}/js/bootstrap.js"></script>
+<script src="./layout/{CENTRAL_TEMPLATE}/js/vendor.js"></script>
+<script src="./layout/{CENTRAL_TEMPLATE}/js/app.js"></script>
+<script src="./layout/{CENTRAL_TEMPLATE}/js/mk-auth.js"></script>
+<script>
+// Envia Form
+jQuery("#btn_submit").click(function () {
+	$("#central_login").submit();
+});	
+
+// Enviar senha
+jQuery("#btn_senha").click(function () {
+	window.location.href = 'login.hhvm?page=senha';
+});	
+</script>
+</body>
+</html>

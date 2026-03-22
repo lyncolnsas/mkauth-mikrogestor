@@ -1,0 +1,48 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<title>NOTA FISCAL DE TELECOMUNICACAO</title>
+<script>
+function printPage() {
+print(document); 
+}
+</script>
+<style type="text/css">
+
+@charset "charset=ISO-8859-1";
+
+@media print {
+* {
+-webkit-print-color-adjust: exact;
+-moz-print-color-adjust: exact; 
+-o-print-color-adjust: exact; 
+-ms-print-color-adjust: exact; 
+print-color-adjust: exact; 
+}
+}
+
+body {
+margin:0;
+padding:0;
+font-family: 'Segoe UI', sans-serif;
+font-size: 12px !important;
+line-height: 14px;
+}
+
+#wrapper table {		
+border-collapse: collapse;
+font-size: 11px;
+font-family: "Courier New", Georgia, Serif;
+}
+
+#wrapper table tr td {			
+border: 1px solid #000;
+}
+
+#wrapper table tr td.bg {		
+background-size: 100% auto;
+}
+
+</style>
+</head>
+<body onLoad="printPage()">

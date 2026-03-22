@@ -1,0 +1,34 @@
+services:
+  app:
+    build: .
+    container_name: mkauth-app
+    ports:
+      - "80:80"
+      - "443:443"
+      - "1812:1812/udp"
+      - "1813:1813/udp"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASS=vertrigo
+      - DB_NAME=mkradius
+    networks:
+      - mkauth-net
+
+  db:
+    image: mariadb:10.3
+    container_name: mkauth-db
+    command: ["mysqld", "--innodb-strict-mode=0", "--innodb-file-per-table=1", "--innodb-large-prefix=1"]
+    environment:
+      - MYSQL_ROOT_PASSWORD=vertrigo
+      - MYSQL_DATABASE=mkradius
+    volumes:
+      - ./remote-files/database/mkradius.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - mkauth-net
+
+networks:
+  mkauth-net:
+    driver: bridge

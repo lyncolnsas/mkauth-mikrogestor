@@ -1,0 +1,26 @@
+0051|ICMS-normal|01092018|
+0086|ICMS - antecipação com ou sem substituição tributária (mercadorias importadas do exterior)|01092018|
+0094|ICMS - substituição pelas entradas sem diferimento|01092018|
+0116|ICMS - substituição pelas saídas para o Estado|01092018|
+0175|ICMS - importação de mercadorias do exterior|01092018|
+0426|ICMS - substituição tributária (contribuinte de outro estado)|01092018|
+0434|ICMS - recolhimento especial|01092018|
+0469|Multa, exceto de mora|01092018|
+0574|ICMS - complementação de alíquota (aquisição em outro estado para ativo fixo/uso ou consumo)|01092018|
+0582|ICMS - antecipação (diferença de alíquota: sistema fronteiras)|01092018|
+0590|ICMS - Antecipação tributária sem substituição (contribuinte do Estado)|01092018|
+0612|ICMS - frete do contribuinte não-inscrito|01092018|
+0639|ICMS - malha fina|01092018|
+0671|ICMS - Consumidor final ou contribuinte não inscrito PE – Lei nº 12.431/2003|01092018|
+0701|ICMS - contribuinte não-inscrito, exceto frete|01092018|
+0710|ICMS - frete do contribuinte inscrito descredenciado|01092018|
+0728|ICMS - substituição pelas entradas com diferimento|01092018|
+0779|ICMS – Polo Gesseiro|01092018|
+0795|ICMS – Substituto pela saídas para este Estado – retenções de 1º a 25 de cada mês|01092018|
+0817|ICMS - Antecipação - água mineral natural e adicionada de sais|01092018|
+0906|ICMS - antecipação da cesta básica|01092018|
+0973|ICMS - incentivo da Lei nº 11.675/99 e alterações (parcela remanescente)|01092018|
+0990|ICMS - Fundo de Combate e Erradicação da Pobreza (FECEP)|01092018|
+1006|ICMS - antecipação nas operações internas|01092018|
+1073|ICMS - substituição tributária do frete|01092018|
+1081|ICMS - substituição tributária do imposto não retido|01092018|
